@@ -1,0 +1,203 @@
+<?xml version="1.0"
+        encoding="UTF-8"?>
+
+<!--
+  ~ ============================================================================
+  ~  Copyright © 2002-2022 by Thomas Thrien.
+  ~  All Rights Reserved.
+  ~ ============================================================================
+  ~  Licensed to the public under the agreements of the GNU Lesser General Public
+  ~  License, version 3.0 (the "License"). You may obtain a copy of the License at
+  ~
+  ~       http://www.gnu.org/licenses/lgpl.html
+  ~
+  ~  Unless required by applicable law or agreed to in writing, software
+  ~  distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+  ~  WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+  ~  License for the specific language governing permissions and limitations
+  ~  under the License.
+  -->
+<!-- $Id: AdditionalTexts.xml 887 2021-03-28 19:25:19Z tquadrat $ -->
+
+<!DOCTYPE texts SYSTEM "http://dtd.tquadrat.org/AdditionalText.dtd">
+<!--suppress GrazieInspection -->
+<texts>
+    <!-- The names for the heats -->
+    <text key='HEAT_DUEL'>
+        <description><![CDATA[The duel heat.]]></description>
+        <translation language="en"><![CDATA[Duel]]></translation>
+        <translation language="de"><![CDATA[Duell]]></translation>
+    </text>
+    <text key='HEAT_PRECISION'>
+        <description><![CDATA[The precision heat.]]></description>
+        <translation language="en"><![CDATA[Precision]]></translation>
+        <translation language="de"><![CDATA[Präzision]]></translation>
+    </text>
+    <text key='HEAT_10s'>
+        <description><![CDATA[The 10 seconds heat.]]></description>
+        <translation language="en"><![CDATA[10 Seconds]]></translation>
+        <translation language="de"><![CDATA[10 Sekunden]]></translation>
+    </text>
+    <text key='HEAT_20s'>
+        <description><![CDATA[The 20 seconds heat.]]></description>
+        <translation language="en"><![CDATA[20 Seconds]]></translation>
+        <translation language="de"><![CDATA[20 Sekunden]]></translation>
+    </text>
+    <text key='HEAT_150s'>
+        <description><![CDATA[The 150 seconds heat.]]></description>
+        <translation language="en"><![CDATA[150 Seconds]]></translation>
+        <translation language="de"><![CDATA[150 Sekunden]]></translation>
+    </text>
+    <text key='TIEBREAK_50s'>
+        <description><![CDATA[A 50 seconds tie-break.]]></description>
+        <translation language="en"><![CDATA[Tie-break 50 Seconds]]></translation>
+        <translation language="de"><![CDATA[Stechschuß 50 Sekunden]]></translation>
+    </text>
+
+    <!-- These texts are used directly by the JavaFX components -->
+    <text key='BUTTON_ABORT'>
+        <description><![CDATA[The text for the abort button.]]></description>
+        <translation language="en"><![CDATA[Cancel]]></translation>
+        <translation language="de"><![CDATA[Abbruch]]></translation>
+    </text>
+    <text key='BUTTON_OK'>
+        <description><![CDATA[The text for the OK button.]]></description>
+        <translation language="en"><![CDATA[Ok]]></translation>
+        <translation language="de"><![CDATA[Ok]]></translation>
+    </text>
+    <text key='BUTTON_START'>
+        <description><![CDATA[The text for the Start button.]]></description>
+        <translation language="en"><![CDATA[Go!]]></translation>
+        <translation language="de"><![CDATA[Start!]]></translation>
+    </text>
+
+    <text key='LABEL_TIME'>
+        <description><![CDATA[The text for the label "Time".]]></description>
+        <translation language="en"><![CDATA[Time (in seconds)]]></translation>
+        <translation language="de"><![CDATA[Zeit (in Sekunden)]]></translation>
+    </text>
+
+    <text key='MENU_DISCIPLINES'>
+        <description><![CDATA[The text for the "Disciplines" menu.]]></description>
+        <translation language="en"><![CDATA[Disci_plines]]></translation>
+        <translation language="de"><![CDATA[Diszi_plinen]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_17'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.17.]]></description>
+        <translation language="en"><![CDATA[Air Pistol DSB 2.17]]></translation>
+        <translation language="de"><![CDATA[Luftpistole _Mehrkampf (2.17)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_18'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.18.]]></description>
+        <translation language="en"><![CDATA[Air Pistol DSB 2.18]]></translation>
+        <translation language="de"><![CDATA[_Luftpistole Standard (2.18)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_40'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.40.]]></description>
+        <translation language="en"><![CDATA[Rimfire Pistol DSB 2.40]]></translation>
+        <translation language="de"><![CDATA[KK S_portpistole (2.40)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_45'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.45.]]></description>
+        <translation language="en"><![CDATA[Center Fire Pistol DSB 2.45]]></translation>
+        <translation language="de"><![CDATA[_Zentralfeuerpistole (2.45)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_53'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.53.]]></description>
+        <translation language="en"><![CDATA[9mm Pistol DSB 2.53]]></translation>
+        <translation language="de"><![CDATA[_9mm Pistole (2.53)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_55'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.55.]]></description>
+        <translation language="en"><![CDATA[.357 Revolver DSB 2.55]]></translation>
+        <translation language="de"><![CDATA[._357 Revolver (2.55)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_58'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.58.]]></description>
+        <translation language="en"><![CDATA[.44 Revolver DSB 2.58]]></translation>
+        <translation language="de"><![CDATA[._44 Revolver (2.58)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_59'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.59.]]></description>
+        <translation language="en"><![CDATA[.45 Pistol DSB 2.59]]></translation>
+        <translation language="de"><![CDATA[.45 _Pistole (2.59)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_60'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.60.]]></description>
+        <translation language="en"><![CDATA[Rimfire Standard Pistol DSB 2.60]]></translation>
+        <translation language="de"><![CDATA[KK S_tandardpistole (2.60)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_TIEBREAK'>
+        <description><![CDATA[The text for the menu entry for the tie-breaks.]]></description>
+        <translation language="en"><![CDATA[_Tie-break]]></translation>
+        <translation language="de"><![CDATA[S_techschuß]]></translation>
+    </text>
+
+    <text key='MENU_FILE'>
+        <description><![CDATA[The text for the 'File' menu.]]></description>
+        <translation language="en"><![CDATA[_File]]></translation>
+        <translation language="de"><![CDATA[_Datei]]></translation>
+    </text>
+    <text key='MENU_FILE_EXIT'>
+        <description><![CDATA[The text for the 'File' menu entry to exit the program.]]></description>
+        <translation language="en"><![CDATA[E_xit]]></translation>
+        <translation language="de"><![CDATA[_Beenden]]></translation>
+    </text>
+
+    <text key='MENU_HELP'>
+        <description><![CDATA[The text for the 'Help' menu.]]></description>
+        <translation language="en"><![CDATA[_Help]]></translation>
+        <translation language="de"><![CDATA[_Hilfe]]></translation>
+    </text>
+    <text key='MENU_HELP_ABOUT'>
+        <description><![CDATA[The text for the 'Help' menu entry for the 'About' dialog.]]></description>
+        <translation language="en"><![CDATA[_About]]></translation>
+        <translation language="de"><![CDATA[_Über …]]></translation>
+    </text>
+
+    <text key='MENU_SETTINGS'>
+        <description><![CDATA[The text for the 'Settings' menu.]]></description>
+        <translation language="en"><![CDATA[_Settings]]></translation>
+        <translation language="de"><![CDATA[_Einstellungen]]></translation>
+    </text>
+    <text key='MENU_SETTING_AFTERTIME'>
+        <description><![CDATA[The text for the 'Settings' menu entry for the backlash time.]]></description>
+        <translation language="en"><![CDATA[B_acklash Time]]></translation>
+        <translation language="de"><![CDATA[_Nachlaufzeit]]></translation>
+    </text>
+    <text key='MENU_SETTING_BEFORETIME'>
+        <description><![CDATA[The text for the 'Settings' menu entry for the time before the prolog.]]></description>
+        <translation language="en"><![CDATA[_Before Time]]></translation>
+        <translation language="de"><![CDATA[_Vorlaufzeit]]></translation>
+    </text>
+    <text key='MENU_SETTING_HEATCOUNT'>
+        <description><![CDATA[The text for the 'Settings' menu entry whether the heat count should be displayed.]]></description>
+        <translation language="en"><![CDATA[Show _Heat]]></translation>
+        <translation language="de"><![CDATA[_Durchgang anzeigen]]></translation>
+    </text>
+    <text key='MENU_SETTING_SHOWSTATUS'>
+        <description><![CDATA[The text for the 'Settings' menu entry whether the status should be displayed.]]></description>
+        <translation language="en"><![CDATA[_Show Status]]></translation>
+        <translation language="de"><![CDATA[_Status anzeigen]]></translation>
+    </text>
+    <text key='MENU_SETTING_SHOWTIME'>
+        <description><![CDATA[The text for the 'Settings' menu entry whether the time should be displayed.]]></description>
+        <translation language="en"><![CDATA[Show _Time]]></translation>
+        <translation language="de"><![CDATA[_Zeit anzeigen]]></translation>
+    </text>
+    <text key='MENU_SETTING_SOUND'>
+          <description><![CDATA[The text for the 'Settings' menu entry whether sound is enabled.]]></description>
+          <translation language="en"><![CDATA[S_ound]]></translation>
+          <translation language="de"><![CDATA[_Tonausgabe]]></translation>
+    </text>
+
+    <text key='TITLE_ABOUT'>
+        <description><![CDATA[The text for the title of the About window.]]></description>
+        <translation language="en"><![CDATA[About Shooting Timer]]></translation>
+        <translation language="de"><![CDATA[Über Shooting Timer]]></translation>
+    </text>
+</texts>
+
+<!--
+End of File
+-->

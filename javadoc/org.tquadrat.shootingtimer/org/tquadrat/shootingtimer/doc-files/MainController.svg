@@ -1,0 +1,312 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version='1.1'
+     baseProfile='full'
+     width='1356.000'
+     height='1111.000'>
+    <defs>
+        <style><![CDATA[
+            line
+            {
+              stroke: black;
+            }
+            line.separator
+            {
+              stroke:       black;
+              stroke-width: 1;
+            }
+            marker
+            {
+              fill: white;
+            }
+            path
+            {
+              fill:   white;
+              stroke: black;
+            }
+            path.implementation
+            {
+              fill:             none;
+              stroke-dasharray: 5,5;
+              stroke-width:     3;
+            }
+            path.inheritance
+            {
+              fill:         none;
+              stroke-width: 3;
+            }
+            rect
+            {
+              fill:         none;
+              stroke:       black;
+              stroke-width: 2;
+            }
+            rect.externalClass
+            {
+              fill:         #D0D0D0;
+              fill-opacity: 0.8;
+            }
+            rect.focusClass
+            {
+              fill:         #FFFFF9;
+              fill-opacity: 0.8;
+            }
+            rect.otherClass
+            {
+              fill:         #F0E68C;
+              fill-opacity: 0.8;
+            }
+            rect.template
+            {
+              fill:             #FFFFFF;
+              fill-opacity:     1.0;
+              stroke-dasharray: 3,3;
+            }
+            text
+            {
+              font-family: monospace;
+              font-size:   10px;
+              font-weight: bold;
+            }
+            text.abstract
+            {
+              font-style: italic;
+            }
+            text.final
+            {
+              text-decoration: underline;
+            }
+            text.static
+            {
+              font-weight: normal;
+            }
+            text.stereotype
+            {
+              font-size:   8px;
+              font-weight: normal;
+            }
+            ]]></style>
+        <marker id='inheritance'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <marker id='implementation'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <clipPath id='ID000001'>
+            <rect class='focusClass'
+                  height='689.000'
+                  width='1306.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.shootingtimer.MainController'>
+            <g>
+                <g class='focusClass'
+                   clip-path='url(#ID000001)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='1306.000'
+                          height='689.000'
+                          class='focusClass'/>
+                    <line x1='0.000'
+                          y1='17.000'
+                          x2='1306.000'
+                          y2='17.000'
+                          class='separator'/>
+                    <text x='611.000'
+                          y='13.000'>MainController</text>
+                    <line x1='0.000'
+                          y1='496.000'
+                          x2='1306.000'
+                          y2='496.000'
+                          class='separator'/>
+                    <text y='30.000'
+                          class='static final'>+ PREF_NODE_Discipline:java.lang.String</text>
+                    <text y='41.000'
+                          class='static final'>+ PREF_NODE_Heat:java.lang.String</text>
+                    <text y='52.000'
+                          class='static final'>+ PREF_NODE_Sound:java.lang.String</text>
+                    <text y='63.000'
+                          class='static final'>+ PREF_NODE_ShowHeatCount:java.lang.String</text>
+                    <text y='74.000'
+                          class='static final'>+ PREF_NODE_ShowStatus:java.lang.String</text>
+                    <text y='85.000'
+                          class='static final'>+ PREF_NODE_ShowTime:java.lang.String</text>
+                    <text y='96.000'
+                          class='static final'>+ PREF_NODE_TimeAfter:java.lang.String</text>
+                    <text y='107.000'
+                          class='static final'>+ PREF_NODE_Before:java.lang.String</text>
+                    <text y='118.000'
+                          class='static final'>+ SOUND_ENDSHOOTING:java.lang.String</text>
+                    <text y='129.000'
+                          class='static final'>+ SOUND_STARTSHOOTING:java.lang.String</text>
+                    <text y='140.000'
+                          class='static final'>+ STATUSBAR_HEIGHT:double</text>
+                    <text y='151.000'
+                          class='static final'>+ TIMERBOX_STARTBUTTON_HEIGHT:double</text>
+                    <text y='162.000'
+                          class='static final'>+ TIMERBOX_TIME_HEIGHT:double</text>
+                    <text y='173.000'
+                          class='static final'>+ TIMERBOX_WIDTH:double</text>
+                    <text y='184.000'>- m_Button_Abort:javafx.scene.control.Button</text>
+                    <text y='195.000'>- m_Button_Start:javafx.scene.control.Button</text>
+                    <text y='206.000'>- m_ButtonPane:javafx.scene.layout.Pane</text>
+                    <text y='217.000'>- m_CheckMenuItem_ShowHeatCount:javafx.scene.control.CheckMenuItem</text>
+                    <text y='228.000'>- m_CheckMenuItem_ShowStatus:javafx.scene.control.CheckMenuItem</text>
+                    <text y='239.000'>- m_CheckMenuItem_ShowTime:javafx.scene.control.CheckMenuItem</text>
+                    <text y='250.000'>- m_CheckMenuItem_Sound:javafx.scene.control.CheckMenuItem</text>
+                    <text y='261.000'>- m_ChoiceBox_Program:javafx.scene.control.ChoiceBox&lt;org.tquadrat.shootingtimer.Heat&gt;</text>
+                    <text y='272.000'>- m_Circle_Green:javafx.scene.shape.Circle</text>
+                    <text y='283.000'>- m_Circle_Red:javafx.scene.shape.Circle</text>
+                    <text y='294.000'>- m_DisciplinesToggleGroup:javafx.scene.control.ToggleGroup</text>
+                    <text y='305.000'>- m_EndSound:java.util.Optional&lt;javafx.scene.media.AudioClip&gt;</text>
+                    <text y='316.000'>- m_GreenLight:org.tquadrat.shootingtimer.MainController.Light</text>
+                    <text y='327.000'>- m_HeatThread:java.lang.Thread</text>
+                    <text y='338.000'
+                          class='final'>- m_HeatThreadGuard:org.tquadrat.foundation.lang.AutoLock</text>
+                    <text y='349.000'>- m_Label_HeatCount:javafx.scene.control.Label</text>
+                    <text y='360.000'>- m_Label_Status:javafx.scene.control.Label</text>
+                    <text y='371.000'>- m_Label_SelectedDiscipline:javafx.scene.control.Label</text>
+                    <text y='382.000'>- m_LightBox:javafx.scene.layout.GridPane</text>
+                    <text y='393.000'
+                          class='final'>- m_Preferences:java.util.prefs.Preferences</text>
+                    <text y='404.000'>- m_RedLight:org.tquadrat.shootingtimer.MainController.Light</text>
+                    <text y='415.000'
+                          class='final'>- m_SelectedDiscipline:javafx.beans.property.ObjectProperty&lt;org.tquadrat.shootingtimer.Discipline&gt;</text>
+                    <text y='426.000'>- m_Slider_AfterTime:javafx.scene.control.Slider</text>
+                    <text y='437.000'>- m_Slider_BeforeTime:javafx.scene.control.Slider</text>
+                    <text y='448.000'>- m_StartSound:java.util.Optional&lt;javafx.scene.media.AudioClip&gt;</text>
+                    <text y='459.000'
+                          class='final'>- m_StatusControl:javafx.beans.property.ObjectProperty&lt;org.tquadrat.shootingtimer.Status&gt;</text>
+                    <text y='470.000'
+                          class='final'>- m_StatusControlGuard:org.tquadrat.foundation.lang.AutoLock</text>
+                    <text y='481.000'>- m_TextField_Time:javafx.scene.control.TextField</text>
+                    <text y='492.000'>- resources:java.util.ResourceBundle</text>
+                    <text x='5.000'
+                          y='509.000'>+ MainController()</text>
+                    <text x='5.000'
+                          y='520.000'>- executeHeat():void</text>
+                    <text x='5.000'
+                          y='531.000'>- initialize():void</text>
+                    <text x='5.000'
+                          y='542.000'>- lightsOff():void</text>
+                    <text x='5.000'
+                          y='553.000'>- onAbort(ignoredEvent:javafx.event.ActionEvent):void</text>
+                    <text x='5.000'
+                          y='564.000'>- onDisciplineChanged(observable:javafx.beans.value.ObservableValue&lt;? extends org.tquadrat.shootingtimer.Discipline&gt;,oldValue:org.tquadrat.shootingtimer.Discipline,newValue:org.tquadrat.shootingtimer.Discipline):void</text>
+                    <text x='5.000'
+                          y='575.000'>- onDisciplineSelectionChanged(observable:javafx.beans.value.ObservableValue&lt;? extends javafx.scene.control.Toggle&gt;,oldValue:javafx.scene.control.Toggle,newValue:javafx.scene.control.Toggle):void</text>
+                    <text x='5.000'
+                          y='586.000'>- onExit(ignoredEvent:javafx.event.ActionEvent):void</text>
+                    <text x='5.000'
+                          y='597.000'>- onMenuAbout(event:javafx.event.ActionEvent):void</text>
+                    <text x='5.000'
+                          y='608.000'>- onStart(ignoredEvent:javafx.event.ActionEvent):void</text>
+                    <text x='5.000'
+                          y='619.000'>- onTouch(event:javafx.scene.input.TouchEvent):void</text>
+                    <text x='5.000'
+                          y='630.000'>- preferenceChanged(event:java.util.prefs.PreferenceChangeEvent):void</text>
+                    <text x='5.000'
+                          y='641.000'>- proceedToNextStatus():void</text>
+                    <text x='5.000'
+                          y='652.000'>- reset():void</text>
+                    <text x='5.000'
+                          y='663.000'>- setStatusProlog():void</text>
+                    <text x='5.000'
+                          y='674.000'>- setStatusStarting():void</text>
+                    <text x='5.000'
+                          y='685.000'>- statusTransition(ignoredObservable:javafx.beans.value.ObservableValue&lt;? extends org.tquadrat.shootingtimer.Status&gt;,oldStatus:org.tquadrat.shootingtimer.Status,newStatus:org.tquadrat.shootingtimer.Status):void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000002'>
+            <rect class='externalClass'
+                  height='172.000'
+                  width='244.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='java.lang.Object'>
+            <g>
+                <g clip-path='url(#ID000002)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='244.000'
+                          height='172.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='17.000'
+                          x2='244.000'
+                          y2='17.000'
+                          class='separator'/>
+                    <text x='104.000'
+                          y='13.000'>Object</text>
+                    <line x1='0.000'
+                          y1='34.000'
+                          x2='244.000'
+                          y2='34.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='30.000'/>
+                    <text x='5.000'
+                          y='47.000'>+ Object()</text>
+                    <text x='5.000'
+                          y='58.000'>+ getClass():java.lang.Class&lt;?&gt;</text>
+                    <text x='5.000'
+                          y='69.000'>+ hashCode():int</text>
+                    <text x='5.000'
+                          y='80.000'>+ equals(arg0:java.lang.Object):boolean</text>
+                    <text x='5.000'
+                          y='91.000'># clone():java.lang.Object</text>
+                    <text x='5.000'
+                          y='102.000'>+ toString():java.lang.String</text>
+                    <text x='5.000'
+                          y='113.000'>+ notify():void</text>
+                    <text x='5.000'
+                          y='124.000'>+ notifyAll():void</text>
+                    <text x='5.000'
+                          y='135.000'>+ wait():void</text>
+                    <text x='5.000'
+                          y='146.000'>+ wait(arg0:long):void</text>
+                    <text x='5.000'
+                          y='157.000'>+ wait(arg0:long,arg1:int):void</text>
+                    <text x='5.000'
+                          y='168.000'># finalize():void</text>
+                </g>
+            </g>
+        </symbol>
+    </defs>
+    <path class='inheritance'
+          d='M678.000,297.000 L678.000,197.000'
+          marker-end='url(#inheritance)'/>
+    <use x='556.000'
+         y='25.000'
+         xlink:href='#java.lang.Object'/>
+    <use x='25.000'
+         y='297.000'
+         xlink:href='#org.tquadrat.shootingtimer.MainController'/>
+</svg>

@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"org.tquadrat.shootingtimer","l":"org.tquadrat.shootingtimer"}];updateSearchResults();

@@ -1,0 +1,686 @@
+
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:svg="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     version='1.1'
+     baseProfile='full'
+     width='1573.000'
+     height='1932.000'>
+    <defs>
+        <style><![CDATA[
+            line
+            {
+              stroke: black;
+            }
+            line.separator
+            {
+              stroke:       black;
+              stroke-width: 1;
+            }
+            marker
+            {
+              fill: white;
+            }
+            path
+            {
+              fill:   white;
+              stroke: black;
+            }
+            path.implementation
+            {
+              fill:             none;
+              stroke-dasharray: 5,5;
+              stroke-width:     3;
+            }
+            path.inheritance
+            {
+              fill:         none;
+              stroke-width: 3;
+            }
+            rect
+            {
+              fill:         none;
+              stroke:       black;
+              stroke-width: 2;
+            }
+            rect.externalClass
+            {
+              fill:         #D0D0D0;
+              fill-opacity: 0.8;
+            }
+            rect.focusClass
+            {
+              fill:         #FFFFF9;
+              fill-opacity: 0.8;
+            }
+            rect.otherClass
+            {
+              fill:         #F0E68C;
+              fill-opacity: 0.8;
+            }
+            rect.template
+            {
+              fill:             #FFFFFF;
+              fill-opacity:     1.0;
+              stroke-dasharray: 3,3;
+            }
+            text
+            {
+              font-family: monospace;
+              font-size:   10px;
+              font-weight: bold;
+            }
+            text.abstract
+            {
+              font-style: italic;
+            }
+            text.final
+            {
+              text-decoration: underline;
+            }
+            text.static
+            {
+              font-weight: normal;
+            }
+            text.stereotype
+            {
+              font-size:   8px;
+              font-weight: normal;
+            }
+            ]]></style>
+        <marker id='inheritance'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <marker id='implementation'
+                viewBox='0,0,40,40'
+                markerUnits='strokeWidth'
+                refX='40'
+                refY='20'
+                markerWidth='6'
+                markerHeight='6'
+                orient='auto'>
+            <path d='M40,20 l-40,-20 v40 Z'
+                  fill='#ffffff'
+                  stroke='#000000'
+                  stroke-width='3'/>
+        </marker>
+        <clipPath id='ID000001'>
+            <rect class='focusClass'
+                  height='95.000'
+                  width='466.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='org.tquadrat.shootingtimer.TimeUpdateService'>
+            <g>
+                <g class='focusClass'
+                   clip-path='url(#ID000001)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='466.000'
+                          height='95.000'
+                          class='focusClass'/>
+                    <line x1='0.000'
+                          y1='17.000'
+                          x2='466.000'
+                          y2='17.000'
+                          class='separator'/>
+                    <text x='182.000'
+                          y='13.000'>TimeUpdateService</text>
+                    <line x1='0.000'
+                          y1='56.000'
+                          x2='466.000'
+                          y2='56.000'
+                          class='separator'/>
+                    <text y='30.000'
+                          class='final'>- m_EndTime:long</text>
+                    <text y='41.000'>- m_Stop:boolean</text>
+                    <text y='52.000'
+                          class='final'>- m_TimeDisplay:javafx.scene.control.TextField</text>
+                    <text x='5.000'
+                          y='69.000'>+ TimeUpdateService(endTime:long,timeDisplay:javafx.scene.control.TextField)</text>
+                    <text x='5.000'
+                          y='80.000'>+ stop():void</text>
+                    <text x='5.000'
+                          y='91.000'># createTask():javafx.concurrent.Task&lt;java.lang.Void&gt;</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000002'>
+            <rect class='externalClass'
+                  height='403.000'
+                  width='886.000'
+                  x='0.000'
+                  y='8.000'/>
+        </clipPath>
+        <symbol id='javafx.concurrent.ScheduledService'>
+            <g>
+                <g clip-path='url(#ID000002)'>
+                    <rect x='0.000'
+                          y='8.000'
+                          width='886.000'
+                          height='403.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='36.000'
+                          x2='886.000'
+                          y2='36.000'
+                          class='separator'/>
+                    <text x='428.600'
+                          y='21.000'
+                          class='stereotype'>&#xAB;Type&#xBB;</text>
+                    <text x='395.000'
+                          y='32.000'
+                          class='abstract'>ScheduledService</text>
+                    <line x1='0.000'
+                          y1='75.000'
+                          x2='886.000'
+                          y2='75.000'
+                          class='separator'/>
+                    <text y='49.000'
+                          class='static final'>+ EXPONENTIAL_BACKOFF_STRATEGY:javafx.util.Callback&lt;javafx.concurrent.ScheduledService&lt;?&gt;,javafx.util.Duration&gt;</text>
+                    <text y='60.000'
+                          class='static final'>+ LOGARITHMIC_BACKOFF_STRATEGY:javafx.util.Callback&lt;javafx.concurrent.ScheduledService&lt;?&gt;,javafx.util.Duration&gt;</text>
+                    <text y='71.000'
+                          class='static final'>+ LINEAR_BACKOFF_STRATEGY:javafx.util.Callback&lt;javafx.concurrent.ScheduledService&lt;?&gt;,javafx.util.Duration&gt;</text>
+                    <text x='5.000'
+                          y='88.000'>+ ScheduledService()</text>
+                    <text x='5.000'
+                          y='99.000'>+ getDelay():javafx.util.Duration</text>
+                    <text x='5.000'
+                          y='110.000'>+ setDelay(arg0:javafx.util.Duration):void</text>
+                    <text x='5.000'
+                          y='121.000'>+ delayProperty():javafx.beans.property.ObjectProperty&lt;javafx.util.Duration&gt;</text>
+                    <text x='5.000'
+                          y='132.000'>+ getPeriod():javafx.util.Duration</text>
+                    <text x='5.000'
+                          y='143.000'>+ setPeriod(arg0:javafx.util.Duration):void</text>
+                    <text x='5.000'
+                          y='154.000'>+ periodProperty():javafx.beans.property.ObjectProperty&lt;javafx.util.Duration&gt;</text>
+                    <text x='5.000'
+                          y='165.000'>+ getBackoffStrategy():javafx.util.Callback&lt;javafx.concurrent.ScheduledService&lt;?&gt;,javafx.util.Duration&gt;</text>
+                    <text x='5.000'
+                          y='176.000'>+ setBackoffStrategy(arg0:javafx.util.Callback&lt;javafx.concurrent.ScheduledService&lt;?&gt;,javafx.util.Duration&gt;):void</text>
+                    <text x='5.000'
+                          y='187.000'>+ backoffStrategyProperty():javafx.beans.property.ObjectProperty&lt;javafx.util.Callback&lt;javafx.concurrent.ScheduledService&lt;?&gt;,javafx.util.Duration&gt;&gt;</text>
+                    <text x='5.000'
+                          y='198.000'>+ getRestartOnFailure():boolean</text>
+                    <text x='5.000'
+                          y='209.000'>+ setRestartOnFailure(arg0:boolean):void</text>
+                    <text x='5.000'
+                          y='220.000'>+ restartOnFailureProperty():javafx.beans.property.BooleanProperty</text>
+                    <text x='5.000'
+                          y='231.000'>+ getMaximumFailureCount():int</text>
+                    <text x='5.000'
+                          y='242.000'>+ setMaximumFailureCount(arg0:int):void</text>
+                    <text x='5.000'
+                          y='253.000'>+ maximumFailureCountProperty():javafx.beans.property.IntegerProperty</text>
+                    <text x='5.000'
+                          y='264.000'>+ getCurrentFailureCount():int</text>
+                    <text x='5.000'
+                          y='275.000'>+ currentFailureCountProperty():javafx.beans.property.ReadOnlyIntegerProperty</text>
+                    <text x='5.000'
+                          y='286.000'>+ getCumulativePeriod():javafx.util.Duration</text>
+                    <text x='5.000'
+                          y='297.000'>+ cumulativePeriodProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;javafx.util.Duration&gt;</text>
+                    <text x='5.000'
+                          y='308.000'>+ getMaximumCumulativePeriod():javafx.util.Duration</text>
+                    <text x='5.000'
+                          y='319.000'>+ setMaximumCumulativePeriod(arg0:javafx.util.Duration):void</text>
+                    <text x='5.000'
+                          y='330.000'>+ maximumCumulativePeriodProperty():javafx.beans.property.ObjectProperty&lt;javafx.util.Duration&gt;</text>
+                    <text x='5.000'
+                          y='341.000'>+ getLastValue():V</text>
+                    <text x='5.000'
+                          y='352.000'>+ lastValueProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;V&gt;</text>
+                    <text x='5.000'
+                          y='363.000'># executeTask(arg0:javafx.concurrent.Task&lt;V&gt;):void</text>
+                    <text x='5.000'
+                          y='374.000'># succeeded():void</text>
+                    <text x='5.000'
+                          y='385.000'># failed():void</text>
+                    <text x='5.000'
+                          y='396.000'>+ reset():void</text>
+                    <text x='5.000'
+                          y='407.000'>+ cancel():boolean</text>
+                </g>
+                <g transform='translate(861.000 0.000)'>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='template'/>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='externalClass'
+                          stroke='none'
+                          stroke-opacity='0.0'/>
+                    <text x='5.000'
+                          y='14.000'>V</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000003'>
+            <rect class='externalClass'
+                  height='700.000'
+                  width='748.000'
+                  x='0.000'
+                  y='8.000'/>
+        </clipPath>
+        <symbol id='javafx.concurrent.Service'>
+            <g>
+                <g clip-path='url(#ID000003)'>
+                    <rect x='0.000'
+                          y='8.000'
+                          width='748.000'
+                          height='700.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='36.000'
+                          x2='748.000'
+                          y2='36.000'
+                          class='separator'/>
+                    <text x='359.600'
+                          y='21.000'
+                          class='stereotype'>&#xAB;Type&#xBB;</text>
+                    <text x='353.000'
+                          y='32.000'
+                          class='abstract'>Service</text>
+                    <line x1='0.000'
+                          y1='53.000'
+                          x2='748.000'
+                          y2='53.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='49.000'>&#x2026;</text>
+                    <text x='5.000'
+                          y='66.000'># Service()</text>
+                    <text x='5.000'
+                          y='77.000'>+ getState():javafx.concurrent.Worker.State</text>
+                    <text x='5.000'
+                          y='88.000'>+ stateProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;javafx.concurrent.Worker.State&gt;</text>
+                    <text x='5.000'
+                          y='99.000'>+ getValue():V</text>
+                    <text x='5.000'
+                          y='110.000'>+ valueProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;V&gt;</text>
+                    <text x='5.000'
+                          y='121.000'>+ getException():java.lang.Throwable</text>
+                    <text x='5.000'
+                          y='132.000'>+ exceptionProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;java.lang.Throwable&gt;</text>
+                    <text x='5.000'
+                          y='143.000'>+ getWorkDone():double</text>
+                    <text x='5.000'
+                          y='154.000'>+ workDoneProperty():javafx.beans.property.ReadOnlyDoubleProperty</text>
+                    <text x='5.000'
+                          y='165.000'>+ getTotalWork():double</text>
+                    <text x='5.000'
+                          y='176.000'>+ totalWorkProperty():javafx.beans.property.ReadOnlyDoubleProperty</text>
+                    <text x='5.000'
+                          y='187.000'>+ getProgress():double</text>
+                    <text x='5.000'
+                          y='198.000'>+ progressProperty():javafx.beans.property.ReadOnlyDoubleProperty</text>
+                    <text x='5.000'
+                          y='209.000'>+ isRunning():boolean</text>
+                    <text x='5.000'
+                          y='220.000'>+ runningProperty():javafx.beans.property.ReadOnlyBooleanProperty</text>
+                    <text x='5.000'
+                          y='231.000'>+ getMessage():java.lang.String</text>
+                    <text x='5.000'
+                          y='242.000'>+ messageProperty():javafx.beans.property.ReadOnlyStringProperty</text>
+                    <text x='5.000'
+                          y='253.000'>+ getTitle():java.lang.String</text>
+                    <text x='5.000'
+                          y='264.000'>+ titleProperty():javafx.beans.property.ReadOnlyStringProperty</text>
+                    <text x='5.000'
+                          y='275.000'>+ setExecutor(arg0:java.util.concurrent.Executor):void</text>
+                    <text x='5.000'
+                          y='286.000'>+ getExecutor():java.util.concurrent.Executor</text>
+                    <text x='5.000'
+                          y='297.000'>+ executorProperty():javafx.beans.property.ObjectProperty&lt;java.util.concurrent.Executor&gt;</text>
+                    <text x='5.000'
+                          y='308.000'>+ onReadyProperty():javafx.beans.property.ObjectProperty&lt;javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;&gt;</text>
+                    <text x='5.000'
+                          y='319.000'>+ getOnReady():javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;</text>
+                    <text x='5.000'
+                          y='330.000'>+ setOnReady(arg0:javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;):void</text>
+                    <text x='5.000'
+                          y='341.000'># ready():void</text>
+                    <text x='5.000'
+                          y='352.000'>+ onScheduledProperty():javafx.beans.property.ObjectProperty&lt;javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;&gt;</text>
+                    <text x='5.000'
+                          y='363.000'>+ getOnScheduled():javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;</text>
+                    <text x='5.000'
+                          y='374.000'>+ setOnScheduled(arg0:javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;):void</text>
+                    <text x='5.000'
+                          y='385.000'># scheduled():void</text>
+                    <text x='5.000'
+                          y='396.000'>+ onRunningProperty():javafx.beans.property.ObjectProperty&lt;javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;&gt;</text>
+                    <text x='5.000'
+                          y='407.000'>+ getOnRunning():javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;</text>
+                    <text x='5.000'
+                          y='418.000'>+ setOnRunning(arg0:javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;):void</text>
+                    <text x='5.000'
+                          y='429.000'># running():void</text>
+                    <text x='5.000'
+                          y='440.000'>+ onSucceededProperty():javafx.beans.property.ObjectProperty&lt;javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;&gt;</text>
+                    <text x='5.000'
+                          y='451.000'>+ getOnSucceeded():javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;</text>
+                    <text x='5.000'
+                          y='462.000'>+ setOnSucceeded(arg0:javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;):void</text>
+                    <text x='5.000'
+                          y='473.000'># succeeded():void</text>
+                    <text x='5.000'
+                          y='484.000'>+ onCancelledProperty():javafx.beans.property.ObjectProperty&lt;javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;&gt;</text>
+                    <text x='5.000'
+                          y='495.000'>+ getOnCancelled():javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;</text>
+                    <text x='5.000'
+                          y='506.000'>+ setOnCancelled(arg0:javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;):void</text>
+                    <text x='5.000'
+                          y='517.000'># cancelled():void</text>
+                    <text x='5.000'
+                          y='528.000'>+ onFailedProperty():javafx.beans.property.ObjectProperty&lt;javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;&gt;</text>
+                    <text x='5.000'
+                          y='539.000'>+ getOnFailed():javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;</text>
+                    <text x='5.000'
+                          y='550.000'>+ setOnFailed(arg0:javafx.event.EventHandler&lt;javafx.concurrent.WorkerStateEvent&gt;):void</text>
+                    <text x='5.000'
+                          y='561.000'># failed():void</text>
+                    <text x='5.000'
+                          y='572.000'>+ cancel():boolean</text>
+                    <text x='5.000'
+                          y='583.000'>+ restart():void</text>
+                    <text x='5.000'
+                          y='594.000'>+ reset():void</text>
+                    <text x='5.000'
+                          y='605.000'>+ start():void</text>
+                    <text x='5.000'
+                          y='616.000'># executeTask(arg0:javafx.concurrent.Task&lt;V&gt;):void</text>
+                    <text x='5.000'
+                          y='627.000'>+ addEventHandler(arg0:javafx.event.EventType&lt;T&gt;,arg1:javafx.event.EventHandler&lt;? super T&gt;):void</text>
+                    <text x='5.000'
+                          y='638.000'>+ removeEventHandler(arg0:javafx.event.EventType&lt;T&gt;,arg1:javafx.event.EventHandler&lt;? super T&gt;):void</text>
+                    <text x='5.000'
+                          y='649.000'>+ addEventFilter(arg0:javafx.event.EventType&lt;T&gt;,arg1:javafx.event.EventHandler&lt;? super T&gt;):void</text>
+                    <text x='5.000'
+                          y='660.000'>+ removeEventFilter(arg0:javafx.event.EventType&lt;T&gt;,arg1:javafx.event.EventHandler&lt;? super T&gt;):void</text>
+                    <text x='5.000'
+                          y='671.000'># setEventHandler(arg0:javafx.event.EventType&lt;T&gt;,arg1:javafx.event.EventHandler&lt;? super T&gt;):void</text>
+                    <text x='5.000'
+                          y='682.000'># fireEvent(arg0:javafx.event.Event):void</text>
+                    <text x='5.000'
+                          y='693.000'>+ buildEventDispatchChain(arg0:javafx.event.EventDispatchChain):javafx.event.EventDispatchChain</text>
+                    <text x='5.000'
+                          y='704.000'
+                          class='abstract'># createTask():javafx.concurrent.Task&lt;V&gt;</text>
+                </g>
+                <g transform='translate(723.000 0.000)'>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='template'/>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='externalClass'
+                          stroke='none'
+                          stroke-opacity='0.0'/>
+                    <text x='5.000'
+                          y='14.000'>V</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000004'>
+            <rect class='externalClass'
+                  height='172.000'
+                  width='244.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='java.lang.Object'>
+            <g>
+                <g clip-path='url(#ID000004)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='244.000'
+                          height='172.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='17.000'
+                          x2='244.000'
+                          y2='17.000'
+                          class='separator'/>
+                    <text x='104.000'
+                          y='13.000'>Object</text>
+                    <line x1='0.000'
+                          y1='34.000'
+                          x2='244.000'
+                          y2='34.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='30.000'/>
+                    <text x='5.000'
+                          y='47.000'>+ Object()</text>
+                    <text x='5.000'
+                          y='58.000'>+ getClass():java.lang.Class&lt;?&gt;</text>
+                    <text x='5.000'
+                          y='69.000'>+ hashCode():int</text>
+                    <text x='5.000'
+                          y='80.000'>+ equals(arg0:java.lang.Object):boolean</text>
+                    <text x='5.000'
+                          y='91.000'># clone():java.lang.Object</text>
+                    <text x='5.000'
+                          y='102.000'>+ toString():java.lang.String</text>
+                    <text x='5.000'
+                          y='113.000'>+ notify():void</text>
+                    <text x='5.000'
+                          y='124.000'>+ notifyAll():void</text>
+                    <text x='5.000'
+                          y='135.000'>+ wait():void</text>
+                    <text x='5.000'
+                          y='146.000'>+ wait(arg0:long):void</text>
+                    <text x='5.000'
+                          y='157.000'>+ wait(arg0:long,arg1:int):void</text>
+                    <text x='5.000'
+                          y='168.000'># finalize():void</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000005'>
+            <rect class='externalClass'
+                  height='260.000'
+                  width='574.000'
+                  x='0.000'
+                  y='8.000'/>
+        </clipPath>
+        <symbol id='javafx.concurrent.Worker'>
+            <g>
+                <g clip-path='url(#ID000005)'>
+                    <rect x='0.000'
+                          y='8.000'
+                          width='574.000'
+                          height='260.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='36.000'
+                          x2='574.000'
+                          y2='36.000'
+                          class='separator'/>
+                    <text x='260.600'
+                          y='21.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='269.000'
+                          y='32.000'
+                          class='abstract'>Worker</text>
+                    <line x1='0.000'
+                          y1='53.000'
+                          x2='574.000'
+                          y2='53.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='49.000'/>
+                    <text x='5.000'
+                          y='66.000'
+                          class='abstract'>+ getState():javafx.concurrent.Worker.State</text>
+                    <text x='5.000'
+                          y='77.000'
+                          class='abstract'>+ stateProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;javafx.concurrent.Worker.State&gt;</text>
+                    <text x='5.000'
+                          y='88.000'
+                          class='abstract'>+ getValue():V</text>
+                    <text x='5.000'
+                          y='99.000'
+                          class='abstract'>+ valueProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;V&gt;</text>
+                    <text x='5.000'
+                          y='110.000'
+                          class='abstract'>+ getException():java.lang.Throwable</text>
+                    <text x='5.000'
+                          y='121.000'
+                          class='abstract'>+ exceptionProperty():javafx.beans.property.ReadOnlyObjectProperty&lt;java.lang.Throwable&gt;</text>
+                    <text x='5.000'
+                          y='132.000'
+                          class='abstract'>+ getWorkDone():double</text>
+                    <text x='5.000'
+                          y='143.000'
+                          class='abstract'>+ workDoneProperty():javafx.beans.property.ReadOnlyDoubleProperty</text>
+                    <text x='5.000'
+                          y='154.000'
+                          class='abstract'>+ getTotalWork():double</text>
+                    <text x='5.000'
+                          y='165.000'
+                          class='abstract'>+ totalWorkProperty():javafx.beans.property.ReadOnlyDoubleProperty</text>
+                    <text x='5.000'
+                          y='176.000'
+                          class='abstract'>+ getProgress():double</text>
+                    <text x='5.000'
+                          y='187.000'
+                          class='abstract'>+ progressProperty():javafx.beans.property.ReadOnlyDoubleProperty</text>
+                    <text x='5.000'
+                          y='198.000'
+                          class='abstract'>+ isRunning():boolean</text>
+                    <text x='5.000'
+                          y='209.000'
+                          class='abstract'>+ runningProperty():javafx.beans.property.ReadOnlyBooleanProperty</text>
+                    <text x='5.000'
+                          y='220.000'
+                          class='abstract'>+ getMessage():java.lang.String</text>
+                    <text x='5.000'
+                          y='231.000'
+                          class='abstract'>+ messageProperty():javafx.beans.property.ReadOnlyStringProperty</text>
+                    <text x='5.000'
+                          y='242.000'
+                          class='abstract'>+ getTitle():java.lang.String</text>
+                    <text x='5.000'
+                          y='253.000'
+                          class='abstract'>+ titleProperty():javafx.beans.property.ReadOnlyStringProperty</text>
+                    <text x='5.000'
+                          y='264.000'
+                          class='abstract'>+ cancel():boolean</text>
+                </g>
+                <g transform='translate(549.000 0.000)'>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='template'/>
+                    <rect x='0.000'
+                          y='1.000'
+                          width='50.000'
+                          height='17.000'
+                          class='externalClass'
+                          stroke='none'
+                          stroke-opacity='0.0'/>
+                    <text x='5.000'
+                          y='14.000'>V</text>
+                </g>
+            </g>
+        </symbol>
+        <clipPath id='ID000006'>
+            <rect class='externalClass'
+                  height='62.000'
+                  width='580.000'
+                  x='0.000'
+                  y='0.000'/>
+        </clipPath>
+        <symbol id='javafx.event.EventTarget'>
+            <g>
+                <g clip-path='url(#ID000006)'>
+                    <rect x='0.000'
+                          y='0.000'
+                          width='580.000'
+                          height='62.000'
+                          class='externalClass'/>
+                    <line x1='0.000'
+                          y1='28.000'
+                          x2='580.000'
+                          y2='28.000'
+                          class='separator'/>
+                    <text x='263.600'
+                          y='13.000'
+                          class='stereotype'>&#xAB;Interface&#xBB;</text>
+                    <text x='257.000'
+                          y='24.000'
+                          class='abstract'>EventTarget</text>
+                    <line x1='0.000'
+                          y1='45.000'
+                          x2='580.000'
+                          y2='45.000'
+                          class='separator'/>
+                    <text x='5.000'
+                          y='41.000'/>
+                    <text x='5.000'
+                          y='58.000'
+                          class='abstract'>+ buildEventDispatchChain(arg0:javafx.event.EventDispatchChain):javafx.event.EventDispatchChain</text>
+                </g>
+            </g>
+        </symbol>
+    </defs>
+    <path class='inheritance'
+          d='M786.500,1712.000 c0.000,-85.000,-12.500,0.000,-12.500,-85.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M774.000,1209.000 L774.000,1101.000'
+          marker-end='url(#inheritance)'/>
+    <path class='inheritance'
+          d='M724.000,401.000 c0.000,-189.000,-577.000,0.000,-577.000,-189.000 v-15'
+          marker-end='url(#inheritance)'/>
+    <path class='implementation'
+          d='M774.000,401.000 c0.000,-93.000,-168.000,0.000,-168.000,-93.000 v-15'
+          marker-end='url(#implementation)'/>
+    <path class='implementation'
+          d='M824.000,401.000 c0.000,-299.000,434.000,0.000,434.000,-299.000 v-15'
+          marker-end='url(#implementation)'/>
+    <use x='25.000'
+         y='25.000'
+         xlink:href='#java.lang.Object'/>
+    <use x='319.000'
+         y='25.000'
+         xlink:href='#javafx.concurrent.Worker'/>
+    <use x='968.000'
+         y='25.000'
+         xlink:href='#javafx.event.EventTarget'/>
+    <use x='400.000'
+         y='393.000'
+         xlink:href='#javafx.concurrent.Service'/>
+    <use x='331.000'
+         y='1201.000'
+         xlink:href='#javafx.concurrent.ScheduledService'/>
+    <use x='553.500'
+         y='1712.000'
+         xlink:href='#org.tquadrat.shootingtimer.TimeUpdateService'/>
+</svg>

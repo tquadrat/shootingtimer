@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--suppress JavaFxRedundantPropertyValue, JavaFxDefaultTag -->
+
+<?import java.lang.Double?>
+<?import org.tquadrat.shootingtimer.Discipline?>
+<?import org.tquadrat.shootingtimer.MainController?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.CustomMenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.tquadrat.shootingtimer.MainController"
+            id="MAIN_PANE">
+    <fx:define>
+        <ToggleGroup fx:id="m_DisciplinesToggleGroup"/>
+    </fx:define>
+
+    <top>
+        <MenuBar id="MENU"
+                 scaleShape="true"
+                 useSystemMenuBar="true">
+            <prefHeight>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </prefHeight>
+            <minHeight>
+                <Region fx:constant="USE_PREF_SIZE" />
+            </minHeight>
+            <maxHeight>
+                <Region fx:constant="USE_PREF_SIZE" />
+            </maxHeight>
+            <prefWidth>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </prefWidth>
+            <minWidth>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </minWidth>
+            <maxWidth>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </maxWidth>
+            <menus>
+                <Menu id="MENU_FILE"
+                      mnemonicParsing="true"
+                      text="%MENU_FILE">
+                    <items>
+                        <MenuItem id="MENU_FILE_EXIT"
+                                  text="%MENU_FILE_EXIT"
+                                  accelerator="ALT+F4"
+                                  mnemonicParsing="true"
+                                  onAction="#onExit"/>
+                    </items>
+                </Menu>
+                <Menu id="MENU_SETTINGS"
+                      text="%MENU_SETTINGS"
+                      mnemonicParsing="true">
+                    <items>
+                        <CheckMenuItem fx:id="m_CheckMenuItem_Sound"
+                                       id="MENU_SETTING_SOUND"
+                                       text="%MENU_SETTING_SOUND"
+                                       mnemonicParsing="true"/>
+                        <CheckMenuItem fx:id="m_CheckMenuItem_ShowTime"
+                                       id="MENU_SETTING_SHOWTIME"
+                                       text="%MENU_SETTING_SHOWTIME"
+                                       mnemonicParsing="true"/>
+                        <CheckMenuItem fx:id="m_CheckMenuItem_ShowHeatCount"
+                                       id="MENU_SETTING_HEATCOUNT"
+                                       text="%MENU_SETTING_HEATCOUNT"
+                                       mnemonicParsing="true"/>
+                        <CheckMenuItem fx:id="m_CheckMenuItem_ShowStatus"
+                                       id="MENU_SETTING_SHOWSTATUS"
+                                       text="%MENU_SETTING_SHOWSTATUS"
+                                       mnemonicParsing="true"/>
+                        <Menu id="MENU_SETTING_BEFORETIME"
+                              text="%MENU_SETTING_BEFORETIME"
+                              mnemonicParsing="true">
+                            <items>
+                                <CustomMenuItem hideOnClick="false">
+                                    <content>
+                                        <Slider fx:id="m_Slider_BeforeTime"
+                                                id="SLIDER_BEFORETIME"
+                                                max="10.0"
+                                                min="0.0"
+                                                blockIncrement="0.5"
+                                                showTickLabels="true"/>
+                                    </content>
+                                </CustomMenuItem>
+                            </items>
+                        </Menu>
+                        <Menu id="MENU_SETTING_AFTERTIME"
+                              text="%MENU_SETTING_AFTERTIME"
+                              mnemonicParsing="true">
+                            <items>
+                                <CustomMenuItem hideOnClick="false">
+                                    <content>
+                                        <Slider fx:id="m_Slider_AfterTime"
+                                                id="SLIDER_AFTERTIME"
+                                                max="15.0"
+                                                min="0.0"
+                                                blockIncrement="0.5"
+                                                showTickLabels="true"/>
+                                    </content>
+                                </CustomMenuItem>
+                            </items>
+                        </Menu>
+                    </items>
+                </Menu>
+                <Menu id="MENU_DISCIPLINES"
+                      text="%MENU_DISCIPLINES"
+                      mnemonicParsing="true">
+                    <items>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_40"
+                                       text="%MENU_DISCIPLINE_2_40"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_40" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_60"
+                                       text="%MENU_DISCIPLINE_2_60"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_60" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_17"
+                                       text="%MENU_DISCIPLINE_2_17"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_17" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_18"
+                                       text="%MENU_DISCIPLINE_2_18"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_18" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_45"
+                                       text="%MENU_DISCIPLINE_2_45"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_45" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_53"
+                                       text="%MENU_DISCIPLINE_2_53"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_53" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_55"
+                                       text="%MENU_DISCIPLINE_2_55"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_55" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_58"
+                                       text="%MENU_DISCIPLINE_2_58"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_58" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_59"
+                                       text="%MENU_DISCIPLINE_2_59"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_59" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_TIEBREAK"
+                                       text="%MENU_DISCIPLINE_TIEBREAK"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="TIEBREAK" />
+                            </userData>
+                        </RadioMenuItem>
+                    </items>
+                </Menu>
+                <Menu id="MENU_HELP"
+                      text="%MENU_HELP"
+                      mnemonicParsing="true">
+                    <items>
+                        <MenuItem id="MENU_HELP_ABOUT"
+                                  text="%MENU_HELP_ABOUT"
+                                  onAction="#onMenuAbout"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <GridPane fx:id="m_LightBox"
+                  id="LIGHTBOX"
+                  onTouchReleased="#onTouch">
+            <padding>
+                <Insets bottom="10.0"
+                        left="10.0"
+                        right="10.0"
+                        top="10.0"/>
+            </padding>
+            <prefHeight>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </prefHeight>
+            <minHeight>
+                <Region fx:constant="USE_PREF_SIZE" />
+            </minHeight>
+            <maxHeight>
+                <Double fx:constant="MAX_VALUE" />
+            </maxHeight>
+            <prefWidth>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </prefWidth>
+            <minWidth>
+                <Region fx:constant="USE_PREF_SIZE" />
+            </minWidth>
+            <maxWidth>
+                <Double fx:constant="MAX_VALUE" />
+            </maxWidth>
+            <columnConstraints>
+                <ColumnConstraints percentWidth="50.0"
+                                   hgrow="NEVER"/>
+                <ColumnConstraints percentWidth="50.0"
+                                   hgrow="NEVER"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints fillHeight="true"
+                                vgrow="ALWAYS"/>
+            </rowConstraints>
+            <children>
+                <Circle fx:id="m_Circle_Red"
+                        id="CIRCLE_RED"
+                        GridPane.columnIndex="0"
+                        GridPane.columnSpan="1"
+                        GridPane.fillWidth="true"
+                        GridPane.halignment="CENTER"
+                        GridPane.hgrow="NEVER"
+                        GridPane.rowIndex="0"
+                        GridPane.rowSpan="1"
+                        GridPane.fillHeight="true"
+                        GridPane.valignment="CENTER"
+                        GridPane.vgrow="NEVER">
+                    <fill>
+                        <Color fx:constant="GRAY" />
+                    </fill>
+                    <stroke>
+                        <Color fx:constant="LIGHTGRAY" />
+                    </stroke>
+                    <GridPane.margin>
+                        <Insets bottom="10.0"
+                                left="10.0"
+                                right="10.0"
+                                top="10.0"/>
+                    </GridPane.margin>
+                </Circle>
+                <Circle fx:id="m_Circle_Green"
+                        id="CIRCLE_GREEN"
+                        GridPane.columnIndex="1"
+                        GridPane.columnSpan="1"
+                        GridPane.fillWidth="true"
+                        GridPane.halignment="CENTER"
+                        GridPane.hgrow="NEVER"
+                        GridPane.rowIndex="0"
+                        GridPane.rowSpan="1"
+                        GridPane.fillHeight="true"
+                        GridPane.valignment="CENTER"
+                        GridPane.vgrow="NEVER">
+                    <fill>
+                        <Color fx:constant="GRAY" />
+                    </fill>
+                    <stroke>
+                        <Color fx:constant="LIGHTGRAY" />
+                    </stroke>
+                    <GridPane.margin>
+                        <Insets bottom="10.0"
+                                left="10.0"
+                                right="10.0"
+                                top="10.0"/>
+                    </GridPane.margin>
+                </Circle>
+            </children>
+        </GridPane>
+    </center>
+    <right>
+        <VBox id="TIMERBOX">
+            <padding>
+                <Insets bottom="10.0"
+                        left="10.0"
+                        right="10.0"
+                        top="10.0"/>
+            </padding>
+            <children>
+                <Label id="LABEL_TIME"
+                       labelFor="$m_TextField_Time"
+                       text="%LABEL_TIME"
+                       alignment="CENTER"
+                       visible="${m_TextField_Time.visible}">
+                    <prefWidth>
+                        <MainController fx:constant="TIMERBOX_WIDTH" />
+                    </prefWidth>
+                    <minWidth>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </minWidth>
+                    <maxWidth>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </maxWidth>
+                </Label>
+                <TextField fx:id="m_TextField_Time"
+                           id="TEXTFIELD_TIME"
+                           alignment="CENTER"
+                           editable="false">
+                    <padding>
+                        <Insets bottom="1.0"
+                                left="1.0"
+                                right="1.0"
+                                top="1.0"/>
+                    </padding>
+                    <prefHeight>
+                        <MainController fx:constant="TIMERBOX_TIME_HEIGHT" />
+                    </prefHeight>
+                    <minHeight>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </minHeight>
+                    <maxHeight>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </maxHeight>
+                    <prefWidth>
+                        <MainController fx:constant="TIMERBOX_WIDTH" />
+                    </prefWidth>
+                    <minWidth>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </minWidth>
+                    <maxWidth>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </maxWidth>
+                </TextField>
+                <StackPane fx:id="m_ButtonPane"
+                           visible="true">
+                    <children>
+                        <Button fx:id="m_Button_Start"
+                                id="BUTTON_START"
+                                text="%BUTTON_START"
+                                defaultButton="true"
+                                visible="${m_Button_Abort.disabled}"
+                                onAction="#onStart">
+                            <prefHeight>
+                                <MainController fx:constant="TIMERBOX_STARTBUTTON_HEIGHT" />
+                            </prefHeight>
+                            <minHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </minHeight>
+                            <maxHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </maxHeight>
+                            <prefWidth>
+                                <MainController fx:constant="TIMERBOX_WIDTH" />
+                            </prefWidth>
+                            <minWidth>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </minWidth>
+                            <maxWidth>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </maxWidth>
+                            <StackPane.margin>
+                                <Insets bottom="10.0"
+                                        left="0.0"
+                                        right="0.0"
+                                        top="75.0"/>
+                            </StackPane.margin>
+                        </Button>
+                        <Button fx:id="m_Button_Abort"
+                                id="BUTTON_ABORT"
+                                text="%BUTTON_ABORT"
+                                cancelButton="true"
+                                visible="${m_Button_Start.disabled}"
+                                onAction="#onAbort">
+                            <prefHeight>
+                                <MainController fx:constant="TIMERBOX_STARTBUTTON_HEIGHT" />
+                            </prefHeight>
+                            <minHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </minHeight>
+                            <maxHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </maxHeight>
+                            <prefWidth>
+                                <MainController fx:constant="TIMERBOX_WIDTH" />
+                            </prefWidth>
+                            <minWidth>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </minWidth>
+                            <maxWidth>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </maxWidth>
+                            <StackPane.margin>
+                                <Insets bottom="10.0"
+                                        left="0.0"
+                                        right="0.0"
+                                        top="75.0"/>
+                            </StackPane.margin>
+                        </Button>
+                    </children>
+                </StackPane>
+                <Label fx:id="m_Label_HeatCount"
+                       id="LABEL_HEATCOUNT"
+                       alignment="CENTER">
+                    <prefWidth>
+                        <MainController fx:constant="TIMERBOX_WIDTH" />
+                    </prefWidth>
+                    <minWidth>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </minWidth>
+                    <maxWidth>
+                        <Region fx:constant="USE_PREF_SIZE" />
+                    </maxWidth>
+                </Label>
+            </children>
+        </VBox>
+    </right>
+    <bottom>
+        <HBox id="STATUSBAR"
+              fillHeight="true">
+            <prefHeight>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </prefHeight>
+            <minHeight>
+                <Region fx:constant="USE_PREF_SIZE" />
+            </minHeight>
+            <maxHeight>
+                <Region fx:constant="USE_PREF_SIZE" />
+            </maxHeight>
+            <prefWidth>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </prefWidth>
+            <minWidth>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </minWidth>
+            <maxWidth>
+                <Region fx:constant="USE_COMPUTED_SIZE" />
+            </maxWidth>
+            <children>
+                <HBox alignment="CENTER_LEFT"
+                      spacing="10.0">
+                    <padding>
+                        <Insets bottom="10.0"
+                                left="10.0"
+                                right="10.0"
+                                top="5.0"/>
+                    </padding>
+                    <children>
+                        <Label fx:id="m_Label_SelectedDiscipline"
+                               id="LABEL_SELECTED_DISCIPLINE">
+                            <prefHeight>
+                                <MainController fx:constant="STATUSBAR_HEIGHT" />
+                            </prefHeight>
+                            <minHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </minHeight>
+                            <maxHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </maxHeight>
+                        </Label>
+                        <ChoiceBox fx:id="m_ChoiceBox_Program"
+                                   id="CHOICEBOX_PROGRAM">
+                            <prefHeight>
+                                <MainController fx:constant="STATUSBAR_HEIGHT" />
+                            </prefHeight>
+                            <minHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </minHeight>
+                            <maxHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </maxHeight>
+                        </ChoiceBox>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT"
+                      HBox.hgrow="ALWAYS">
+                    <padding>
+                        <Insets bottom="10.0"
+                                left="10.0"
+                                right="10.0"
+                                top="5.0"/>
+                    </padding>
+                    <children>
+                        <Label fx:id="m_Label_Status"
+                               id="LABEL_STATUS"
+                               alignment="CENTER_RIGHT">
+                            <prefHeight>
+                                <MainController fx:constant="STATUSBAR_HEIGHT" />
+                            </prefHeight>
+                            <minHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </minHeight>
+                            <maxHeight>
+                                <Region fx:constant="USE_PREF_SIZE" />
+                            </maxHeight>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>
