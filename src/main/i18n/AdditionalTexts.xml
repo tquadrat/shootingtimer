@@ -17,7 +17,7 @@
   ~  License for the specific language governing permissions and limitations
   ~  under the License.
   -->
-<!-- $Id: AdditionalTexts.xml 887 2021-03-28 19:25:19Z tquadrat $ -->
+<!-- $Id: AdditionalTexts.xml 106 2022-01-19 15:53:24Z tquadrat $ -->
 
 <!DOCTYPE texts SYSTEM "http://dtd.tquadrat.org/AdditionalText.dtd">
 <!--suppress GrazieInspection -->

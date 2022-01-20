@@ -85,12 +85,12 @@ import javafx.stage.Stage;
 /**
  *  The main controller for the Shooting Timer application.
  *
- *  @version $Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $
+ *  @version $Id: MainController.java 106 2022-01-19 15:53:24Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @UMLGraph.link
  *  @since 0.1.0
  */
-@ClassVersion( sourceVersion = "$Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: MainController.java 106 2022-01-19 15:53:24Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class MainController
 {
@@ -100,12 +100,12 @@ public class MainController
     /**
      *  This class will manage the status for the lights.
      *
-     *  @version $Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $
+     *  @version $Id: MainController.java 106 2022-01-19 15:53:24Z tquadrat $
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
      *  @UMLGraph.link
      *  @since 0.1.0
      */
-    @ClassVersion( sourceVersion = "$Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: MainController.java 106 2022-01-19 15:53:24Z tquadrat $" )
     @API( status = INTERNAL, since = "0.1.0" )
     private static class Light
     {

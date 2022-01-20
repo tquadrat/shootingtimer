@@ -37,12 +37,12 @@ import org.tquadrat.foundation.i18n.Translation;
  *  for.}</p>
  *  <p>The name is based on the discipline number as used by the DSB.</p>
  *
- *  @version $Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $
+ *  @version $Id: Discipline.java 106 2022-01-19 15:53:24Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @UMLGraph.link
  *  @since 0.1.0
  */
-@ClassVersion( sourceVersion = "$Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Discipline.java 106 2022-01-19 15:53:24Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public enum Discipline
 {

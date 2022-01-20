@@ -34,12 +34,12 @@ import javafx.util.Duration;
 /**
  *  The service that will update the time display.
  *
- *  @version $Id: Action.java 944 2021-12-21 21:56:24Z tquadrat $
+ *  @version $Id: TimeUpdateService.java 106 2022-01-19 15:53:24Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @UMLGraph.link
  *  @since 0.1.0
  */
-@ClassVersion( sourceVersion = "$Id: Action.java 944 2021-12-21 21:56:24Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: TimeUpdateService.java 106 2022-01-19 15:53:24Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class TimeUpdateService extends ScheduledService<Void>
 {
@@ -49,12 +49,12 @@ public class TimeUpdateService extends ScheduledService<Void>
     /**
      *  The task that will update the time display.
      *
-     *  @version $Id: Action.java 944 2021-12-21 21:56:24Z tquadrat $
+     *  @version $Id: TimeUpdateService.java 106 2022-01-19 15:53:24Z tquadrat $
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
      *  @UMLGraph.link
      *  @since 0.1.0
      */
-    @ClassVersion( sourceVersion = "$Id: Action.java 944 2021-12-21 21:56:24Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: TimeUpdateService.java 106 2022-01-19 15:53:24Z tquadrat $" )
     @API( status = INTERNAL, since = "0.1.0" )
     private class TimeUpdateTask extends Task<Void>
     {

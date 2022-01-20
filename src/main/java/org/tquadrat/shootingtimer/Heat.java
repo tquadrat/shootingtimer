@@ -36,12 +36,12 @@ import javafx.util.StringConverter;
  *  purpose of the Shooting Timer application, it defines the prolog time and
  *  the shooting time.
  *
- *  @version $Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $
+ *  @version $Id: Heat.java 106 2022-01-19 15:53:24Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @UMLGraph.link
  *  @since 0.1.0
  */
-@ClassVersion( sourceVersion = "$Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Heat.java 106 2022-01-19 15:53:24Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class Heat
 {
@@ -53,12 +53,12 @@ public class Heat
      *  {@link javafx.util.StringConverter javafx.util.StringConverter }
      *  for instances of this class.
      *
-     *  @version $Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $
+     *  @version $Id: Heat.java 106 2022-01-19 15:53:24Z tquadrat $
      *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
      *  @UMLGraph.link
      *  @since 0.1.0
      */
-    @ClassVersion( sourceVersion = "$Id: HexUtils.java 747 2020-12-01 12:40:38Z tquadrat $" )
+    @ClassVersion( sourceVersion = "$Id: Heat.java 106 2022-01-19 15:53:24Z tquadrat $" )
     @API( status = STABLE, since = "0.1.0" )
     private static class HeatConverter extends StringConverter<Heat>
     {

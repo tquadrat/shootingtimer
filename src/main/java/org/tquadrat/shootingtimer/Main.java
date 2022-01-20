@@ -50,13 +50,13 @@ import javafx.stage.Stage;
 /**
  *  The main class for the Shooting Timer application.
  *
- *  @version $Id: Action.java 944 2021-12-21 21:56:24Z tquadrat $
+ *  @version $Id: Main.java 106 2022-01-19 15:53:24Z tquadrat $
  *  @extauthor Thomas Thrien - thomas.thrien@tquadrat.org
  *  @UMLGraph.link
  *  @since 0.1.0
  */
 @ProgramClass
-@ClassVersion( sourceVersion = "$Id: Action.java 944 2021-12-21 21:56:24Z tquadrat $" )
+@ClassVersion( sourceVersion = "$Id: Main.java 106 2022-01-19 15:53:24Z tquadrat $" )
 @API( status = STABLE, since = "0.1.0" )
 public class Main extends Application
 {
