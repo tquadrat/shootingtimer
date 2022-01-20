@@ -23,7 +23,7 @@ import static javafx.scene.input.KeyCombination.NO_MATCH;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.i18n.I18nUtil.loadResourceBundle;
 import static org.tquadrat.foundation.lang.CommonConstants.EMPTY_STRING;
-import static org.tquadrat.foundation.lang.DebugOutput.debugOutput;
+import static org.tquadrat.foundation.lang.DebugOutput.ifDebug;
 import static org.tquadrat.foundation.lang.Objects.isNull;
 import static org.tquadrat.foundation.lang.Objects.nonNull;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
@@ -175,8 +175,8 @@ public class Main extends Application
             //---* Load the resource bundle with the texts *-------------------
             final var textURL = getClass().getResource( "/" + BASE_BUNDLE_NAME.replace( '.', '/' ) + ".properties" );
             //noinspection ConstantConditions
-            debugOutput( nonNull( textURL ), $ -> textURL.toExternalForm() );
-            debugOutput( isNull( textURL ), "Not found %s%n"::formatted, "/" + BASE_BUNDLE_NAME.replace( '.', '/' ) + ".properties" );
+            ifDebug( nonNull( textURL ), $ -> textURL.toExternalForm() );
+            ifDebug( isNull( textURL ), "Not found %s%n"::formatted, "/" + BASE_BUNDLE_NAME.replace( '.', '/' ) + ".properties" );
 
             ResourceBundle.getBundle( BASE_BUNDLE_NAME );
 
