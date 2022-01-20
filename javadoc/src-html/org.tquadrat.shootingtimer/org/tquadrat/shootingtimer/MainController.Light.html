@@ -284,948 +284,947 @@
 <span class="source-line-no">271</span><span id="line-271">     *  The width for the fields in the timer box: {@value}.</span>
 <span class="source-line-no">272</span><span id="line-272">     */</span>
 <span class="source-line-no">273</span><span id="line-273">    @SuppressWarnings( "unused" )</span>
-<span class="source-line-no">274</span><span id="line-274"></span>
-<span class="source-line-no">275</span><span id="line-275">    public final static double TIMERBOX_WIDTH = 200.0;</span>
-<span class="source-line-no">276</span><span id="line-276"></span>
-<span class="source-line-no">277</span><span id="line-277">        /*------------*\</span>
-<span class="source-line-no">278</span><span id="line-278">    ====** Attributes **=======================================================</span>
-<span class="source-line-no">279</span><span id="line-279">        \*------------*/</span>
-<span class="source-line-no">280</span><span id="line-280">    /**</span>
-<span class="source-line-no">281</span><span id="line-281">     *  The button that aborts a running heat.</span>
-<span class="source-line-no">282</span><span id="line-282">     */</span>
-<span class="source-line-no">283</span><span id="line-283">    @FXML</span>
-<span class="source-line-no">284</span><span id="line-284">    private Button m_Button_Abort;</span>
-<span class="source-line-no">285</span><span id="line-285"></span>
-<span class="source-line-no">286</span><span id="line-286">    /**</span>
-<span class="source-line-no">287</span><span id="line-287">     *  The button that starts a heat.</span>
-<span class="source-line-no">288</span><span id="line-288">     */</span>
-<span class="source-line-no">289</span><span id="line-289">    @FXML</span>
-<span class="source-line-no">290</span><span id="line-290">    private Button m_Button_Start;</span>
-<span class="source-line-no">291</span><span id="line-291"></span>
-<span class="source-line-no">292</span><span id="line-292">    /**</span>
-<span class="source-line-no">293</span><span id="line-293">     *  The pane that holds the buttons.</span>
-<span class="source-line-no">294</span><span id="line-294">     */</span>
-<span class="source-line-no">295</span><span id="line-295">    @FXML</span>
-<span class="source-line-no">296</span><span id="line-296">    private Pane m_ButtonPane;</span>
-<span class="source-line-no">297</span><span id="line-297"></span>
-<span class="source-line-no">298</span><span id="line-298">    /**</span>
-<span class="source-line-no">299</span><span id="line-299">     *  The menu item for the heat count display.</span>
-<span class="source-line-no">300</span><span id="line-300">     */</span>
-<span class="source-line-no">301</span><span id="line-301">    @FXML</span>
-<span class="source-line-no">302</span><span id="line-302">    private CheckMenuItem m_CheckMenuItem_ShowHeatCount;</span>
-<span class="source-line-no">303</span><span id="line-303"></span>
-<span class="source-line-no">304</span><span id="line-304">    /**</span>
-<span class="source-line-no">305</span><span id="line-305">     *  The menu item for the status display.</span>
-<span class="source-line-no">306</span><span id="line-306">     */</span>
-<span class="source-line-no">307</span><span id="line-307">    @FXML</span>
-<span class="source-line-no">308</span><span id="line-308">    private CheckMenuItem m_CheckMenuItem_ShowStatus;</span>
-<span class="source-line-no">309</span><span id="line-309"></span>
-<span class="source-line-no">310</span><span id="line-310">    /**</span>
-<span class="source-line-no">311</span><span id="line-311">     *  The menu item for the time display.</span>
-<span class="source-line-no">312</span><span id="line-312">     */</span>
-<span class="source-line-no">313</span><span id="line-313">    @FXML</span>
-<span class="source-line-no">314</span><span id="line-314">    private CheckMenuItem m_CheckMenuItem_ShowTime;</span>
-<span class="source-line-no">315</span><span id="line-315"></span>
-<span class="source-line-no">316</span><span id="line-316">    /**</span>
-<span class="source-line-no">317</span><span id="line-317">     *  The menu item for the sound control.</span>
-<span class="source-line-no">318</span><span id="line-318">     */</span>
-<span class="source-line-no">319</span><span id="line-319">    @FXML</span>
-<span class="source-line-no">320</span><span id="line-320">    private CheckMenuItem m_CheckMenuItem_Sound;</span>
-<span class="source-line-no">321</span><span id="line-321"></span>
-<span class="source-line-no">322</span><span id="line-322">    /**</span>
-<span class="source-line-no">323</span><span id="line-323">     *  The choice box for the program of the selected discipline.</span>
-<span class="source-line-no">324</span><span id="line-324">     */</span>
-<span class="source-line-no">325</span><span id="line-325">    @FXML</span>
-<span class="source-line-no">326</span><span id="line-326">    private ChoiceBox&lt;Heat&gt; m_ChoiceBox_Program;</span>
-<span class="source-line-no">327</span><span id="line-327"></span>
-<span class="source-line-no">328</span><span id="line-328">    /**</span>
-<span class="source-line-no">329</span><span id="line-329">     *  The circle for the green light.</span>
-<span class="source-line-no">330</span><span id="line-330">     */</span>
-<span class="source-line-no">331</span><span id="line-331">    @FXML</span>
-<span class="source-line-no">332</span><span id="line-332">    private Circle m_Circle_Green;</span>
-<span class="source-line-no">333</span><span id="line-333"></span>
-<span class="source-line-no">334</span><span id="line-334">    /**</span>
-<span class="source-line-no">335</span><span id="line-335">     *  The circle for the red light.</span>
-<span class="source-line-no">336</span><span id="line-336">     */</span>
-<span class="source-line-no">337</span><span id="line-337">    @FXML</span>
-<span class="source-line-no">338</span><span id="line-338">    private Circle m_Circle_Red;</span>
-<span class="source-line-no">339</span><span id="line-339"></span>
-<span class="source-line-no">340</span><span id="line-340">    /**</span>
-<span class="source-line-no">341</span><span id="line-341">     *  The toggle group for the selected discipline.</span>
-<span class="source-line-no">342</span><span id="line-342">     */</span>
-<span class="source-line-no">343</span><span id="line-343">    @FXML</span>
-<span class="source-line-no">344</span><span id="line-344">    private ToggleGroup m_DisciplinesToggleGroup;</span>
-<span class="source-line-no">345</span><span id="line-345"></span>
-<span class="source-line-no">346</span><span id="line-346">    /**</span>
-<span class="source-line-no">347</span><span id="line-347">     *  The end sound.</span>
-<span class="source-line-no">348</span><span id="line-348">     */</span>
-<span class="source-line-no">349</span><span id="line-349">    @SuppressWarnings( "OptionalUsedAsFieldOrParameterType" )</span>
-<span class="source-line-no">350</span><span id="line-350">    private Optional&lt;AudioClip&gt; m_EndSound;</span>
-<span class="source-line-no">351</span><span id="line-351"></span>
-<span class="source-line-no">352</span><span id="line-352">    /**</span>
-<span class="source-line-no">353</span><span id="line-353">     *  The green light.</span>
-<span class="source-line-no">354</span><span id="line-354">     */</span>
-<span class="source-line-no">355</span><span id="line-355">    private Light m_GreenLight;</span>
-<span class="source-line-no">356</span><span id="line-356"></span>
-<span class="source-line-no">357</span><span id="line-357">    /**</span>
-<span class="source-line-no">358</span><span id="line-358">     *  The thread that executes the current heat.</span>
-<span class="source-line-no">359</span><span id="line-359">     */</span>
-<span class="source-line-no">360</span><span id="line-360">    private Thread m_HeatThread;</span>
-<span class="source-line-no">361</span><span id="line-361"></span>
-<span class="source-line-no">362</span><span id="line-362">    /**</span>
-<span class="source-line-no">363</span><span id="line-363">     *  The guard for the heat thread.</span>
-<span class="source-line-no">364</span><span id="line-364">     */</span>
-<span class="source-line-no">365</span><span id="line-365">    private final AutoLock m_HeatThreadGuard;</span>
-<span class="source-line-no">366</span><span id="line-366"></span>
-<span class="source-line-no">367</span><span id="line-367">    /**</span>
-<span class="source-line-no">368</span><span id="line-368">     *  The label that displays the heat counter.</span>
-<span class="source-line-no">369</span><span id="line-369">     */</span>
-<span class="source-line-no">370</span><span id="line-370">    @FXML</span>
-<span class="source-line-no">371</span><span id="line-371">    private Label m_Label_HeatCount;</span>
-<span class="source-line-no">372</span><span id="line-372"></span>
-<span class="source-line-no">373</span><span id="line-373">    /**</span>
-<span class="source-line-no">374</span><span id="line-374">     *  The label that shows the current system status.</span>
-<span class="source-line-no">375</span><span id="line-375">     */</span>
-<span class="source-line-no">376</span><span id="line-376">    @FXML</span>
-<span class="source-line-no">377</span><span id="line-377">    private Label m_Label_Status;</span>
-<span class="source-line-no">378</span><span id="line-378"></span>
-<span class="source-line-no">379</span><span id="line-379">    /**</span>
-<span class="source-line-no">380</span><span id="line-380">     *  The label that shows the currently selected discipline.</span>
-<span class="source-line-no">381</span><span id="line-381">     */</span>
-<span class="source-line-no">382</span><span id="line-382">    @FXML</span>
-<span class="source-line-no">383</span><span id="line-383">    private Label m_Label_SelectedDiscipline;</span>
-<span class="source-line-no">384</span><span id="line-384"></span>
-<span class="source-line-no">385</span><span id="line-385">    /**</span>
-<span class="source-line-no">386</span><span id="line-386">     *  The pane that holds the lights.</span>
-<span class="source-line-no">387</span><span id="line-387">     */</span>
-<span class="source-line-no">388</span><span id="line-388">    @FXML</span>
-<span class="source-line-no">389</span><span id="line-389">    private GridPane m_LightBox;</span>
-<span class="source-line-no">390</span><span id="line-390"></span>
-<span class="source-line-no">391</span><span id="line-391">    /**</span>
-<span class="source-line-no">392</span><span id="line-392">     *  The preferences.</span>
-<span class="source-line-no">393</span><span id="line-393">     */</span>
-<span class="source-line-no">394</span><span id="line-394">    private final Preferences m_Preferences;</span>
-<span class="source-line-no">395</span><span id="line-395"></span>
-<span class="source-line-no">396</span><span id="line-396">    /**</span>
-<span class="source-line-no">397</span><span id="line-397">     *  The red light.</span>
-<span class="source-line-no">398</span><span id="line-398">     */</span>
-<span class="source-line-no">399</span><span id="line-399">    private Light m_RedLight;</span>
-<span class="source-line-no">400</span><span id="line-400"></span>
-<span class="source-line-no">401</span><span id="line-401">    /**</span>
-<span class="source-line-no">402</span><span id="line-402">     *  The currently selected discipline.</span>
-<span class="source-line-no">403</span><span id="line-403">     */</span>
-<span class="source-line-no">404</span><span id="line-404">    private final ObjectProperty&lt;Discipline&gt; m_SelectedDiscipline = new SimpleObjectProperty&lt;&gt;();</span>
-<span class="source-line-no">405</span><span id="line-405"></span>
-<span class="source-line-no">406</span><span id="line-406">    /**</span>
-<span class="source-line-no">407</span><span id="line-407">     *  The slider for the time after shooting and before the reset.</span>
-<span class="source-line-no">408</span><span id="line-408">     */</span>
-<span class="source-line-no">409</span><span id="line-409">    @FXML</span>
-<span class="source-line-no">410</span><span id="line-410">    private Slider m_Slider_AfterTime;</span>
-<span class="source-line-no">411</span><span id="line-411"></span>
-<span class="source-line-no">412</span><span id="line-412">    /**</span>
-<span class="source-line-no">413</span><span id="line-413">     *  The slider for the time before the prolog.</span>
-<span class="source-line-no">414</span><span id="line-414">     */</span>
-<span class="source-line-no">415</span><span id="line-415">    @FXML</span>
-<span class="source-line-no">416</span><span id="line-416">    private Slider m_Slider_BeforeTime;</span>
-<span class="source-line-no">417</span><span id="line-417"></span>
-<span class="source-line-no">418</span><span id="line-418">    /**</span>
-<span class="source-line-no">419</span><span id="line-419">     *  The start sound.</span>
-<span class="source-line-no">420</span><span id="line-420">     */</span>
-<span class="source-line-no">421</span><span id="line-421">    @SuppressWarnings( "OptionalUsedAsFieldOrParameterType" )</span>
-<span class="source-line-no">422</span><span id="line-422">    private Optional&lt;AudioClip&gt; m_StartSound;</span>
-<span class="source-line-no">423</span><span id="line-423"></span>
-<span class="source-line-no">424</span><span id="line-424">    /**</span>
-<span class="source-line-no">425</span><span id="line-425">     *  The status control property.</span>
-<span class="source-line-no">426</span><span id="line-426">     */</span>
-<span class="source-line-no">427</span><span id="line-427">    private final ObjectProperty&lt;Status&gt; m_StatusControl;</span>
-<span class="source-line-no">428</span><span id="line-428"></span>
-<span class="source-line-no">429</span><span id="line-429">    /**</span>
-<span class="source-line-no">430</span><span id="line-430">     *  The guard for the status control.</span>
-<span class="source-line-no">431</span><span id="line-431">     */</span>
-<span class="source-line-no">432</span><span id="line-432">    private final AutoLock m_StatusControlGuard;</span>
-<span class="source-line-no">433</span><span id="line-433"></span>
-<span class="source-line-no">434</span><span id="line-434">    /**</span>
-<span class="source-line-no">435</span><span id="line-435">     *  The text field that is used to display the remaining time.</span>
-<span class="source-line-no">436</span><span id="line-436">     */</span>
-<span class="source-line-no">437</span><span id="line-437">    @FXML</span>
-<span class="source-line-no">438</span><span id="line-438">    private TextField m_TextField_Time;</span>
-<span class="source-line-no">439</span><span id="line-439"></span>
-<span class="source-line-no">440</span><span id="line-440">    /**</span>
-<span class="source-line-no">441</span><span id="line-441">     *  The injected resource bundle.</span>
-<span class="source-line-no">442</span><span id="line-442">     *</span>
-<span class="source-line-no">443</span><span id="line-443">     *  @note   The name of the field is dictated by JavaFX.</span>
-<span class="source-line-no">444</span><span id="line-444">     */</span>
-<span class="source-line-no">445</span><span id="line-445">    @FXML</span>
-<span class="source-line-no">446</span><span id="line-446">    private ResourceBundle resources;</span>
-<span class="source-line-no">447</span><span id="line-447"></span>
-<span class="source-line-no">448</span><span id="line-448">        /*------------------------*\</span>
-<span class="source-line-no">449</span><span id="line-449">    ====** Static Initialisations **===========================================</span>
-<span class="source-line-no">450</span><span id="line-450">        \*------------------------*/</span>
-<span class="source-line-no">451</span><span id="line-451"></span>
-<span class="source-line-no">452</span><span id="line-452">        /*--------------*\</span>
-<span class="source-line-no">453</span><span id="line-453">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">454</span><span id="line-454">        \*--------------*/</span>
-<span class="source-line-no">455</span><span id="line-455">    /**</span>
-<span class="source-line-no">456</span><span id="line-456">     *  Creates a new {@code MainController} instance.</span>
-<span class="source-line-no">457</span><span id="line-457">     */</span>
-<span class="source-line-no">458</span><span id="line-458">    public MainController()</span>
-<span class="source-line-no">459</span><span id="line-459">    {</span>
-<span class="source-line-no">460</span><span id="line-460">        //---* Load the preferences *------------------------------------------</span>
-<span class="source-line-no">461</span><span id="line-461">        m_Preferences = Preferences.userNodeForPackage( getClass() );</span>
-<span class="source-line-no">462</span><span id="line-462">        m_Preferences.addPreferenceChangeListener( this::preferenceChanged );</span>
-<span class="source-line-no">463</span><span id="line-463"></span>
-<span class="source-line-no">464</span><span id="line-464">        //---* Create the lock *-----------------------------------------------</span>
-<span class="source-line-no">465</span><span id="line-465">        var lock = new ReentrantLock( false );</span>
-<span class="source-line-no">466</span><span id="line-466">        m_HeatThreadGuard = AutoLock.of( lock );</span>
-<span class="source-line-no">467</span><span id="line-467">        lock = new ReentrantLock( false );</span>
-<span class="source-line-no">468</span><span id="line-468">        m_StatusControlGuard = AutoLock.of( lock );</span>
-<span class="source-line-no">469</span><span id="line-469"></span>
-<span class="source-line-no">470</span><span id="line-470">        //---* Create the status control *-------------------------------------</span>
-<span class="source-line-no">471</span><span id="line-471">        m_StatusControl = new SimpleObjectProperty&lt;&gt;();</span>
-<span class="source-line-no">472</span><span id="line-472">        m_StatusControl.addListener( this::statusTransition );</span>
-<span class="source-line-no">473</span><span id="line-473">    }   //  MainController()</span>
+<span class="source-line-no">274</span><span id="line-274">    public final static double TIMERBOX_WIDTH = 200.0;</span>
+<span class="source-line-no">275</span><span id="line-275"></span>
+<span class="source-line-no">276</span><span id="line-276">        /*------------*\</span>
+<span class="source-line-no">277</span><span id="line-277">    ====** Attributes **=======================================================</span>
+<span class="source-line-no">278</span><span id="line-278">        \*------------*/</span>
+<span class="source-line-no">279</span><span id="line-279">    /**</span>
+<span class="source-line-no">280</span><span id="line-280">     *  The button that aborts a running heat.</span>
+<span class="source-line-no">281</span><span id="line-281">     */</span>
+<span class="source-line-no">282</span><span id="line-282">    @FXML</span>
+<span class="source-line-no">283</span><span id="line-283">    private Button m_Button_Abort;</span>
+<span class="source-line-no">284</span><span id="line-284"></span>
+<span class="source-line-no">285</span><span id="line-285">    /**</span>
+<span class="source-line-no">286</span><span id="line-286">     *  The button that starts a heat.</span>
+<span class="source-line-no">287</span><span id="line-287">     */</span>
+<span class="source-line-no">288</span><span id="line-288">    @FXML</span>
+<span class="source-line-no">289</span><span id="line-289">    private Button m_Button_Start;</span>
+<span class="source-line-no">290</span><span id="line-290"></span>
+<span class="source-line-no">291</span><span id="line-291">    /**</span>
+<span class="source-line-no">292</span><span id="line-292">     *  The pane that holds the buttons.</span>
+<span class="source-line-no">293</span><span id="line-293">     */</span>
+<span class="source-line-no">294</span><span id="line-294">    @FXML</span>
+<span class="source-line-no">295</span><span id="line-295">    private Pane m_ButtonPane;</span>
+<span class="source-line-no">296</span><span id="line-296"></span>
+<span class="source-line-no">297</span><span id="line-297">    /**</span>
+<span class="source-line-no">298</span><span id="line-298">     *  The menu item for the heat count display.</span>
+<span class="source-line-no">299</span><span id="line-299">     */</span>
+<span class="source-line-no">300</span><span id="line-300">    @FXML</span>
+<span class="source-line-no">301</span><span id="line-301">    private CheckMenuItem m_CheckMenuItem_ShowHeatCount;</span>
+<span class="source-line-no">302</span><span id="line-302"></span>
+<span class="source-line-no">303</span><span id="line-303">    /**</span>
+<span class="source-line-no">304</span><span id="line-304">     *  The menu item for the status display.</span>
+<span class="source-line-no">305</span><span id="line-305">     */</span>
+<span class="source-line-no">306</span><span id="line-306">    @FXML</span>
+<span class="source-line-no">307</span><span id="line-307">    private CheckMenuItem m_CheckMenuItem_ShowStatus;</span>
+<span class="source-line-no">308</span><span id="line-308"></span>
+<span class="source-line-no">309</span><span id="line-309">    /**</span>
+<span class="source-line-no">310</span><span id="line-310">     *  The menu item for the time display.</span>
+<span class="source-line-no">311</span><span id="line-311">     */</span>
+<span class="source-line-no">312</span><span id="line-312">    @FXML</span>
+<span class="source-line-no">313</span><span id="line-313">    private CheckMenuItem m_CheckMenuItem_ShowTime;</span>
+<span class="source-line-no">314</span><span id="line-314"></span>
+<span class="source-line-no">315</span><span id="line-315">    /**</span>
+<span class="source-line-no">316</span><span id="line-316">     *  The menu item for the sound control.</span>
+<span class="source-line-no">317</span><span id="line-317">     */</span>
+<span class="source-line-no">318</span><span id="line-318">    @FXML</span>
+<span class="source-line-no">319</span><span id="line-319">    private CheckMenuItem m_CheckMenuItem_Sound;</span>
+<span class="source-line-no">320</span><span id="line-320"></span>
+<span class="source-line-no">321</span><span id="line-321">    /**</span>
+<span class="source-line-no">322</span><span id="line-322">     *  The choice box for the program of the selected discipline.</span>
+<span class="source-line-no">323</span><span id="line-323">     */</span>
+<span class="source-line-no">324</span><span id="line-324">    @FXML</span>
+<span class="source-line-no">325</span><span id="line-325">    private ChoiceBox&lt;Heat&gt; m_ChoiceBox_Program;</span>
+<span class="source-line-no">326</span><span id="line-326"></span>
+<span class="source-line-no">327</span><span id="line-327">    /**</span>
+<span class="source-line-no">328</span><span id="line-328">     *  The circle for the green light.</span>
+<span class="source-line-no">329</span><span id="line-329">     */</span>
+<span class="source-line-no">330</span><span id="line-330">    @FXML</span>
+<span class="source-line-no">331</span><span id="line-331">    private Circle m_Circle_Green;</span>
+<span class="source-line-no">332</span><span id="line-332"></span>
+<span class="source-line-no">333</span><span id="line-333">    /**</span>
+<span class="source-line-no">334</span><span id="line-334">     *  The circle for the red light.</span>
+<span class="source-line-no">335</span><span id="line-335">     */</span>
+<span class="source-line-no">336</span><span id="line-336">    @FXML</span>
+<span class="source-line-no">337</span><span id="line-337">    private Circle m_Circle_Red;</span>
+<span class="source-line-no">338</span><span id="line-338"></span>
+<span class="source-line-no">339</span><span id="line-339">    /**</span>
+<span class="source-line-no">340</span><span id="line-340">     *  The toggle group for the selected discipline.</span>
+<span class="source-line-no">341</span><span id="line-341">     */</span>
+<span class="source-line-no">342</span><span id="line-342">    @FXML</span>
+<span class="source-line-no">343</span><span id="line-343">    private ToggleGroup m_DisciplinesToggleGroup;</span>
+<span class="source-line-no">344</span><span id="line-344"></span>
+<span class="source-line-no">345</span><span id="line-345">    /**</span>
+<span class="source-line-no">346</span><span id="line-346">     *  The end sound.</span>
+<span class="source-line-no">347</span><span id="line-347">     */</span>
+<span class="source-line-no">348</span><span id="line-348">    @SuppressWarnings( "OptionalUsedAsFieldOrParameterType" )</span>
+<span class="source-line-no">349</span><span id="line-349">    private Optional&lt;AudioClip&gt; m_EndSound;</span>
+<span class="source-line-no">350</span><span id="line-350"></span>
+<span class="source-line-no">351</span><span id="line-351">    /**</span>
+<span class="source-line-no">352</span><span id="line-352">     *  The green light.</span>
+<span class="source-line-no">353</span><span id="line-353">     */</span>
+<span class="source-line-no">354</span><span id="line-354">    private Light m_GreenLight;</span>
+<span class="source-line-no">355</span><span id="line-355"></span>
+<span class="source-line-no">356</span><span id="line-356">    /**</span>
+<span class="source-line-no">357</span><span id="line-357">     *  The thread that executes the current heat.</span>
+<span class="source-line-no">358</span><span id="line-358">     */</span>
+<span class="source-line-no">359</span><span id="line-359">    private Thread m_HeatThread;</span>
+<span class="source-line-no">360</span><span id="line-360"></span>
+<span class="source-line-no">361</span><span id="line-361">    /**</span>
+<span class="source-line-no">362</span><span id="line-362">     *  The guard for the heat thread.</span>
+<span class="source-line-no">363</span><span id="line-363">     */</span>
+<span class="source-line-no">364</span><span id="line-364">    private final AutoLock m_HeatThreadGuard;</span>
+<span class="source-line-no">365</span><span id="line-365"></span>
+<span class="source-line-no">366</span><span id="line-366">    /**</span>
+<span class="source-line-no">367</span><span id="line-367">     *  The label that displays the heat counter.</span>
+<span class="source-line-no">368</span><span id="line-368">     */</span>
+<span class="source-line-no">369</span><span id="line-369">    @FXML</span>
+<span class="source-line-no">370</span><span id="line-370">    private Label m_Label_HeatCount;</span>
+<span class="source-line-no">371</span><span id="line-371"></span>
+<span class="source-line-no">372</span><span id="line-372">    /**</span>
+<span class="source-line-no">373</span><span id="line-373">     *  The label that shows the current system status.</span>
+<span class="source-line-no">374</span><span id="line-374">     */</span>
+<span class="source-line-no">375</span><span id="line-375">    @FXML</span>
+<span class="source-line-no">376</span><span id="line-376">    private Label m_Label_Status;</span>
+<span class="source-line-no">377</span><span id="line-377"></span>
+<span class="source-line-no">378</span><span id="line-378">    /**</span>
+<span class="source-line-no">379</span><span id="line-379">     *  The label that shows the currently selected discipline.</span>
+<span class="source-line-no">380</span><span id="line-380">     */</span>
+<span class="source-line-no">381</span><span id="line-381">    @FXML</span>
+<span class="source-line-no">382</span><span id="line-382">    private Label m_Label_SelectedDiscipline;</span>
+<span class="source-line-no">383</span><span id="line-383"></span>
+<span class="source-line-no">384</span><span id="line-384">    /**</span>
+<span class="source-line-no">385</span><span id="line-385">     *  The pane that holds the lights.</span>
+<span class="source-line-no">386</span><span id="line-386">     */</span>
+<span class="source-line-no">387</span><span id="line-387">    @FXML</span>
+<span class="source-line-no">388</span><span id="line-388">    private GridPane m_LightBox;</span>
+<span class="source-line-no">389</span><span id="line-389"></span>
+<span class="source-line-no">390</span><span id="line-390">    /**</span>
+<span class="source-line-no">391</span><span id="line-391">     *  The preferences.</span>
+<span class="source-line-no">392</span><span id="line-392">     */</span>
+<span class="source-line-no">393</span><span id="line-393">    private final Preferences m_Preferences;</span>
+<span class="source-line-no">394</span><span id="line-394"></span>
+<span class="source-line-no">395</span><span id="line-395">    /**</span>
+<span class="source-line-no">396</span><span id="line-396">     *  The red light.</span>
+<span class="source-line-no">397</span><span id="line-397">     */</span>
+<span class="source-line-no">398</span><span id="line-398">    private Light m_RedLight;</span>
+<span class="source-line-no">399</span><span id="line-399"></span>
+<span class="source-line-no">400</span><span id="line-400">    /**</span>
+<span class="source-line-no">401</span><span id="line-401">     *  The currently selected discipline.</span>
+<span class="source-line-no">402</span><span id="line-402">     */</span>
+<span class="source-line-no">403</span><span id="line-403">    private final ObjectProperty&lt;Discipline&gt; m_SelectedDiscipline = new SimpleObjectProperty&lt;&gt;();</span>
+<span class="source-line-no">404</span><span id="line-404"></span>
+<span class="source-line-no">405</span><span id="line-405">    /**</span>
+<span class="source-line-no">406</span><span id="line-406">     *  The slider for the time after shooting and before the reset.</span>
+<span class="source-line-no">407</span><span id="line-407">     */</span>
+<span class="source-line-no">408</span><span id="line-408">    @FXML</span>
+<span class="source-line-no">409</span><span id="line-409">    private Slider m_Slider_AfterTime;</span>
+<span class="source-line-no">410</span><span id="line-410"></span>
+<span class="source-line-no">411</span><span id="line-411">    /**</span>
+<span class="source-line-no">412</span><span id="line-412">     *  The slider for the time before the prolog.</span>
+<span class="source-line-no">413</span><span id="line-413">     */</span>
+<span class="source-line-no">414</span><span id="line-414">    @FXML</span>
+<span class="source-line-no">415</span><span id="line-415">    private Slider m_Slider_BeforeTime;</span>
+<span class="source-line-no">416</span><span id="line-416"></span>
+<span class="source-line-no">417</span><span id="line-417">    /**</span>
+<span class="source-line-no">418</span><span id="line-418">     *  The start sound.</span>
+<span class="source-line-no">419</span><span id="line-419">     */</span>
+<span class="source-line-no">420</span><span id="line-420">    @SuppressWarnings( "OptionalUsedAsFieldOrParameterType" )</span>
+<span class="source-line-no">421</span><span id="line-421">    private Optional&lt;AudioClip&gt; m_StartSound;</span>
+<span class="source-line-no">422</span><span id="line-422"></span>
+<span class="source-line-no">423</span><span id="line-423">    /**</span>
+<span class="source-line-no">424</span><span id="line-424">     *  The status control property.</span>
+<span class="source-line-no">425</span><span id="line-425">     */</span>
+<span class="source-line-no">426</span><span id="line-426">    private final ObjectProperty&lt;Status&gt; m_StatusControl;</span>
+<span class="source-line-no">427</span><span id="line-427"></span>
+<span class="source-line-no">428</span><span id="line-428">    /**</span>
+<span class="source-line-no">429</span><span id="line-429">     *  The guard for the status control.</span>
+<span class="source-line-no">430</span><span id="line-430">     */</span>
+<span class="source-line-no">431</span><span id="line-431">    private final AutoLock m_StatusControlGuard;</span>
+<span class="source-line-no">432</span><span id="line-432"></span>
+<span class="source-line-no">433</span><span id="line-433">    /**</span>
+<span class="source-line-no">434</span><span id="line-434">     *  The text field that is used to display the remaining time.</span>
+<span class="source-line-no">435</span><span id="line-435">     */</span>
+<span class="source-line-no">436</span><span id="line-436">    @FXML</span>
+<span class="source-line-no">437</span><span id="line-437">    private TextField m_TextField_Time;</span>
+<span class="source-line-no">438</span><span id="line-438"></span>
+<span class="source-line-no">439</span><span id="line-439">    /**</span>
+<span class="source-line-no">440</span><span id="line-440">     *  The injected resource bundle.</span>
+<span class="source-line-no">441</span><span id="line-441">     *</span>
+<span class="source-line-no">442</span><span id="line-442">     *  @note   The name of the field is dictated by JavaFX.</span>
+<span class="source-line-no">443</span><span id="line-443">     */</span>
+<span class="source-line-no">444</span><span id="line-444">    @FXML</span>
+<span class="source-line-no">445</span><span id="line-445">    private ResourceBundle resources;</span>
+<span class="source-line-no">446</span><span id="line-446"></span>
+<span class="source-line-no">447</span><span id="line-447">        /*------------------------*\</span>
+<span class="source-line-no">448</span><span id="line-448">    ====** Static Initialisations **===========================================</span>
+<span class="source-line-no">449</span><span id="line-449">        \*------------------------*/</span>
+<span class="source-line-no">450</span><span id="line-450"></span>
+<span class="source-line-no">451</span><span id="line-451">        /*--------------*\</span>
+<span class="source-line-no">452</span><span id="line-452">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">453</span><span id="line-453">        \*--------------*/</span>
+<span class="source-line-no">454</span><span id="line-454">    /**</span>
+<span class="source-line-no">455</span><span id="line-455">     *  Creates a new {@code MainController} instance.</span>
+<span class="source-line-no">456</span><span id="line-456">     */</span>
+<span class="source-line-no">457</span><span id="line-457">    public MainController()</span>
+<span class="source-line-no">458</span><span id="line-458">    {</span>
+<span class="source-line-no">459</span><span id="line-459">        //---* Load the preferences *------------------------------------------</span>
+<span class="source-line-no">460</span><span id="line-460">        m_Preferences = Preferences.userNodeForPackage( getClass() );</span>
+<span class="source-line-no">461</span><span id="line-461">        m_Preferences.addPreferenceChangeListener( this::preferenceChanged );</span>
+<span class="source-line-no">462</span><span id="line-462"></span>
+<span class="source-line-no">463</span><span id="line-463">        //---* Create the lock *-----------------------------------------------</span>
+<span class="source-line-no">464</span><span id="line-464">        var lock = new ReentrantLock( false );</span>
+<span class="source-line-no">465</span><span id="line-465">        m_HeatThreadGuard = AutoLock.of( lock );</span>
+<span class="source-line-no">466</span><span id="line-466">        lock = new ReentrantLock( false );</span>
+<span class="source-line-no">467</span><span id="line-467">        m_StatusControlGuard = AutoLock.of( lock );</span>
+<span class="source-line-no">468</span><span id="line-468"></span>
+<span class="source-line-no">469</span><span id="line-469">        //---* Create the status control *-------------------------------------</span>
+<span class="source-line-no">470</span><span id="line-470">        m_StatusControl = new SimpleObjectProperty&lt;&gt;();</span>
+<span class="source-line-no">471</span><span id="line-471">        m_StatusControl.addListener( this::statusTransition );</span>
+<span class="source-line-no">472</span><span id="line-472">    }   //  MainController()</span>
+<span class="source-line-no">473</span><span id="line-473"></span>
 <span class="source-line-no">474</span><span id="line-474"></span>
-<span class="source-line-no">475</span><span id="line-475"></span>
-<span class="source-line-no">476</span><span id="line-476">        /*---------*\</span>
-<span class="source-line-no">477</span><span id="line-477">    ====** Methods **==========================================================</span>
-<span class="source-line-no">478</span><span id="line-478">        \*---------*/</span>
-<span class="source-line-no">479</span><span id="line-479">    /**</span>
-<span class="source-line-no">480</span><span id="line-480">     *  Executes the current heat.</span>
-<span class="source-line-no">481</span><span id="line-481">     */</span>
-<span class="source-line-no">482</span><span id="line-482">    @SuppressWarnings( "BusyWait" )</span>
-<span class="source-line-no">483</span><span id="line-483">    private final void executeHeat()</span>
-<span class="source-line-no">484</span><span id="line-484">    {</span>
-<span class="source-line-no">485</span><span id="line-485">        var proceed = !interrupted();</span>
-<span class="source-line-no">486</span><span id="line-486"></span>
-<span class="source-line-no">487</span><span id="line-487">        //---* Retrieve the current heat settings *----------------------------</span>
-<span class="source-line-no">488</span><span id="line-488">        final var heat = m_ChoiceBox_Program.getValue();</span>
-<span class="source-line-no">489</span><span id="line-489"></span>
-<span class="source-line-no">490</span><span id="line-490">        //---* Execute ... *---------------------------------------------------</span>
-<span class="source-line-no">491</span><span id="line-491">        setStatusStarting();</span>
-<span class="source-line-no">492</span><span id="line-492">        proceedToNextStatus();</span>
-<span class="source-line-no">493</span><span id="line-493">        final var beforeTime = (long) (m_Slider_BeforeTime.getValue() * 1000.0);</span>
-<span class="source-line-no">494</span><span id="line-494">        if( beforeTime &gt; 0.0 )</span>
-<span class="source-line-no">495</span><span id="line-495">        {</span>
-<span class="source-line-no">496</span><span id="line-496">            try</span>
-<span class="source-line-no">497</span><span id="line-497">            {</span>
-<span class="source-line-no">498</span><span id="line-498">                sleep( beforeTime );</span>
-<span class="source-line-no">499</span><span id="line-499">            }</span>
-<span class="source-line-no">500</span><span id="line-500">            catch( @SuppressWarnings( "unused" ) final InterruptedException e )</span>
-<span class="source-line-no">501</span><span id="line-501">            {</span>
-<span class="source-line-no">502</span><span id="line-502">                proceed = false;</span>
-<span class="source-line-no">503</span><span id="line-503">            }</span>
-<span class="source-line-no">504</span><span id="line-504">        }</span>
-<span class="source-line-no">505</span><span id="line-505">        if( !heat.isRepeated() ) proceedToNextStatus();</span>
-<span class="source-line-no">506</span><span id="line-506"></span>
-<span class="source-line-no">507</span><span id="line-507">        final var heatCount = new AtomicInteger();</span>
-<span class="source-line-no">508</span><span id="line-508"></span>
-<span class="source-line-no">509</span><span id="line-509">        RepeatLoop: for( var r = 0; (r &lt; heat.getRepetitions()) &amp;&amp; proceed; ++r )</span>
-<span class="source-line-no">510</span><span id="line-510">        {</span>
-<span class="source-line-no">511</span><span id="line-511">            if( heat.isRepeated() ) setStatusProlog();</span>
-<span class="source-line-no">512</span><span id="line-512"></span>
-<span class="source-line-no">513</span><span id="line-513">            //---* Update the heat count *-------------------------------------</span>
-<span class="source-line-no">514</span><span id="line-514">            heatCount.set( r + 1 );</span>
-<span class="source-line-no">515</span><span id="line-515">            runLater( () -&gt; m_Label_HeatCount.setText( Integer.toString( heatCount.get() ) ) );</span>
-<span class="source-line-no">516</span><span id="line-516"></span>
-<span class="source-line-no">517</span><span id="line-517">            //---* Start the prolog *------------------------------------------</span>
-<span class="source-line-no">518</span><span id="line-518">            var endTime = currentTimeMillis() + heat.getPrologTime();</span>
-<span class="source-line-no">519</span><span id="line-519">            var scheduledService = new TimeUpdateService( endTime, m_TextField_Time );</span>
-<span class="source-line-no">520</span><span id="line-520">            scheduledService.start();</span>
-<span class="source-line-no">521</span><span id="line-521">            PrologLoop: while( currentTimeMillis() &lt; endTime )</span>
-<span class="source-line-no">522</span><span id="line-522">            {</span>
-<span class="source-line-no">523</span><span id="line-523">                if( interrupted() )</span>
-<span class="source-line-no">524</span><span id="line-524">                {</span>
-<span class="source-line-no">525</span><span id="line-525">                    proceed = false;</span>
-<span class="source-line-no">526</span><span id="line-526">                    break PrologLoop;</span>
-<span class="source-line-no">527</span><span id="line-527">                }</span>
-<span class="source-line-no">528</span><span id="line-528">                try</span>
-<span class="source-line-no">529</span><span id="line-529">                {</span>
-<span class="source-line-no">530</span><span id="line-530">                    sleep( endTime - currentTimeMillis() );</span>
-<span class="source-line-no">531</span><span id="line-531">                }</span>
-<span class="source-line-no">532</span><span id="line-532">                catch( @SuppressWarnings( "unused" ) final InterruptedException e )</span>
-<span class="source-line-no">533</span><span id="line-533">                {</span>
-<span class="source-line-no">534</span><span id="line-534">                    proceed = false;</span>
-<span class="source-line-no">535</span><span id="line-535">                    break PrologLoop;</span>
-<span class="source-line-no">536</span><span id="line-536">                }</span>
-<span class="source-line-no">537</span><span id="line-537">            }   //  PrologLoop:</span>
-<span class="source-line-no">538</span><span id="line-538"></span>
-<span class="source-line-no">539</span><span id="line-539">            scheduledService.stop();</span>
-<span class="source-line-no">540</span><span id="line-540">            proceedToNextStatus();</span>
-<span class="source-line-no">541</span><span id="line-541"></span>
-<span class="source-line-no">542</span><span id="line-542">            if( proceed )</span>
-<span class="source-line-no">543</span><span id="line-543">            {</span>
-<span class="source-line-no">544</span><span id="line-544">                //---* Start the shooting *------------------------------------</span>
-<span class="source-line-no">545</span><span id="line-545">                endTime = currentTimeMillis() + heat.getShootingTime();</span>
-<span class="source-line-no">546</span><span id="line-546">                scheduledService = new TimeUpdateService( endTime, m_TextField_Time );</span>
-<span class="source-line-no">547</span><span id="line-547">                scheduledService.start();</span>
-<span class="source-line-no">548</span><span id="line-548">                ShootingLoop: while( currentTimeMillis() &lt; endTime )</span>
-<span class="source-line-no">549</span><span id="line-549">                {</span>
-<span class="source-line-no">550</span><span id="line-550">                    if( interrupted() )</span>
-<span class="source-line-no">551</span><span id="line-551">                    {</span>
-<span class="source-line-no">552</span><span id="line-552">                        proceed = false;</span>
-<span class="source-line-no">553</span><span id="line-553">                        break ShootingLoop;</span>
-<span class="source-line-no">554</span><span id="line-554">                    }</span>
-<span class="source-line-no">555</span><span id="line-555">                    try</span>
-<span class="source-line-no">556</span><span id="line-556">                    {</span>
-<span class="source-line-no">557</span><span id="line-557">                        sleep( endTime - currentTimeMillis() );</span>
-<span class="source-line-no">558</span><span id="line-558">                    }</span>
-<span class="source-line-no">559</span><span id="line-559">                    catch( @SuppressWarnings( "unused" ) final InterruptedException e )</span>
-<span class="source-line-no">560</span><span id="line-560">                    {</span>
-<span class="source-line-no">561</span><span id="line-561">                        proceed = false;</span>
-<span class="source-line-no">562</span><span id="line-562">                        break ShootingLoop;</span>
-<span class="source-line-no">563</span><span id="line-563">                    }</span>
-<span class="source-line-no">564</span><span id="line-564">                }   //  ShootingLoop:</span>
-<span class="source-line-no">565</span><span id="line-565">                scheduledService.stop();</span>
-<span class="source-line-no">566</span><span id="line-566">            }</span>
-<span class="source-line-no">567</span><span id="line-567"></span>
-<span class="source-line-no">568</span><span id="line-568">            proceed &amp;= !interrupted();</span>
-<span class="source-line-no">569</span><span id="line-569">        }   //  RepeatLoop:</span>
-<span class="source-line-no">570</span><span id="line-570"></span>
-<span class="source-line-no">571</span><span id="line-571">        if( proceed )</span>
-<span class="source-line-no">572</span><span id="line-572">        {</span>
-<span class="source-line-no">573</span><span id="line-573">            //---* After shooting *--------------------------------------------</span>
-<span class="source-line-no">574</span><span id="line-574">            proceedToNextStatus();</span>
-<span class="source-line-no">575</span><span id="line-575">            final var epilogTime = (long) (m_Slider_AfterTime.getValue() * 1_000.0);</span>
-<span class="source-line-no">576</span><span id="line-576">            if( epilogTime &gt; 0.0 )</span>
-<span class="source-line-no">577</span><span id="line-577">            {</span>
-<span class="source-line-no">578</span><span id="line-578">                try</span>
-<span class="source-line-no">579</span><span id="line-579">                {</span>
-<span class="source-line-no">580</span><span id="line-580">                    sleep( epilogTime );</span>
-<span class="source-line-no">581</span><span id="line-581">                }</span>
-<span class="source-line-no">582</span><span id="line-582">                catch( @SuppressWarnings( "unused" ) final InterruptedException e ) { /* Deliberately ignored */ }</span>
-<span class="source-line-no">583</span><span id="line-583">            }</span>
-<span class="source-line-no">584</span><span id="line-584">        }</span>
-<span class="source-line-no">585</span><span id="line-585"></span>
-<span class="source-line-no">586</span><span id="line-586">        //---* Cleanup *-------------------------------------------------------</span>
-<span class="source-line-no">587</span><span id="line-587">        m_HeatThread = null;</span>
-<span class="source-line-no">588</span><span id="line-588">        reset();</span>
-<span class="source-line-no">589</span><span id="line-589">    }   //  executeHeat()</span>
-<span class="source-line-no">590</span><span id="line-590"></span>
-<span class="source-line-no">591</span><span id="line-591">    /**</span>
-<span class="source-line-no">592</span><span id="line-592">     *  Initialises the controller.</span>
-<span class="source-line-no">593</span><span id="line-593">     */</span>
-<span class="source-line-no">594</span><span id="line-594">    @FXML</span>
-<span class="source-line-no">595</span><span id="line-595">    private final void initialize()</span>
-<span class="source-line-no">596</span><span id="line-596">    {</span>
-<span class="source-line-no">597</span><span id="line-597">        assert m_Button_Abort != null : "fx:id=\"m_Button_Abort\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">598</span><span id="line-598">        assert m_Button_Start != null : "fx:id=\"m_Button_Start\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">599</span><span id="line-599">        assert m_ButtonPane != null : "fx:id=\"m_ButtonPane\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">600</span><span id="line-600">        assert m_CheckMenuItem_ShowHeatCount != null : "fx:id=\"m_CheckMenuItem_ShowHeatCount\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">601</span><span id="line-601">        assert m_CheckMenuItem_ShowStatus != null : "fx:id=\"m_CheckMenuItem_ShowStatus\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">602</span><span id="line-602">        assert m_CheckMenuItem_ShowTime != null : "fx:id=\"m_CheckMenuItem_ShowTime\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">603</span><span id="line-603">        assert m_CheckMenuItem_Sound != null : "fx:id=\"m_CheckMenuItem_Sound\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">604</span><span id="line-604">        assert m_ChoiceBox_Program != null : "fx:id=\"m_ChoiceBox_Program\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">605</span><span id="line-605">        assert m_Circle_Green != null : "fx:id=\"m_Circle_Green\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">606</span><span id="line-606">        assert m_Circle_Red != null : "fx:id=\"m_Circle_Red\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">607</span><span id="line-607">        assert m_DisciplinesToggleGroup != null : "fx:id=\"m_DisciplinesToggleGroup\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">608</span><span id="line-608">        assert m_Label_HeatCount != null : "fx:id=\"m_Label_HeatCount\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">609</span><span id="line-609">        assert m_Label_SelectedDiscipline != null : "fx:id=\"m_Label_SelectedDiscipline\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">610</span><span id="line-610">        assert m_Label_Status != null : "fx:id=\"m_Label_Status\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">611</span><span id="line-611">        assert m_LightBox != null : "fx:id=\"m_LightBox\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">612</span><span id="line-612">        assert m_Slider_AfterTime != null : "fx:id=\"m_Slider_AfterTime\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">613</span><span id="line-613">        assert m_Slider_BeforeTime != null : "fx:id=\"m_Slider_BeforeTime\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">614</span><span id="line-614">        assert m_TextField_Time != null : "fx:id=\"m_TextField_Time\" was not injected: check your FXML file 'Main.fxml'.";</span>
-<span class="source-line-no">615</span><span id="line-615">        assert resources != null : "The resource bundle was not injected";</span>
-<span class="source-line-no">616</span><span id="line-616"></span>
-<span class="source-line-no">617</span><span id="line-617">        //---* Load the sounds *-----------------------------------------------</span>
-<span class="source-line-no">618</span><span id="line-618">        if( "arm".equalsIgnoreCase( getProperty( PROPERTY_CPUARCHITECTURE ) ) )</span>
-<span class="source-line-no">619</span><span id="line-619">        {</span>
-<span class="source-line-no">620</span><span id="line-620">            /*</span>
-<span class="source-line-no">621</span><span id="line-621">             * Currently (as for 2017-08-19) JavaFX has issues to play media on</span>
-<span class="source-line-no">622</span><span id="line-622">             * the Raspberry PI 3, due to a problem with libjfxmedia.so.</span>
-<span class="source-line-no">623</span><span id="line-623">             * Therefore, we do now allow audio/sound on a Raspberry PI.</span>
-<span class="source-line-no">624</span><span id="line-624">             */</span>
-<span class="source-line-no">625</span><span id="line-625">            m_CheckMenuItem_Sound.setDisable( true );</span>
-<span class="source-line-no">626</span><span id="line-626">            m_CheckMenuItem_Sound.setSelected( false );</span>
-<span class="source-line-no">627</span><span id="line-627"></span>
-<span class="source-line-no">628</span><span id="line-628">            m_StartSound = Optional.empty();</span>
-<span class="source-line-no">629</span><span id="line-629">            m_EndSound = Optional.empty();</span>
-<span class="source-line-no">630</span><span id="line-630">        }</span>
-<span class="source-line-no">631</span><span id="line-631">        else</span>
-<span class="source-line-no">632</span><span id="line-632">        {</span>
-<span class="source-line-no">633</span><span id="line-633">            //---* Sets the sound flag *---------------------------------------</span>
-<span class="source-line-no">634</span><span id="line-634">            m_CheckMenuItem_Sound.setDisable( false );</span>
-<span class="source-line-no">635</span><span id="line-635">            final var soundFlag = m_Preferences.getBoolean( PREF_NODE_Sound, false );</span>
-<span class="source-line-no">636</span><span id="line-636">            m_CheckMenuItem_Sound.setSelected( soundFlag );</span>
-<span class="source-line-no">637</span><span id="line-637"></span>
-<span class="source-line-no">638</span><span id="line-638">            //---* Load the audio clips *--------------------------------------</span>
-<span class="source-line-no">639</span><span id="line-639">            var audioClipURL = getClass().getResource( SOUND_ENDSHOOTING );</span>
-<span class="source-line-no">640</span><span id="line-640">            if( nonNull( audioClipURL ) )</span>
-<span class="source-line-no">641</span><span id="line-641">            {</span>
-<span class="source-line-no">642</span><span id="line-642">                var audioClip = new AudioClip( audioClipURL.toExternalForm() );</span>
-<span class="source-line-no">643</span><span id="line-643">                audioClip.play();</span>
-<span class="source-line-no">644</span><span id="line-644">                audioClip.stop();</span>
-<span class="source-line-no">645</span><span id="line-645">                m_EndSound = Optional.of( audioClip );</span>
-<span class="source-line-no">646</span><span id="line-646"></span>
-<span class="source-line-no">647</span><span id="line-647">                /*</span>
-<span class="source-line-no">648</span><span id="line-648">                 * We try to load the start sound only when we have an end</span>
-<span class="source-line-no">649</span><span id="line-649">                 * sound.</span>
-<span class="source-line-no">650</span><span id="line-650">                 */</span>
-<span class="source-line-no">651</span><span id="line-651">                audioClipURL = getClass().getResource( SOUND_STARTSHOOTING );</span>
-<span class="source-line-no">652</span><span id="line-652">                if( nonNull( audioClipURL ) )</span>
-<span class="source-line-no">653</span><span id="line-653">                {</span>
-<span class="source-line-no">654</span><span id="line-654">                    audioClip = new AudioClip( audioClipURL.toExternalForm() );</span>
-<span class="source-line-no">655</span><span id="line-655">                    audioClip.play();</span>
-<span class="source-line-no">656</span><span id="line-656">                    audioClip.stop();</span>
-<span class="source-line-no">657</span><span id="line-657">                    m_StartSound = Optional.of( audioClip );</span>
-<span class="source-line-no">658</span><span id="line-658"></span>
-<span class="source-line-no">659</span><span id="line-659">                    //---* Sets the listener for the sound flag menu item *----</span>
-<span class="source-line-no">660</span><span id="line-660">                    m_CheckMenuItem_Sound.selectedProperty().addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_Sound, n ) );</span>
-<span class="source-line-no">661</span><span id="line-661">                }</span>
-<span class="source-line-no">662</span><span id="line-662">                else</span>
-<span class="source-line-no">663</span><span id="line-663">                {</span>
-<span class="source-line-no">664</span><span id="line-664">                    m_StartSound = Optional.empty();</span>
-<span class="source-line-no">665</span><span id="line-665">                    m_CheckMenuItem_Sound.setDisable( true );</span>
-<span class="source-line-no">666</span><span id="line-666">                    m_CheckMenuItem_Sound.setSelected( false );</span>
-<span class="source-line-no">667</span><span id="line-667">                }</span>
-<span class="source-line-no">668</span><span id="line-668">            }</span>
-<span class="source-line-no">669</span><span id="line-669">            else</span>
-<span class="source-line-no">670</span><span id="line-670">            {</span>
-<span class="source-line-no">671</span><span id="line-671">                m_EndSound = Optional.empty();</span>
-<span class="source-line-no">672</span><span id="line-672">                m_CheckMenuItem_Sound.setDisable( true );</span>
-<span class="source-line-no">673</span><span id="line-673">                m_CheckMenuItem_Sound.setSelected( false );</span>
-<span class="source-line-no">674</span><span id="line-674">            }</span>
-<span class="source-line-no">675</span><span id="line-675">        }</span>
-<span class="source-line-no">676</span><span id="line-676"></span>
-<span class="source-line-no">677</span><span id="line-677">        /*</span>
-<span class="source-line-no">678</span><span id="line-678">         * Although this can be set also in the *.fxml file, it should be done</span>
-<span class="source-line-no">679</span><span id="line-679">         * here.</span>
-<span class="source-line-no">680</span><span id="line-680">         * This is because when it is set in *.fxml, the screen remain blank</span>
-<span class="source-line-no">681</span><span id="line-681">         * until the mouse is moved over the menu or the button.</span>
-<span class="source-line-no">682</span><span id="line-682">         */</span>
-<span class="source-line-no">683</span><span id="line-683">        m_TextField_Time.setFocusTraversable( false );</span>
-<span class="source-line-no">684</span><span id="line-684"></span>
-<span class="source-line-no">685</span><span id="line-685">        //---* Bind the "show time" flag to the time text field *--------------</span>
-<span class="source-line-no">686</span><span id="line-686">        /*</span>
-<span class="source-line-no">687</span><span id="line-687">         * For some reason, this could not be set in the *.fxgraph file.</span>
-<span class="source-line-no">688</span><span id="line-688">         */</span>
-<span class="source-line-no">689</span><span id="line-689">        m_TextField_Time.visibleProperty()</span>
-<span class="source-line-no">690</span><span id="line-690">            .bind( m_CheckMenuItem_ShowTime.selectedProperty() );</span>
-<span class="source-line-no">691</span><span id="line-691"></span>
-<span class="source-line-no">692</span><span id="line-692">        /*</span>
-<span class="source-line-no">693</span><span id="line-693">         * The button pane should be visible only when at least one button is</span>
-<span class="source-line-no">694</span><span id="line-694">         * enabled.</span>
-<span class="source-line-no">695</span><span id="line-695">         */</span>
-<span class="source-line-no">696</span><span id="line-696">        m_ButtonPane.visibleProperty()</span>
-<span class="source-line-no">697</span><span id="line-697">            .bind( m_Button_Abort.disabledProperty().and( m_Button_Start.disabledProperty() ).not() );</span>
-<span class="source-line-no">698</span><span id="line-698"></span>
-<span class="source-line-no">699</span><span id="line-699">        //---* Sets the "show time" flag *-------------------------------------</span>
-<span class="source-line-no">700</span><span id="line-700">        final var showTimeFlag = m_Preferences.getBoolean( PREF_NODE_ShowTime, true );</span>
-<span class="source-line-no">701</span><span id="line-701">        m_CheckMenuItem_ShowTime.setSelected( showTimeFlag );</span>
-<span class="source-line-no">702</span><span id="line-702"></span>
-<span class="source-line-no">703</span><span id="line-703">        //---* Sets the listener for the "show time" flag menu item *----------</span>
-<span class="source-line-no">704</span><span id="line-704">        m_CheckMenuItem_ShowTime.selectedProperty()</span>
-<span class="source-line-no">705</span><span id="line-705">            .addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_ShowTime, n ) );</span>
-<span class="source-line-no">706</span><span id="line-706"></span>
-<span class="source-line-no">707</span><span id="line-707">        //---* Initialises the additional times *------------------------------</span>
-<span class="source-line-no">708</span><span id="line-708">        final var prologTime = m_Preferences.getDouble( PREF_NODE_Before, 0.0 );</span>
-<span class="source-line-no">709</span><span id="line-709">        m_Slider_BeforeTime.setValue( prologTime );</span>
-<span class="source-line-no">710</span><span id="line-710">        m_Slider_BeforeTime.valueProperty()</span>
-<span class="source-line-no">711</span><span id="line-711">            .addListener( (p,o,n) -&gt; m_Preferences.putDouble( PREF_NODE_Before, n.doubleValue() ) );</span>
-<span class="source-line-no">712</span><span id="line-712"></span>
-<span class="source-line-no">713</span><span id="line-713">        final var epilogTime = m_Preferences.getDouble( PREF_NODE_TimeAfter, 0.0 );</span>
-<span class="source-line-no">714</span><span id="line-714">        m_Slider_AfterTime.setValue( epilogTime );</span>
-<span class="source-line-no">715</span><span id="line-715">        m_Slider_AfterTime.valueProperty()</span>
-<span class="source-line-no">716</span><span id="line-716">            .addListener( (p,o,n) -&gt; m_Preferences.putDouble( PREF_NODE_TimeAfter, n.doubleValue() ) );</span>
-<span class="source-line-no">717</span><span id="line-717"></span>
-<span class="source-line-no">718</span><span id="line-718">        //---* Set the change listener for the selected discipline *-----------</span>
-<span class="source-line-no">719</span><span id="line-719">        m_SelectedDiscipline.addListener( this::onDisciplineChanged );</span>
-<span class="source-line-no">720</span><span id="line-720"></span>
-<span class="source-line-no">721</span><span id="line-721">        //---* Get the currently selected discipline *-------------------------</span>
-<span class="source-line-no">722</span><span id="line-722">        final var heatNumber = m_Preferences.getInt( PREF_NODE_Heat, 0 );</span>
-<span class="source-line-no">723</span><span id="line-723">        final var disciplineName = m_Preferences.get( PREF_NODE_Discipline, DISCIPLINE_2_17.name() );</span>
-<span class="source-line-no">724</span><span id="line-724">        final var discipline = Discipline.valueOf( disciplineName );</span>
-<span class="source-line-no">725</span><span id="line-725">        m_DisciplinesToggleGroup.getToggles()</span>
-<span class="source-line-no">726</span><span id="line-726">            .stream()</span>
-<span class="source-line-no">727</span><span id="line-727">            .filter( toggle -&gt; toggle.getUserData() == discipline )</span>
-<span class="source-line-no">728</span><span id="line-728">            .findFirst()</span>
-<span class="source-line-no">729</span><span id="line-729">            .ifPresent( m_DisciplinesToggleGroup::selectToggle );</span>
-<span class="source-line-no">730</span><span id="line-730">        final var selectedToggle = m_DisciplinesToggleGroup.getSelectedToggle();</span>
-<span class="source-line-no">731</span><span id="line-731">        if( nonNull( selectedToggle) )</span>
-<span class="source-line-no">732</span><span id="line-732">        {</span>
-<span class="source-line-no">733</span><span id="line-733">            m_SelectedDiscipline.set( (Discipline) selectedToggle.getUserData() );</span>
-<span class="source-line-no">734</span><span id="line-734">        }</span>
-<span class="source-line-no">735</span><span id="line-735"></span>
-<span class="source-line-no">736</span><span id="line-736">        //---* Set the listener for the heat changes *-------------------------</span>
-<span class="source-line-no">737</span><span id="line-737">        m_ChoiceBox_Program.valueProperty()</span>
-<span class="source-line-no">738</span><span id="line-738">            .addListener( (p,o,n) -&gt;</span>
-<span class="source-line-no">739</span><span id="line-739">            {</span>
-<span class="source-line-no">740</span><span id="line-740">                final var program = m_SelectedDiscipline.getValue().getProgram();</span>
-<span class="source-line-no">741</span><span id="line-741">                var h = -1;</span>
-<span class="source-line-no">742</span><span id="line-742">                for( var i = 0; i &lt; program.length; ++i )</span>
-<span class="source-line-no">743</span><span id="line-743">                {</span>
-<span class="source-line-no">744</span><span id="line-744">                    if( program [i] == n ) h = i;</span>
-<span class="source-line-no">745</span><span id="line-745">                }</span>
-<span class="source-line-no">746</span><span id="line-746">                if( h &gt;= 0 ) m_Preferences.putInt( PREF_NODE_Heat, h );</span>
-<span class="source-line-no">747</span><span id="line-747">            } );</span>
-<span class="source-line-no">748</span><span id="line-748"></span>
-<span class="source-line-no">749</span><span id="line-749">        //---* Set the heat *--------------------------------------------------</span>
-<span class="source-line-no">750</span><span id="line-750">        if( heatNumber != 0 )</span>
-<span class="source-line-no">751</span><span id="line-751">        {</span>
-<span class="source-line-no">752</span><span id="line-752">            final var heat = discipline.getProgram() [heatNumber];</span>
-<span class="source-line-no">753</span><span id="line-753">            m_ChoiceBox_Program.setValue( heat );</span>
-<span class="source-line-no">754</span><span id="line-754">        }</span>
-<span class="source-line-no">755</span><span id="line-755"></span>
-<span class="source-line-no">756</span><span id="line-756">        //---* Configure the choice box for the program *----------------------</span>
-<span class="source-line-no">757</span><span id="line-757">        m_ChoiceBox_Program.setConverter( Heat.getStringConverter() );</span>
-<span class="source-line-no">758</span><span id="line-758"></span>
-<span class="source-line-no">759</span><span id="line-759">        //---* Set the change listener for the disciplines menu *--------------</span>
-<span class="source-line-no">760</span><span id="line-760">        m_DisciplinesToggleGroup.selectedToggleProperty()</span>
-<span class="source-line-no">761</span><span id="line-761">            .addListener( this::onDisciplineSelectionChanged );</span>
-<span class="source-line-no">762</span><span id="line-762"></span>
-<span class="source-line-no">763</span><span id="line-763">        //---* Set the radius for the lights *---------------------------------</span>
-<span class="source-line-no">764</span><span id="line-764">        m_Circle_Green.radiusProperty()</span>
-<span class="source-line-no">765</span><span id="line-765">            .bind( Bindings.min( m_LightBox.widthProperty().divide( 2.0 ), m_LightBox.heightProperty() ).divide( 2.0 ).subtract( 20.0 ) );</span>
-<span class="source-line-no">766</span><span id="line-766">        m_Circle_Red.radiusProperty()</span>
-<span class="source-line-no">767</span><span id="line-767">            .bind( Bindings.min( m_LightBox.widthProperty().divide( 2.0 ), m_LightBox.heightProperty() ).divide( 2.0 ).subtract( 20.0 ) );</span>
-<span class="source-line-no">768</span><span id="line-768"></span>
-<span class="source-line-no">769</span><span id="line-769">        //---* Create the light instances *------------------------------------</span>
-<span class="source-line-no">770</span><span id="line-770">        m_GreenLight = new Light( Color.GREEN, m_Circle_Green::setFill );</span>
-<span class="source-line-no">771</span><span id="line-771">        m_RedLight = new Light( Color.RED, m_Circle_Red::setFill );</span>
-<span class="source-line-no">772</span><span id="line-772"></span>
-<span class="source-line-no">773</span><span id="line-773">        //---* Sets the show status flag *-------------------------------------</span>
-<span class="source-line-no">774</span><span id="line-774">        final var showStatusFlag = m_Preferences.getBoolean( PREF_NODE_ShowStatus, false );</span>
-<span class="source-line-no">775</span><span id="line-775">        m_CheckMenuItem_ShowStatus.setSelected( showStatusFlag );</span>
-<span class="source-line-no">776</span><span id="line-776"></span>
-<span class="source-line-no">777</span><span id="line-777">        //---* Sets the listener for the show status flag menu item *----------</span>
-<span class="source-line-no">778</span><span id="line-778">        m_CheckMenuItem_ShowStatus.selectedProperty()</span>
-<span class="source-line-no">779</span><span id="line-779">            .addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_ShowStatus, n ) );</span>
-<span class="source-line-no">780</span><span id="line-780"></span>
-<span class="source-line-no">781</span><span id="line-781">        //---* Bind the status label to the status control *-------------------</span>
-<span class="source-line-no">782</span><span id="line-782">        /*</span>
-<span class="source-line-no">783</span><span id="line-783">        //m_Label_Status.textProperty().bind( m_StatusControl.asString() );</span>
-<span class="source-line-no">784</span><span id="line-784">         *</span>
-<span class="source-line-no">785</span><span id="line-785">         * Unfortunately this does not work as expected, as the label will not</span>
-<span class="source-line-no">786</span><span id="line-786">         * be updated when the status changes.</span>
-<span class="source-line-no">787</span><span id="line-787">         */</span>
-<span class="source-line-no">788</span><span id="line-788"></span>
-<span class="source-line-no">789</span><span id="line-789">        m_Label_Status.visibleProperty()</span>
-<span class="source-line-no">790</span><span id="line-790">            .bind( m_CheckMenuItem_ShowStatus.selectedProperty() );</span>
-<span class="source-line-no">791</span><span id="line-791"></span>
-<span class="source-line-no">792</span><span id="line-792">        //---* Sets the show heat count flag *---------------------------------</span>
-<span class="source-line-no">793</span><span id="line-793">        final var showHeatCountFlag = m_Preferences.getBoolean( PREF_NODE_ShowHeatCount, true );</span>
-<span class="source-line-no">794</span><span id="line-794">        m_CheckMenuItem_ShowHeatCount.setSelected( showHeatCountFlag );</span>
-<span class="source-line-no">795</span><span id="line-795"></span>
-<span class="source-line-no">796</span><span id="line-796">        //---* Sets the listener for the show heat count flag menu item *------</span>
-<span class="source-line-no">797</span><span id="line-797">        m_CheckMenuItem_ShowHeatCount.selectedProperty()</span>
-<span class="source-line-no">798</span><span id="line-798">            .addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_ShowHeatCount, n ) );</span>
-<span class="source-line-no">799</span><span id="line-799"></span>
-<span class="source-line-no">800</span><span id="line-800">        //---* Sets the size for the heat count label *------------------------</span>
-<span class="source-line-no">801</span><span id="line-801">        if( "arm".equalsIgnoreCase( getProperty( PROPERTY_CPUARCHITECTURE ) ) )</span>
-<span class="source-line-no">802</span><span id="line-802">        {</span>
-<span class="source-line-no">803</span><span id="line-803">            m_Label_HeatCount.setStyle( "-fx-font-size : 30.0;" );</span>
-<span class="source-line-no">804</span><span id="line-804">        }</span>
-<span class="source-line-no">805</span><span id="line-805">        else</span>
-<span class="source-line-no">806</span><span id="line-806">        {</span>
-<span class="source-line-no">807</span><span id="line-807">            m_Label_HeatCount.setStyle( "-fx-font-size : 250.0;" );</span>
-<span class="source-line-no">808</span><span id="line-808">        }</span>
-<span class="source-line-no">809</span><span id="line-809"></span>
-<span class="source-line-no">810</span><span id="line-810">        //---* Set the initial state *-----------------------------------------</span>
-<span class="source-line-no">811</span><span id="line-811">        reset();</span>
-<span class="source-line-no">812</span><span id="line-812">    }   //  initialize()</span>
-<span class="source-line-no">813</span><span id="line-813"></span>
-<span class="source-line-no">814</span><span id="line-814">    /**</span>
-<span class="source-line-no">815</span><span id="line-815">     *  Sets the lights to the off state.</span>
-<span class="source-line-no">816</span><span id="line-816">     */</span>
-<span class="source-line-no">817</span><span id="line-817">    private final void lightsOff()</span>
-<span class="source-line-no">818</span><span id="line-818">    {</span>
-<span class="source-line-no">819</span><span id="line-819">        asList( m_RedLight, m_GreenLight )</span>
-<span class="source-line-no">820</span><span id="line-820">            .forEach( Light::off );</span>
-<span class="source-line-no">821</span><span id="line-821">    }   //  lightsOff()</span>
-<span class="source-line-no">822</span><span id="line-822"></span>
-<span class="source-line-no">823</span><span id="line-823">    /**</span>
-<span class="source-line-no">824</span><span id="line-824">     *  The button handler for the</span>
-<span class="source-line-no">825</span><span id="line-825">     *  {@link #m_Button_Abort ABORT}</span>
-<span class="source-line-no">826</span><span id="line-826">     *  button.</span>
-<span class="source-line-no">827</span><span id="line-827">     *</span>
-<span class="source-line-no">828</span><span id="line-828">     *  @param  ignoredEvent    The action event.</span>
-<span class="source-line-no">829</span><span id="line-829">     */</span>
-<span class="source-line-no">830</span><span id="line-830">    @FXML</span>
-<span class="source-line-no">831</span><span id="line-831">    private final void onAbort( final ActionEvent ignoredEvent )</span>
-<span class="source-line-no">832</span><span id="line-832">    {</span>
-<span class="source-line-no">833</span><span id="line-833">        //---* Disable the abort button *--------------------------------------</span>
-<span class="source-line-no">834</span><span id="line-834">        m_Button_Abort.setDisable( true );</span>
-<span class="source-line-no">835</span><span id="line-835"></span>
-<span class="source-line-no">836</span><span id="line-836">        try( var ignored = m_HeatThreadGuard.lock() )</span>
-<span class="source-line-no">837</span><span id="line-837">        {</span>
-<span class="source-line-no">838</span><span id="line-838">            //---* Stop the heat thread *---------------------------------------</span>
-<span class="source-line-no">839</span><span id="line-839">            if( nonNull( m_HeatThread ) &amp;&amp; m_HeatThread.isAlive() )</span>
-<span class="source-line-no">840</span><span id="line-840">            {</span>
-<span class="source-line-no">841</span><span id="line-841">                var t = m_HeatThread;</span>
-<span class="source-line-no">842</span><span id="line-842">                m_HeatThread = null;</span>
-<span class="source-line-no">843</span><span id="line-843">                t.interrupt();</span>
-<span class="source-line-no">844</span><span id="line-844">                try</span>
-<span class="source-line-no">845</span><span id="line-845">                {</span>
-<span class="source-line-no">846</span><span id="line-846">                    t.join( 1000 );</span>
-<span class="source-line-no">847</span><span id="line-847">                }</span>
-<span class="source-line-no">848</span><span id="line-848">                catch( @SuppressWarnings( "unused" ) final InterruptedException e ) { /* Deliberately ignored */ }</span>
-<span class="source-line-no">849</span><span id="line-849">            }</span>
-<span class="source-line-no">850</span><span id="line-850">        }</span>
-<span class="source-line-no">851</span><span id="line-851"></span>
-<span class="source-line-no">852</span><span id="line-852">        //---* Reset the system *----------------------------------------------</span>
-<span class="source-line-no">853</span><span id="line-853">        reset();</span>
-<span class="source-line-no">854</span><span id="line-854">    }   //  onAbort()</span>
-<span class="source-line-no">855</span><span id="line-855"></span>
-<span class="source-line-no">856</span><span id="line-856">    /**</span>
-<span class="source-line-no">857</span><span id="line-857">     *  The change listener for the selected discipline.</span>
-<span class="source-line-no">858</span><span id="line-858">     *</span>
-<span class="source-line-no">859</span><span id="line-859">     *  @param  observable  The observed entity.</span>
-<span class="source-line-no">860</span><span id="line-860">     *  @param  oldValue    The old value.</span>
-<span class="source-line-no">861</span><span id="line-861">     *  @param  newValue    The new value.</span>
-<span class="source-line-no">862</span><span id="line-862">     */</span>
-<span class="source-line-no">863</span><span id="line-863">    private final void onDisciplineChanged( final ObservableValue&lt;? extends Discipline&gt; observable, final Discipline oldValue, final Discipline newValue )</span>
-<span class="source-line-no">864</span><span id="line-864">    {</span>
-<span class="source-line-no">865</span><span id="line-865">        if( nonNull( newValue ) )</span>
-<span class="source-line-no">866</span><span id="line-866">        {</span>
-<span class="source-line-no">867</span><span id="line-867">            final var text = newValue.toString();</span>
-<span class="source-line-no">868</span><span id="line-868">            m_Label_SelectedDiscipline.setText( text );</span>
-<span class="source-line-no">869</span><span id="line-869">            final var program = m_ChoiceBox_Program.getItems();</span>
-<span class="source-line-no">870</span><span id="line-870">            program.clear();</span>
-<span class="source-line-no">871</span><span id="line-871">            program.addAll( newValue.getProgram() );</span>
-<span class="source-line-no">872</span><span id="line-872">            m_ChoiceBox_Program.setValue( program.get( 0 ) );</span>
-<span class="source-line-no">873</span><span id="line-873"></span>
-<span class="source-line-no">874</span><span id="line-874">            //---* Update the preferences *------------------------------------</span>
-<span class="source-line-no">875</span><span id="line-875">            m_Preferences.put( PREF_NODE_Discipline, newValue.name() );</span>
-<span class="source-line-no">876</span><span id="line-876">            m_Preferences.putInt( PREF_NODE_Heat, 0 );</span>
-<span class="source-line-no">877</span><span id="line-877">        }</span>
-<span class="source-line-no">878</span><span id="line-878">    }   //  onDisciplineChanged()</span>
-<span class="source-line-no">879</span><span id="line-879"></span>
-<span class="source-line-no">880</span><span id="line-880">    /**</span>
-<span class="source-line-no">881</span><span id="line-881">     *  The change listener for the disciplines in the menu.</span>
-<span class="source-line-no">882</span><span id="line-882">     *</span>
-<span class="source-line-no">883</span><span id="line-883">     *  @param  observable  The observed entity.</span>
-<span class="source-line-no">884</span><span id="line-884">     *  @param  oldValue    The old value.</span>
-<span class="source-line-no">885</span><span id="line-885">     *  @param  newValue    The new value.</span>
-<span class="source-line-no">886</span><span id="line-886">     */</span>
-<span class="source-line-no">887</span><span id="line-887">    private final void onDisciplineSelectionChanged( final ObservableValue&lt;? extends Toggle&gt; observable, final Toggle oldValue, final Toggle newValue )</span>
-<span class="source-line-no">888</span><span id="line-888">    {</span>
-<span class="source-line-no">889</span><span id="line-889">        if( nonNull( newValue ) ) m_SelectedDiscipline.set( (Discipline) newValue.getUserData() );</span>
-<span class="source-line-no">890</span><span id="line-890">    }   //  onDisciplineSelectionChanged()</span>
-<span class="source-line-no">891</span><span id="line-891"></span>
-<span class="source-line-no">892</span><span id="line-892">    /**</span>
-<span class="source-line-no">893</span><span id="line-893">     *  The handler method that initialises the termination of the application.</span>
-<span class="source-line-no">894</span><span id="line-894">     *  It is assigned to the {@code MENU_FILE_EXIT} menu item.</span>
-<span class="source-line-no">895</span><span id="line-895">     *</span>
-<span class="source-line-no">896</span><span id="line-896">     *  @param  ignoredEvent    The action event.</span>
-<span class="source-line-no">897</span><span id="line-897">     */</span>
-<span class="source-line-no">898</span><span id="line-898">    @SuppressWarnings( "static-method" )</span>
-<span class="source-line-no">899</span><span id="line-899">    @FXML</span>
-<span class="source-line-no">900</span><span id="line-900">    private final void onExit( final ActionEvent ignoredEvent )</span>
-<span class="source-line-no">901</span><span id="line-901">    {</span>
-<span class="source-line-no">902</span><span id="line-902">        exit();</span>
-<span class="source-line-no">903</span><span id="line-903">    }   //  onExit()</span>
-<span class="source-line-no">904</span><span id="line-904"></span>
-<span class="source-line-no">905</span><span id="line-905">    /**</span>
-<span class="source-line-no">906</span><span id="line-906">     *  Responds to the menu item {@code Help|About} and shows the</span>
-<span class="source-line-no">907</span><span id="line-907">     *  &amp;quot;About&amp;quot; dialog.</span>
-<span class="source-line-no">908</span><span id="line-908">     *</span>
-<span class="source-line-no">909</span><span id="line-909">     *  @param  event   The event that triggered this handler.</span>
-<span class="source-line-no">910</span><span id="line-910">     */</span>
-<span class="source-line-no">911</span><span id="line-911">    @FXML</span>
-<span class="source-line-no">912</span><span id="line-912">    private final void onMenuAbout( final ActionEvent event )</span>
-<span class="source-line-no">913</span><span id="line-913">    {</span>
-<span class="source-line-no">914</span><span id="line-914">        event.consume();</span>
-<span class="source-line-no">915</span><span id="line-915">        try</span>
-<span class="source-line-no">916</span><span id="line-916">        {</span>
-<span class="source-line-no">917</span><span id="line-917">            final var mainClass = Main.class;</span>
-<span class="source-line-no">918</span><span id="line-918"></span>
-<span class="source-line-no">919</span><span id="line-919">            /*</span>
-<span class="source-line-no">920</span><span id="line-920">             * Get the parent window for the &amp;quot;About&amp;quot; window. This is</span>
-<span class="source-line-no">921</span><span id="line-921">             * the owner of the menu.</span>
-<span class="source-line-no">922</span><span id="line-922">             */</span>
-<span class="source-line-no">923</span><span id="line-923">            final var ownerWindow = ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();</span>
-<span class="source-line-no">924</span><span id="line-924"></span>
-<span class="source-line-no">925</span><span id="line-925">            //---* Get the user data from the scene of the parent window *-----</span>
-<span class="source-line-no">926</span><span id="line-926">            final var mainSceneUserData = retrieveUserData( ownerWindow.getScene(), mainClass )</span>
-<span class="source-line-no">927</span><span id="line-927">                .orElseThrow();</span>
-<span class="source-line-no">928</span><span id="line-928">            final var application = mainSceneUserData.getApplication();</span>
-<span class="source-line-no">929</span><span id="line-929"></span>
-<span class="source-line-no">930</span><span id="line-930">            //---* Create the new stage *--------------------------------------</span>
-<span class="source-line-no">931</span><span id="line-931">            final var stage = new Stage( UTILITY );</span>
-<span class="source-line-no">932</span><span id="line-932"></span>
-<span class="source-line-no">933</span><span id="line-933">            //---* Assign the parent *-----------------------------------------</span>
-<span class="source-line-no">934</span><span id="line-934">            stage.initOwner( ownerWindow );</span>
-<span class="source-line-no">935</span><span id="line-935"></span>
-<span class="source-line-no">936</span><span id="line-936">            //---* Load the *.fxml and create the scene root *-----------------</span>
-<span class="source-line-no">937</span><span id="line-937">            final var fxmlFileName = "About.fxml";</span>
-<span class="source-line-no">938</span><span id="line-938">            final var fxmlURL = mainClass.getResource( fxmlFileName );</span>
-<span class="source-line-no">939</span><span id="line-939">            if( isNull( fxmlURL ) )</span>
-<span class="source-line-no">940</span><span id="line-940">            {</span>
-<span class="source-line-no">941</span><span id="line-941">                throw new ApplicationError( application.retrieveMessage( resources, MSGKEY_CannotLoadUIDefinition, fxmlFileName ) );</span>
-<span class="source-line-no">942</span><span id="line-942">            }</span>
-<span class="source-line-no">943</span><span id="line-943">            final Pane root = FXMLLoader.load( fxmlURL, resources );</span>
-<span class="source-line-no">944</span><span id="line-944"></span>
-<span class="source-line-no">945</span><span id="line-945">            //---* Create the new scene *--------------------------------------</span>
-<span class="source-line-no">946</span><span id="line-946">            SceneUserData.createScene( mainSceneUserData, stage, root );</span>
-<span class="source-line-no">947</span><span id="line-947"></span>
-<span class="source-line-no">948</span><span id="line-948">            //---* Configure the stage *---------------------------------------</span>
-<span class="source-line-no">949</span><span id="line-949">            stage.setAlwaysOnTop( true );</span>
-<span class="source-line-no">950</span><span id="line-950">            stage.setTitle( resources.getString( "TITLE_ABOUT" ) );</span>
-<span class="source-line-no">951</span><span id="line-951">            stage.sizeToScene();</span>
-<span class="source-line-no">952</span><span id="line-952">            stage.centerOnScreen();</span>
-<span class="source-line-no">953</span><span id="line-953">            stage.showAndWait();</span>
-<span class="source-line-no">954</span><span id="line-954">        }</span>
-<span class="source-line-no">955</span><span id="line-955">        catch( final Exception e )</span>
-<span class="source-line-no">956</span><span id="line-956">        {</span>
-<span class="source-line-no">957</span><span id="line-957">            throw new ApplicationError( e );</span>
-<span class="source-line-no">958</span><span id="line-958">        }</span>
-<span class="source-line-no">959</span><span id="line-959">    }   //  onMenuAbout()</span>
-<span class="source-line-no">960</span><span id="line-960"></span>
-<span class="source-line-no">961</span><span id="line-961">    /**</span>
-<span class="source-line-no">962</span><span id="line-962">     *  The handler method for the</span>
-<span class="source-line-no">963</span><span id="line-963">     *  {@link #m_Button_Start START}</span>
-<span class="source-line-no">964</span><span id="line-964">     *  button.</span>
-<span class="source-line-no">965</span><span id="line-965">     *</span>
-<span class="source-line-no">966</span><span id="line-966">     *  @param  ignoredEvent   The action event.</span>
-<span class="source-line-no">967</span><span id="line-967">     */</span>
-<span class="source-line-no">968</span><span id="line-968">    @FXML</span>
-<span class="source-line-no">969</span><span id="line-969">    private final void onStart( final ActionEvent ignoredEvent )</span>
-<span class="source-line-no">970</span><span id="line-970">    {</span>
-<span class="source-line-no">971</span><span id="line-971">        //---* Start the sequence *--------------------------------------------</span>
-<span class="source-line-no">972</span><span id="line-972">        reset();</span>
-<span class="source-line-no">973</span><span id="line-973">        proceedToNextStatus();</span>
-<span class="source-line-no">974</span><span id="line-974"></span>
-<span class="source-line-no">975</span><span id="line-975">        try( var ignored = m_HeatThreadGuard.lock() )</span>
-<span class="source-line-no">976</span><span id="line-976">        {</span>
-<span class="source-line-no">977</span><span id="line-977">            //---* Execute the heat *------------------------------------------</span>
-<span class="source-line-no">978</span><span id="line-978">            m_HeatThread = new Thread( this::executeHeat );</span>
-<span class="source-line-no">979</span><span id="line-979">            m_HeatThread.setDaemon( true );</span>
-<span class="source-line-no">980</span><span id="line-980">            m_HeatThread.start();</span>
-<span class="source-line-no">981</span><span id="line-981">        }</span>
-<span class="source-line-no">982</span><span id="line-982">    }   //  onStart()</span>
-<span class="source-line-no">983</span><span id="line-983"></span>
-<span class="source-line-no">984</span><span id="line-984">    /**</span>
-<span class="source-line-no">985</span><span id="line-985">     *  The handler method for touches to the grid pane.</span>
-<span class="source-line-no">986</span><span id="line-986">     *</span>
-<span class="source-line-no">987</span><span id="line-987">     *  @param  event   The touch event.</span>
-<span class="source-line-no">988</span><span id="line-988">     */</span>
-<span class="source-line-no">989</span><span id="line-989">    @FXML</span>
-<span class="source-line-no">990</span><span id="line-990">    private final void onTouch( final TouchEvent event )</span>
-<span class="source-line-no">991</span><span id="line-991">    {</span>
-<span class="source-line-no">992</span><span id="line-992">        final var buttonEvent = new ActionEvent( event.getSource(), event.getTarget() );</span>
-<span class="source-line-no">993</span><span id="line-993"></span>
-<span class="source-line-no">994</span><span id="line-994">        try( var ignored = m_HeatThreadGuard.lock() )</span>
-<span class="source-line-no">995</span><span id="line-995">        {</span>
-<span class="source-line-no">996</span><span id="line-996">            if( isNull( m_HeatThread ) || !m_HeatThread.isAlive() )</span>
-<span class="source-line-no">997</span><span id="line-997">            {</span>
-<span class="source-line-no">998</span><span id="line-998">                onStart( buttonEvent );</span>
-<span class="source-line-no">999</span><span id="line-999">            }</span>
-<span class="source-line-no">1000</span><span id="line-1000">            else</span>
-<span class="source-line-no">1001</span><span id="line-1001">            {</span>
-<span class="source-line-no">1002</span><span id="line-1002">                onAbort( buttonEvent );</span>
-<span class="source-line-no">1003</span><span id="line-1003">            }</span>
-<span class="source-line-no">1004</span><span id="line-1004">        }</span>
-<span class="source-line-no">1005</span><span id="line-1005">    }   //  onTouch()</span>
-<span class="source-line-no">1006</span><span id="line-1006"></span>
-<span class="source-line-no">1007</span><span id="line-1007">    /**</span>
-<span class="source-line-no">1008</span><span id="line-1008">     *  The change listener for the preferences.</span>
-<span class="source-line-no">1009</span><span id="line-1009">     *</span>
-<span class="source-line-no">1010</span><span id="line-1010">     *  @param  event   The change event.</span>
-<span class="source-line-no">1011</span><span id="line-1011">     */</span>
-<span class="source-line-no">1012</span><span id="line-1012">    private final void preferenceChanged( final PreferenceChangeEvent event )</span>
-<span class="source-line-no">1013</span><span id="line-1013">    {</span>
-<span class="source-line-no">1014</span><span id="line-1014">        final var preferences = event.getNode();</span>
-<span class="source-line-no">1015</span><span id="line-1015">        try</span>
-<span class="source-line-no">1016</span><span id="line-1016">        {</span>
-<span class="source-line-no">1017</span><span id="line-1017">            preferences.flush();</span>
-<span class="source-line-no">1018</span><span id="line-1018">        }</span>
-<span class="source-line-no">1019</span><span id="line-1019">        catch( final BackingStoreException e )</span>
-<span class="source-line-no">1020</span><span id="line-1020">        {</span>
-<span class="source-line-no">1021</span><span id="line-1021">            //---* We will not terminate the program … *-----------------------</span>
-<span class="source-line-no">1022</span><span id="line-1022">            e.printStackTrace( err );</span>
-<span class="source-line-no">1023</span><span id="line-1023">        }</span>
-<span class="source-line-no">1024</span><span id="line-1024">    }   //  preferenceChanged()</span>
-<span class="source-line-no">1025</span><span id="line-1025"></span>
-<span class="source-line-no">1026</span><span id="line-1026">    /**</span>
-<span class="source-line-no">1027</span><span id="line-1027">     *  Proceeds to the next status.</span>
-<span class="source-line-no">1028</span><span id="line-1028">     */</span>
-<span class="source-line-no">1029</span><span id="line-1029">    @SuppressWarnings( "UnnecessaryDefault" )</span>
-<span class="source-line-no">1030</span><span id="line-1030">    private final void proceedToNextStatus()</span>
-<span class="source-line-no">1031</span><span id="line-1031">    {</span>
-<span class="source-line-no">1032</span><span id="line-1032">        /*</span>
-<span class="source-line-no">1033</span><span id="line-1033">         * We do not rely on the sequence the enum values of Status are defined</span>
-<span class="source-line-no">1034</span><span id="line-1034">         * in; instead, we do it the verbose way.</span>
-<span class="source-line-no">1035</span><span id="line-1035">         */</span>
-<span class="source-line-no">1036</span><span id="line-1036">        try( var ignored = m_StatusControlGuard.lock() )</span>
-<span class="source-line-no">1037</span><span id="line-1037">        {</span>
-<span class="source-line-no">1038</span><span id="line-1038">            var currentStatus = m_StatusControl.get();</span>
-<span class="source-line-no">1039</span><span id="line-1039">            var newStatus = switch( currentStatus )</span>
-<span class="source-line-no">1040</span><span id="line-1040">            {</span>
-<span class="source-line-no">1041</span><span id="line-1041">                case null, STATUS_OFF -&gt; STATUS_STARTING;</span>
-<span class="source-line-no">1042</span><span id="line-1042">                case STATUS_STARTING -&gt; STATUS_BEFORE;</span>
-<span class="source-line-no">1043</span><span id="line-1043">                case STATUS_BEFORE -&gt; STATUS_PROLOG;</span>
-<span class="source-line-no">1044</span><span id="line-1044">                case STATUS_PROLOG -&gt; STATUS_SHOOTING;</span>
-<span class="source-line-no">1045</span><span id="line-1045">                case STATUS_SHOOTING -&gt; STATUS_AFTER;</span>
-<span class="source-line-no">1046</span><span id="line-1046">                case STATUS_AFTER -&gt; STATUS_OFF;</span>
-<span class="source-line-no">1047</span><span id="line-1047">                default -&gt; throw new UnsupportedEnumError( currentStatus );</span>
-<span class="source-line-no">1048</span><span id="line-1048">            };</span>
-<span class="source-line-no">1049</span><span id="line-1049"></span>
-<span class="source-line-no">1050</span><span id="line-1050">            //---* Apply the new status *--------------------------------------</span>
-<span class="source-line-no">1051</span><span id="line-1051">            m_StatusControl.set( newStatus );</span>
-<span class="source-line-no">1052</span><span id="line-1052">        }</span>
-<span class="source-line-no">1053</span><span id="line-1053">    }   //  proceedToNextStatus()</span>
-<span class="source-line-no">1054</span><span id="line-1054"></span>
-<span class="source-line-no">1055</span><span id="line-1055">    /**</span>
-<span class="source-line-no">1056</span><span id="line-1056">     *  Resets the system status.</span>
-<span class="source-line-no">1057</span><span id="line-1057">     */</span>
-<span class="source-line-no">1058</span><span id="line-1058">    private final void reset()</span>
-<span class="source-line-no">1059</span><span id="line-1059">    {</span>
-<span class="source-line-no">1060</span><span id="line-1060">        try( var ignored = m_StatusControlGuard.lock() )</span>
-<span class="source-line-no">1061</span><span id="line-1061">        {</span>
-<span class="source-line-no">1062</span><span id="line-1062">            m_StatusControl.set( STATUS_OFF );</span>
-<span class="source-line-no">1063</span><span id="line-1063">        }</span>
-<span class="source-line-no">1064</span><span id="line-1064">    }   //  reset()</span>
-<span class="source-line-no">1065</span><span id="line-1065"></span>
-<span class="source-line-no">1066</span><span id="line-1066">    /**</span>
-<span class="source-line-no">1067</span><span id="line-1067">     *  Sets the system status to</span>
-<span class="source-line-no">1068</span><span id="line-1068">     *  {@link Status#STATUS_PROLOG}.</span>
-<span class="source-line-no">1069</span><span id="line-1069">     */</span>
-<span class="source-line-no">1070</span><span id="line-1070">    private final void setStatusProlog()</span>
-<span class="source-line-no">1071</span><span id="line-1071">    {</span>
-<span class="source-line-no">1072</span><span id="line-1072">        try( var ignored = m_StatusControlGuard.lock() )</span>
-<span class="source-line-no">1073</span><span id="line-1073">        {</span>
-<span class="source-line-no">1074</span><span id="line-1074">            m_StatusControl.set( STATUS_PROLOG );</span>
-<span class="source-line-no">1075</span><span id="line-1075">        }</span>
-<span class="source-line-no">1076</span><span id="line-1076">    }   //  setStatusProlog()</span>
-<span class="source-line-no">1077</span><span id="line-1077"></span>
-<span class="source-line-no">1078</span><span id="line-1078">    /**</span>
-<span class="source-line-no">1079</span><span id="line-1079">     *  Sets the system status to</span>
-<span class="source-line-no">1080</span><span id="line-1080">     *  {@link Status#STATUS_STARTING}.</span>
-<span class="source-line-no">1081</span><span id="line-1081">     */</span>
-<span class="source-line-no">1082</span><span id="line-1082">    private final void setStatusStarting()</span>
-<span class="source-line-no">1083</span><span id="line-1083">    {</span>
-<span class="source-line-no">1084</span><span id="line-1084">        try( var ignored = m_StatusControlGuard.lock() )</span>
-<span class="source-line-no">1085</span><span id="line-1085">        {</span>
-<span class="source-line-no">1086</span><span id="line-1086">            m_StatusControl.set( STATUS_STARTING );</span>
-<span class="source-line-no">1087</span><span id="line-1087">        }</span>
-<span class="source-line-no">1088</span><span id="line-1088">    }   //  setStatusStarting()</span>
-<span class="source-line-no">1089</span><span id="line-1089"></span>
-<span class="source-line-no">1090</span><span id="line-1090">    /**</span>
-<span class="source-line-no">1091</span><span id="line-1091">     *  The change listener for the status control.&lt;br&gt;</span>
-<span class="source-line-no">1092</span><span id="line-1092">     *  &lt;br&gt;This method controls the current display.</span>
-<span class="source-line-no">1093</span><span id="line-1093">     *</span>
-<span class="source-line-no">1094</span><span id="line-1094">     *  @param  ignoredObservable   The observed entity; ignored.</span>
-<span class="source-line-no">1095</span><span id="line-1095">     *  @param  oldStatus   The previous status.</span>
-<span class="source-line-no">1096</span><span id="line-1096">     *  @param  newStatus   The new status.</span>
-<span class="source-line-no">1097</span><span id="line-1097">     */</span>
-<span class="source-line-no">1098</span><span id="line-1098">    private final void statusTransition( final ObservableValue&lt;? extends Status&gt; ignoredObservable, final Status oldStatus, final Status newStatus )</span>
-<span class="source-line-no">1099</span><span id="line-1099">    {</span>
-<span class="source-line-no">1100</span><span id="line-1100">        try( var ignored = m_StatusControlGuard.lock() )</span>
-<span class="source-line-no">1101</span><span id="line-1101">        {</span>
-<span class="source-line-no">1102</span><span id="line-1102">            if( nonNull( newStatus ) )</span>
-<span class="source-line-no">1103</span><span id="line-1103">            {</span>
-<span class="source-line-no">1104</span><span id="line-1104">                runLater( () -&gt; m_Label_Status.setText( newStatus.toString() ) );</span>
-<span class="source-line-no">1105</span><span id="line-1105"></span>
-<span class="source-line-no">1106</span><span id="line-1106">                StatusSwitch:</span>
-<span class="source-line-no">1107</span><span id="line-1107">                switch( newStatus )</span>
-<span class="source-line-no">1108</span><span id="line-1108">                {</span>
-<span class="source-line-no">1109</span><span id="line-1109">                    case STATUS_AFTER -&gt; {</span>
-<span class="source-line-no">1110</span><span id="line-1110">                        //---* Stop the start sound and play the end sound *---</span>
-<span class="source-line-no">1111</span><span id="line-1111">                        if( m_CheckMenuItem_Sound.isSelected() )</span>
-<span class="source-line-no">1112</span><span id="line-1112">                        {</span>
-<span class="source-line-no">1113</span><span id="line-1113">                            m_StartSound.ifPresent( s -&gt; {</span>
-<span class="source-line-no">1114</span><span id="line-1114">                                if( s.isPlaying() )</span>
-<span class="source-line-no">1115</span><span id="line-1115">                                    s.stop();</span>
-<span class="source-line-no">1116</span><span id="line-1116">                            } );</span>
-<span class="source-line-no">1117</span><span id="line-1117">                            m_EndSound.ifPresent( AudioClip::play );</span>
-<span class="source-line-no">1118</span><span id="line-1118">                        }</span>
-<span class="source-line-no">1119</span><span id="line-1119"></span>
-<span class="source-line-no">1120</span><span id="line-1120">                        //---* Disable the abort button *----------------------</span>
-<span class="source-line-no">1121</span><span id="line-1121">                        m_Button_Abort.setDisable( true );</span>
-<span class="source-line-no">1122</span><span id="line-1122"></span>
-<span class="source-line-no">1123</span><span id="line-1123">                        //---* Change the lights *-----------------------------</span>
-<span class="source-line-no">1124</span><span id="line-1124">                        m_RedLight.toggle();</span>
-<span class="source-line-no">1125</span><span id="line-1125">                        m_GreenLight.toggle();</span>
-<span class="source-line-no">1126</span><span id="line-1126"></span>
-<span class="source-line-no">1127</span><span id="line-1127">                        //---* Hide the heat count *---------------------------</span>
-<span class="source-line-no">1128</span><span id="line-1128">                        m_Label_HeatCount.setVisible( false );</span>
-<span class="source-line-no">1129</span><span id="line-1129">                    }</span>
-<span class="source-line-no">1130</span><span id="line-1130">                    case STATUS_BEFORE -&gt; {</span>
-<span class="source-line-no">1131</span><span id="line-1131">                        //---* Disable the start button *----------------------</span>
-<span class="source-line-no">1132</span><span id="line-1132">                        m_Button_Start.setDisable( true );</span>
-<span class="source-line-no">1133</span><span id="line-1133"></span>
-<span class="source-line-no">1134</span><span id="line-1134">                        //---* Enable the abort button *----------------------</span>
-<span class="source-line-no">1135</span><span id="line-1135">                        m_Button_Abort.setDisable( false );</span>
-<span class="source-line-no">1136</span><span id="line-1136"></span>
-<span class="source-line-no">1137</span><span id="line-1137">                        //---* Focus the abort button *------------------------</span>
-<span class="source-line-no">1138</span><span id="line-1138">                        runLater( m_Button_Abort::requestFocus );</span>
-<span class="source-line-no">1139</span><span id="line-1139">                    }</span>
-<span class="source-line-no">1140</span><span id="line-1140">                    case STATUS_OFF -&gt; {</span>
-<span class="source-line-no">1141</span><span id="line-1141">                        //---* Set the default time *--------------------------</span>
-<span class="source-line-no">1142</span><span id="line-1142">                        m_TextField_Time.setText( format( "%3.1f", 0.0 ) );</span>
-<span class="source-line-no">1143</span><span id="line-1143"></span>
-<span class="source-line-no">1144</span><span id="line-1144">                        //---* Enable the start button *-----------------------</span>
-<span class="source-line-no">1145</span><span id="line-1145">                        m_Button_Start.setDisable( false );</span>
-<span class="source-line-no">1146</span><span id="line-1146"></span>
-<span class="source-line-no">1147</span><span id="line-1147">                        //---* Disable the abort button *----------------------</span>
-<span class="source-line-no">1148</span><span id="line-1148">                        m_Button_Abort.setDisable( true );</span>
-<span class="source-line-no">1149</span><span id="line-1149"></span>
-<span class="source-line-no">1150</span><span id="line-1150">                        //---* Focus the start button *------------------------</span>
-<span class="source-line-no">1151</span><span id="line-1151">                        runLater( m_Button_Start::requestFocus );</span>
-<span class="source-line-no">1152</span><span id="line-1152"></span>
-<span class="source-line-no">1153</span><span id="line-1153">                        //---* Hide the heat count *---------------------------</span>
-<span class="source-line-no">1154</span><span id="line-1154">                        m_Label_HeatCount.setVisible( false );</span>
-<span class="source-line-no">1155</span><span id="line-1155"></span>
-<span class="source-line-no">1156</span><span id="line-1156">                        //---* Switch off the lights *-------------------------</span>
-<span class="source-line-no">1157</span><span id="line-1157">                        lightsOff();</span>
-<span class="source-line-no">1158</span><span id="line-1158">                    }</span>
-<span class="source-line-no">1159</span><span id="line-1159">                    case STATUS_PROLOG -&gt; {</span>
-<span class="source-line-no">1160</span><span id="line-1160">                        if( oldStatus == STATUS_SHOOTING )</span>
-<span class="source-line-no">1161</span><span id="line-1161">                        {</span>
-<span class="source-line-no">1162</span><span id="line-1162">                            if( m_CheckMenuItem_Sound.isSelected() )</span>
-<span class="source-line-no">1163</span><span id="line-1163">                            {</span>
-<span class="source-line-no">1164</span><span id="line-1164">                                /*</span>
-<span class="source-line-no">1165</span><span id="line-1165">                                 * Stop the start sound and play the end sound.</span>
-<span class="source-line-no">1166</span><span id="line-1166">                                 */</span>
-<span class="source-line-no">1167</span><span id="line-1167">                                m_StartSound.ifPresent( s -&gt; {</span>
-<span class="source-line-no">1168</span><span id="line-1168">                                    if( s.isPlaying() )</span>
-<span class="source-line-no">1169</span><span id="line-1169">                                        s.stop();</span>
-<span class="source-line-no">1170</span><span id="line-1170">                                } );</span>
-<span class="source-line-no">1171</span><span id="line-1171">                                m_EndSound.ifPresent( AudioClip::play );</span>
-<span class="source-line-no">1172</span><span id="line-1172">                            }</span>
-<span class="source-line-no">1173</span><span id="line-1173"></span>
-<span class="source-line-no">1174</span><span id="line-1174">                            //---* Switch off the red light *------------------</span>
-<span class="source-line-no">1175</span><span id="line-1175">                            m_GreenLight.off();</span>
-<span class="source-line-no">1176</span><span id="line-1176">                        }</span>
-<span class="source-line-no">1177</span><span id="line-1177"></span>
-<span class="source-line-no">1178</span><span id="line-1178">                        //---* Show the heat count *---------------------------</span>
-<span class="source-line-no">1179</span><span id="line-1179">                        if( m_ChoiceBox_Program.getValue().isRepeated() &amp;&amp; m_CheckMenuItem_ShowHeatCount.isSelected() )</span>
-<span class="source-line-no">1180</span><span id="line-1180">                        {</span>
-<span class="source-line-no">1181</span><span id="line-1181">                            m_Label_HeatCount.setVisible( true );</span>
-<span class="source-line-no">1182</span><span id="line-1182">                        }</span>
-<span class="source-line-no">1183</span><span id="line-1183"></span>
-<span class="source-line-no">1184</span><span id="line-1184">                        //---* Switch on the red light *-----------------------</span>
-<span class="source-line-no">1185</span><span id="line-1185">                        m_RedLight.on();</span>
-<span class="source-line-no">1186</span><span id="line-1186">                    }</span>
-<span class="source-line-no">1187</span><span id="line-1187">                    case STATUS_SHOOTING -&gt; {</span>
-<span class="source-line-no">1188</span><span id="line-1188">                        //---* Play the start sound *--------------------------</span>
-<span class="source-line-no">1189</span><span id="line-1189">                        if( m_CheckMenuItem_Sound.isSelected() )</span>
-<span class="source-line-no">1190</span><span id="line-1190">                            m_StartSound.ifPresent( AudioClip::play );</span>
-<span class="source-line-no">1191</span><span id="line-1191"></span>
-<span class="source-line-no">1192</span><span id="line-1192">                        //---* Switch on the green light *---------------------</span>
-<span class="source-line-no">1193</span><span id="line-1193">                        m_GreenLight.on();</span>
-<span class="source-line-no">1194</span><span id="line-1194"></span>
-<span class="source-line-no">1195</span><span id="line-1195">                        //---* Switch off the red light *----------------------</span>
-<span class="source-line-no">1196</span><span id="line-1196">                        m_RedLight.off();</span>
-<span class="source-line-no">1197</span><span id="line-1197"></span>
-<span class="source-line-no">1198</span><span id="line-1198">                        //---* Leave the switch *------------------------------</span>
-<span class="source-line-no">1199</span><span id="line-1199">                        break StatusSwitch;</span>
-<span class="source-line-no">1200</span><span id="line-1200">                    }</span>
-<span class="source-line-no">1201</span><span id="line-1201"></span>
-<span class="source-line-no">1202</span><span id="line-1202">                    //---* Disable the start button *--------------------------</span>
-<span class="source-line-no">1203</span><span id="line-1203">                    case STATUS_STARTING -&gt; m_Button_Start.setDisable( true );</span>
-<span class="source-line-no">1204</span><span id="line-1204"></span>
-<span class="source-line-no">1205</span><span id="line-1205">                    default -&gt; throw new UnsupportedEnumError( newStatus );</span>
-<span class="source-line-no">1206</span><span id="line-1206">                }   //  StatusSwitch:</span>
-<span class="source-line-no">1207</span><span id="line-1207">            }</span>
-<span class="source-line-no">1208</span><span id="line-1208">        }</span>
-<span class="source-line-no">1209</span><span id="line-1209">    }   //  statusTransition()</span>
-<span class="source-line-no">1210</span><span id="line-1210">}</span>
-<span class="source-line-no">1211</span><span id="line-1211">//  class MainController</span>
-<span class="source-line-no">1212</span><span id="line-1212"></span>
-<span class="source-line-no">1213</span><span id="line-1213">/*</span>
-<span class="source-line-no">1214</span><span id="line-1214"> *  End of File</span>
-<span class="source-line-no">1215</span><span id="line-1215"> */</span>
+<span class="source-line-no">475</span><span id="line-475">        /*---------*\</span>
+<span class="source-line-no">476</span><span id="line-476">    ====** Methods **==========================================================</span>
+<span class="source-line-no">477</span><span id="line-477">        \*---------*/</span>
+<span class="source-line-no">478</span><span id="line-478">    /**</span>
+<span class="source-line-no">479</span><span id="line-479">     *  Executes the current heat.</span>
+<span class="source-line-no">480</span><span id="line-480">     */</span>
+<span class="source-line-no">481</span><span id="line-481">    @SuppressWarnings( "BusyWait" )</span>
+<span class="source-line-no">482</span><span id="line-482">    private final void executeHeat()</span>
+<span class="source-line-no">483</span><span id="line-483">    {</span>
+<span class="source-line-no">484</span><span id="line-484">        var proceed = !interrupted();</span>
+<span class="source-line-no">485</span><span id="line-485"></span>
+<span class="source-line-no">486</span><span id="line-486">        //---* Retrieve the current heat settings *----------------------------</span>
+<span class="source-line-no">487</span><span id="line-487">        final var heat = m_ChoiceBox_Program.getValue();</span>
+<span class="source-line-no">488</span><span id="line-488"></span>
+<span class="source-line-no">489</span><span id="line-489">        //---* Execute ... *---------------------------------------------------</span>
+<span class="source-line-no">490</span><span id="line-490">        setStatusStarting();</span>
+<span class="source-line-no">491</span><span id="line-491">        proceedToNextStatus();</span>
+<span class="source-line-no">492</span><span id="line-492">        final var beforeTime = (long) (m_Slider_BeforeTime.getValue() * 1000.0);</span>
+<span class="source-line-no">493</span><span id="line-493">        if( beforeTime &gt; 0.0 )</span>
+<span class="source-line-no">494</span><span id="line-494">        {</span>
+<span class="source-line-no">495</span><span id="line-495">            try</span>
+<span class="source-line-no">496</span><span id="line-496">            {</span>
+<span class="source-line-no">497</span><span id="line-497">                sleep( beforeTime );</span>
+<span class="source-line-no">498</span><span id="line-498">            }</span>
+<span class="source-line-no">499</span><span id="line-499">            catch( @SuppressWarnings( "unused" ) final InterruptedException e )</span>
+<span class="source-line-no">500</span><span id="line-500">            {</span>
+<span class="source-line-no">501</span><span id="line-501">                proceed = false;</span>
+<span class="source-line-no">502</span><span id="line-502">            }</span>
+<span class="source-line-no">503</span><span id="line-503">        }</span>
+<span class="source-line-no">504</span><span id="line-504">        if( !heat.isRepeated() ) proceedToNextStatus();</span>
+<span class="source-line-no">505</span><span id="line-505"></span>
+<span class="source-line-no">506</span><span id="line-506">        final var heatCount = new AtomicInteger();</span>
+<span class="source-line-no">507</span><span id="line-507"></span>
+<span class="source-line-no">508</span><span id="line-508">        RepeatLoop: for( var r = 0; (r &lt; heat.getRepetitions()) &amp;&amp; proceed; ++r )</span>
+<span class="source-line-no">509</span><span id="line-509">        {</span>
+<span class="source-line-no">510</span><span id="line-510">            if( heat.isRepeated() ) setStatusProlog();</span>
+<span class="source-line-no">511</span><span id="line-511"></span>
+<span class="source-line-no">512</span><span id="line-512">            //---* Update the heat count *-------------------------------------</span>
+<span class="source-line-no">513</span><span id="line-513">            heatCount.set( r + 1 );</span>
+<span class="source-line-no">514</span><span id="line-514">            runLater( () -&gt; m_Label_HeatCount.setText( Integer.toString( heatCount.get() ) ) );</span>
+<span class="source-line-no">515</span><span id="line-515"></span>
+<span class="source-line-no">516</span><span id="line-516">            //---* Start the prolog *------------------------------------------</span>
+<span class="source-line-no">517</span><span id="line-517">            var endTime = currentTimeMillis() + heat.getPrologTime();</span>
+<span class="source-line-no">518</span><span id="line-518">            var scheduledService = new TimeUpdateService( endTime, m_TextField_Time );</span>
+<span class="source-line-no">519</span><span id="line-519">            scheduledService.start();</span>
+<span class="source-line-no">520</span><span id="line-520">            PrologLoop: while( currentTimeMillis() &lt; endTime )</span>
+<span class="source-line-no">521</span><span id="line-521">            {</span>
+<span class="source-line-no">522</span><span id="line-522">                if( interrupted() )</span>
+<span class="source-line-no">523</span><span id="line-523">                {</span>
+<span class="source-line-no">524</span><span id="line-524">                    proceed = false;</span>
+<span class="source-line-no">525</span><span id="line-525">                    break PrologLoop;</span>
+<span class="source-line-no">526</span><span id="line-526">                }</span>
+<span class="source-line-no">527</span><span id="line-527">                try</span>
+<span class="source-line-no">528</span><span id="line-528">                {</span>
+<span class="source-line-no">529</span><span id="line-529">                    sleep( endTime - currentTimeMillis() );</span>
+<span class="source-line-no">530</span><span id="line-530">                }</span>
+<span class="source-line-no">531</span><span id="line-531">                catch( @SuppressWarnings( "unused" ) final InterruptedException e )</span>
+<span class="source-line-no">532</span><span id="line-532">                {</span>
+<span class="source-line-no">533</span><span id="line-533">                    proceed = false;</span>
+<span class="source-line-no">534</span><span id="line-534">                    break PrologLoop;</span>
+<span class="source-line-no">535</span><span id="line-535">                }</span>
+<span class="source-line-no">536</span><span id="line-536">            }   //  PrologLoop:</span>
+<span class="source-line-no">537</span><span id="line-537"></span>
+<span class="source-line-no">538</span><span id="line-538">            scheduledService.stop();</span>
+<span class="source-line-no">539</span><span id="line-539">            proceedToNextStatus();</span>
+<span class="source-line-no">540</span><span id="line-540"></span>
+<span class="source-line-no">541</span><span id="line-541">            if( proceed )</span>
+<span class="source-line-no">542</span><span id="line-542">            {</span>
+<span class="source-line-no">543</span><span id="line-543">                //---* Start the shooting *------------------------------------</span>
+<span class="source-line-no">544</span><span id="line-544">                endTime = currentTimeMillis() + heat.getShootingTime();</span>
+<span class="source-line-no">545</span><span id="line-545">                scheduledService = new TimeUpdateService( endTime, m_TextField_Time );</span>
+<span class="source-line-no">546</span><span id="line-546">                scheduledService.start();</span>
+<span class="source-line-no">547</span><span id="line-547">                ShootingLoop: while( currentTimeMillis() &lt; endTime )</span>
+<span class="source-line-no">548</span><span id="line-548">                {</span>
+<span class="source-line-no">549</span><span id="line-549">                    if( interrupted() )</span>
+<span class="source-line-no">550</span><span id="line-550">                    {</span>
+<span class="source-line-no">551</span><span id="line-551">                        proceed = false;</span>
+<span class="source-line-no">552</span><span id="line-552">                        break ShootingLoop;</span>
+<span class="source-line-no">553</span><span id="line-553">                    }</span>
+<span class="source-line-no">554</span><span id="line-554">                    try</span>
+<span class="source-line-no">555</span><span id="line-555">                    {</span>
+<span class="source-line-no">556</span><span id="line-556">                        sleep( endTime - currentTimeMillis() );</span>
+<span class="source-line-no">557</span><span id="line-557">                    }</span>
+<span class="source-line-no">558</span><span id="line-558">                    catch( @SuppressWarnings( "unused" ) final InterruptedException e )</span>
+<span class="source-line-no">559</span><span id="line-559">                    {</span>
+<span class="source-line-no">560</span><span id="line-560">                        proceed = false;</span>
+<span class="source-line-no">561</span><span id="line-561">                        break ShootingLoop;</span>
+<span class="source-line-no">562</span><span id="line-562">                    }</span>
+<span class="source-line-no">563</span><span id="line-563">                }   //  ShootingLoop:</span>
+<span class="source-line-no">564</span><span id="line-564">                scheduledService.stop();</span>
+<span class="source-line-no">565</span><span id="line-565">            }</span>
+<span class="source-line-no">566</span><span id="line-566"></span>
+<span class="source-line-no">567</span><span id="line-567">            proceed &amp;= !interrupted();</span>
+<span class="source-line-no">568</span><span id="line-568">        }   //  RepeatLoop:</span>
+<span class="source-line-no">569</span><span id="line-569"></span>
+<span class="source-line-no">570</span><span id="line-570">        if( proceed )</span>
+<span class="source-line-no">571</span><span id="line-571">        {</span>
+<span class="source-line-no">572</span><span id="line-572">            //---* After shooting *--------------------------------------------</span>
+<span class="source-line-no">573</span><span id="line-573">            proceedToNextStatus();</span>
+<span class="source-line-no">574</span><span id="line-574">            final var epilogTime = (long) (m_Slider_AfterTime.getValue() * 1_000.0);</span>
+<span class="source-line-no">575</span><span id="line-575">            if( epilogTime &gt; 0.0 )</span>
+<span class="source-line-no">576</span><span id="line-576">            {</span>
+<span class="source-line-no">577</span><span id="line-577">                try</span>
+<span class="source-line-no">578</span><span id="line-578">                {</span>
+<span class="source-line-no">579</span><span id="line-579">                    sleep( epilogTime );</span>
+<span class="source-line-no">580</span><span id="line-580">                }</span>
+<span class="source-line-no">581</span><span id="line-581">                catch( @SuppressWarnings( "unused" ) final InterruptedException e ) { /* Deliberately ignored */ }</span>
+<span class="source-line-no">582</span><span id="line-582">            }</span>
+<span class="source-line-no">583</span><span id="line-583">        }</span>
+<span class="source-line-no">584</span><span id="line-584"></span>
+<span class="source-line-no">585</span><span id="line-585">        //---* Cleanup *-------------------------------------------------------</span>
+<span class="source-line-no">586</span><span id="line-586">        m_HeatThread = null;</span>
+<span class="source-line-no">587</span><span id="line-587">        reset();</span>
+<span class="source-line-no">588</span><span id="line-588">    }   //  executeHeat()</span>
+<span class="source-line-no">589</span><span id="line-589"></span>
+<span class="source-line-no">590</span><span id="line-590">    /**</span>
+<span class="source-line-no">591</span><span id="line-591">     *  Initialises the controller.</span>
+<span class="source-line-no">592</span><span id="line-592">     */</span>
+<span class="source-line-no">593</span><span id="line-593">    @FXML</span>
+<span class="source-line-no">594</span><span id="line-594">    private final void initialize()</span>
+<span class="source-line-no">595</span><span id="line-595">    {</span>
+<span class="source-line-no">596</span><span id="line-596">        assert nonNull( m_Button_Abort ) : "fx:id=\"m_Button_Abort\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">597</span><span id="line-597">        assert nonNull( m_Button_Start ) : "fx:id=\"m_Button_Start\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">598</span><span id="line-598">        assert nonNull( m_ButtonPane ) : "fx:id=\"m_ButtonPane\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">599</span><span id="line-599">        assert nonNull( m_CheckMenuItem_ShowHeatCount ) : "fx:id=\"m_CheckMenuItem_ShowHeatCount\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">600</span><span id="line-600">        assert nonNull( m_CheckMenuItem_ShowStatus ) : "fx:id=\"m_CheckMenuItem_ShowStatus\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">601</span><span id="line-601">        assert nonNull( m_CheckMenuItem_ShowTime ) : "fx:id=\"m_CheckMenuItem_ShowTime\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">602</span><span id="line-602">        assert nonNull( m_CheckMenuItem_Sound ) : "fx:id=\"m_CheckMenuItem_Sound\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">603</span><span id="line-603">        assert nonNull( m_ChoiceBox_Program ) : "fx:id=\"m_ChoiceBox_Program\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">604</span><span id="line-604">        assert nonNull( m_Circle_Green ) : "fx:id=\"m_Circle_Green\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">605</span><span id="line-605">        assert nonNull( m_Circle_Red ) : "fx:id=\"m_Circle_Red\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">606</span><span id="line-606">        assert nonNull( m_DisciplinesToggleGroup ) : "fx:id=\"m_DisciplinesToggleGroup\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">607</span><span id="line-607">        assert nonNull( m_Label_HeatCount ) : "fx:id=\"m_Label_HeatCount\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">608</span><span id="line-608">        assert nonNull( m_Label_SelectedDiscipline ) : "fx:id=\"m_Label_SelectedDiscipline\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">609</span><span id="line-609">        assert nonNull( m_Label_Status ) : "fx:id=\"m_Label_Status\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">610</span><span id="line-610">        assert nonNull( m_LightBox ) : "fx:id=\"m_LightBox\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">611</span><span id="line-611">        assert nonNull( m_Slider_AfterTime ) : "fx:id=\"m_Slider_AfterTime\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">612</span><span id="line-612">        assert nonNull( m_Slider_BeforeTime ) : "fx:id=\"m_Slider_BeforeTime\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">613</span><span id="line-613">        assert nonNull( m_TextField_Time ) : "fx:id=\"m_TextField_Time\" was not injected: check your FXML file 'Main.fxml'.";</span>
+<span class="source-line-no">614</span><span id="line-614">        assert nonNull( resources ) : "The resource bundle was not injected";</span>
+<span class="source-line-no">615</span><span id="line-615"></span>
+<span class="source-line-no">616</span><span id="line-616">        //---* Load the sounds *-----------------------------------------------</span>
+<span class="source-line-no">617</span><span id="line-617">        if( "arm".equalsIgnoreCase( getProperty( PROPERTY_CPUARCHITECTURE ) ) )</span>
+<span class="source-line-no">618</span><span id="line-618">        {</span>
+<span class="source-line-no">619</span><span id="line-619">            /*</span>
+<span class="source-line-no">620</span><span id="line-620">             * Currently (as for 2017-08-19) JavaFX has issues to play media on</span>
+<span class="source-line-no">621</span><span id="line-621">             * the Raspberry PI 3, due to a problem with libjfxmedia.so.</span>
+<span class="source-line-no">622</span><span id="line-622">             * Therefore, we do now allow audio/sound on a Raspberry PI.</span>
+<span class="source-line-no">623</span><span id="line-623">             */</span>
+<span class="source-line-no">624</span><span id="line-624">            m_CheckMenuItem_Sound.setDisable( true );</span>
+<span class="source-line-no">625</span><span id="line-625">            m_CheckMenuItem_Sound.setSelected( false );</span>
+<span class="source-line-no">626</span><span id="line-626"></span>
+<span class="source-line-no">627</span><span id="line-627">            m_StartSound = Optional.empty();</span>
+<span class="source-line-no">628</span><span id="line-628">            m_EndSound = Optional.empty();</span>
+<span class="source-line-no">629</span><span id="line-629">        }</span>
+<span class="source-line-no">630</span><span id="line-630">        else</span>
+<span class="source-line-no">631</span><span id="line-631">        {</span>
+<span class="source-line-no">632</span><span id="line-632">            //---* Sets the sound flag *---------------------------------------</span>
+<span class="source-line-no">633</span><span id="line-633">            m_CheckMenuItem_Sound.setDisable( false );</span>
+<span class="source-line-no">634</span><span id="line-634">            final var soundFlag = m_Preferences.getBoolean( PREF_NODE_Sound, false );</span>
+<span class="source-line-no">635</span><span id="line-635">            m_CheckMenuItem_Sound.setSelected( soundFlag );</span>
+<span class="source-line-no">636</span><span id="line-636"></span>
+<span class="source-line-no">637</span><span id="line-637">            //---* Load the audio clips *--------------------------------------</span>
+<span class="source-line-no">638</span><span id="line-638">            var audioClipURL = getClass().getResource( SOUND_ENDSHOOTING );</span>
+<span class="source-line-no">639</span><span id="line-639">            if( nonNull( audioClipURL ) )</span>
+<span class="source-line-no">640</span><span id="line-640">            {</span>
+<span class="source-line-no">641</span><span id="line-641">                var audioClip = new AudioClip( audioClipURL.toExternalForm() );</span>
+<span class="source-line-no">642</span><span id="line-642">                audioClip.play();</span>
+<span class="source-line-no">643</span><span id="line-643">                audioClip.stop();</span>
+<span class="source-line-no">644</span><span id="line-644">                m_EndSound = Optional.of( audioClip );</span>
+<span class="source-line-no">645</span><span id="line-645"></span>
+<span class="source-line-no">646</span><span id="line-646">                /*</span>
+<span class="source-line-no">647</span><span id="line-647">                 * We try to load the start sound only when we have an end</span>
+<span class="source-line-no">648</span><span id="line-648">                 * sound.</span>
+<span class="source-line-no">649</span><span id="line-649">                 */</span>
+<span class="source-line-no">650</span><span id="line-650">                audioClipURL = getClass().getResource( SOUND_STARTSHOOTING );</span>
+<span class="source-line-no">651</span><span id="line-651">                if( nonNull( audioClipURL ) )</span>
+<span class="source-line-no">652</span><span id="line-652">                {</span>
+<span class="source-line-no">653</span><span id="line-653">                    audioClip = new AudioClip( audioClipURL.toExternalForm() );</span>
+<span class="source-line-no">654</span><span id="line-654">                    audioClip.play();</span>
+<span class="source-line-no">655</span><span id="line-655">                    audioClip.stop();</span>
+<span class="source-line-no">656</span><span id="line-656">                    m_StartSound = Optional.of( audioClip );</span>
+<span class="source-line-no">657</span><span id="line-657"></span>
+<span class="source-line-no">658</span><span id="line-658">                    //---* Sets the listener for the sound flag menu item *----</span>
+<span class="source-line-no">659</span><span id="line-659">                    m_CheckMenuItem_Sound.selectedProperty().addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_Sound, n ) );</span>
+<span class="source-line-no">660</span><span id="line-660">                }</span>
+<span class="source-line-no">661</span><span id="line-661">                else</span>
+<span class="source-line-no">662</span><span id="line-662">                {</span>
+<span class="source-line-no">663</span><span id="line-663">                    m_StartSound = Optional.empty();</span>
+<span class="source-line-no">664</span><span id="line-664">                    m_CheckMenuItem_Sound.setDisable( true );</span>
+<span class="source-line-no">665</span><span id="line-665">                    m_CheckMenuItem_Sound.setSelected( false );</span>
+<span class="source-line-no">666</span><span id="line-666">                }</span>
+<span class="source-line-no">667</span><span id="line-667">            }</span>
+<span class="source-line-no">668</span><span id="line-668">            else</span>
+<span class="source-line-no">669</span><span id="line-669">            {</span>
+<span class="source-line-no">670</span><span id="line-670">                m_EndSound = Optional.empty();</span>
+<span class="source-line-no">671</span><span id="line-671">                m_CheckMenuItem_Sound.setDisable( true );</span>
+<span class="source-line-no">672</span><span id="line-672">                m_CheckMenuItem_Sound.setSelected( false );</span>
+<span class="source-line-no">673</span><span id="line-673">            }</span>
+<span class="source-line-no">674</span><span id="line-674">        }</span>
+<span class="source-line-no">675</span><span id="line-675"></span>
+<span class="source-line-no">676</span><span id="line-676">        /*</span>
+<span class="source-line-no">677</span><span id="line-677">         * Although this can be set also in the *.fxml file, it should be done</span>
+<span class="source-line-no">678</span><span id="line-678">         * here.</span>
+<span class="source-line-no">679</span><span id="line-679">         * This is because when it is set in *.fxml, the screen remain blank</span>
+<span class="source-line-no">680</span><span id="line-680">         * until the mouse is moved over the menu or the button.</span>
+<span class="source-line-no">681</span><span id="line-681">         */</span>
+<span class="source-line-no">682</span><span id="line-682">        m_TextField_Time.setFocusTraversable( false );</span>
+<span class="source-line-no">683</span><span id="line-683"></span>
+<span class="source-line-no">684</span><span id="line-684">        //---* Bind the "show time" flag to the time text field *--------------</span>
+<span class="source-line-no">685</span><span id="line-685">        /*</span>
+<span class="source-line-no">686</span><span id="line-686">         * For some reason, this could not be set in the *.fxgraph file.</span>
+<span class="source-line-no">687</span><span id="line-687">         */</span>
+<span class="source-line-no">688</span><span id="line-688">        m_TextField_Time.visibleProperty()</span>
+<span class="source-line-no">689</span><span id="line-689">            .bind( m_CheckMenuItem_ShowTime.selectedProperty() );</span>
+<span class="source-line-no">690</span><span id="line-690"></span>
+<span class="source-line-no">691</span><span id="line-691">        /*</span>
+<span class="source-line-no">692</span><span id="line-692">         * The button pane should be visible only when at least one button is</span>
+<span class="source-line-no">693</span><span id="line-693">         * enabled.</span>
+<span class="source-line-no">694</span><span id="line-694">         */</span>
+<span class="source-line-no">695</span><span id="line-695">        m_ButtonPane.visibleProperty()</span>
+<span class="source-line-no">696</span><span id="line-696">            .bind( m_Button_Abort.disabledProperty().and( m_Button_Start.disabledProperty() ).not() );</span>
+<span class="source-line-no">697</span><span id="line-697"></span>
+<span class="source-line-no">698</span><span id="line-698">        //---* Sets the "show time" flag *-------------------------------------</span>
+<span class="source-line-no">699</span><span id="line-699">        final var showTimeFlag = m_Preferences.getBoolean( PREF_NODE_ShowTime, true );</span>
+<span class="source-line-no">700</span><span id="line-700">        m_CheckMenuItem_ShowTime.setSelected( showTimeFlag );</span>
+<span class="source-line-no">701</span><span id="line-701"></span>
+<span class="source-line-no">702</span><span id="line-702">        //---* Sets the listener for the "show time" flag menu item *----------</span>
+<span class="source-line-no">703</span><span id="line-703">        m_CheckMenuItem_ShowTime.selectedProperty()</span>
+<span class="source-line-no">704</span><span id="line-704">            .addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_ShowTime, n ) );</span>
+<span class="source-line-no">705</span><span id="line-705"></span>
+<span class="source-line-no">706</span><span id="line-706">        //---* Initialises the additional times *------------------------------</span>
+<span class="source-line-no">707</span><span id="line-707">        final var prologTime = m_Preferences.getDouble( PREF_NODE_Before, 0.0 );</span>
+<span class="source-line-no">708</span><span id="line-708">        m_Slider_BeforeTime.setValue( prologTime );</span>
+<span class="source-line-no">709</span><span id="line-709">        m_Slider_BeforeTime.valueProperty()</span>
+<span class="source-line-no">710</span><span id="line-710">            .addListener( (p,o,n) -&gt; m_Preferences.putDouble( PREF_NODE_Before, n.doubleValue() ) );</span>
+<span class="source-line-no">711</span><span id="line-711"></span>
+<span class="source-line-no">712</span><span id="line-712">        final var epilogTime = m_Preferences.getDouble( PREF_NODE_TimeAfter, 0.0 );</span>
+<span class="source-line-no">713</span><span id="line-713">        m_Slider_AfterTime.setValue( epilogTime );</span>
+<span class="source-line-no">714</span><span id="line-714">        m_Slider_AfterTime.valueProperty()</span>
+<span class="source-line-no">715</span><span id="line-715">            .addListener( (p,o,n) -&gt; m_Preferences.putDouble( PREF_NODE_TimeAfter, n.doubleValue() ) );</span>
+<span class="source-line-no">716</span><span id="line-716"></span>
+<span class="source-line-no">717</span><span id="line-717">        //---* Set the change listener for the selected discipline *-----------</span>
+<span class="source-line-no">718</span><span id="line-718">        m_SelectedDiscipline.addListener( this::onDisciplineChanged );</span>
+<span class="source-line-no">719</span><span id="line-719"></span>
+<span class="source-line-no">720</span><span id="line-720">        //---* Get the currently selected discipline *-------------------------</span>
+<span class="source-line-no">721</span><span id="line-721">        final var heatNumber = m_Preferences.getInt( PREF_NODE_Heat, 0 );</span>
+<span class="source-line-no">722</span><span id="line-722">        final var disciplineName = m_Preferences.get( PREF_NODE_Discipline, DISCIPLINE_2_17.name() );</span>
+<span class="source-line-no">723</span><span id="line-723">        final var discipline = Discipline.valueOf( disciplineName );</span>
+<span class="source-line-no">724</span><span id="line-724">        m_DisciplinesToggleGroup.getToggles()</span>
+<span class="source-line-no">725</span><span id="line-725">            .stream()</span>
+<span class="source-line-no">726</span><span id="line-726">            .filter( toggle -&gt; toggle.getUserData() == discipline )</span>
+<span class="source-line-no">727</span><span id="line-727">            .findFirst()</span>
+<span class="source-line-no">728</span><span id="line-728">            .ifPresent( m_DisciplinesToggleGroup::selectToggle );</span>
+<span class="source-line-no">729</span><span id="line-729">        final var selectedToggle = m_DisciplinesToggleGroup.getSelectedToggle();</span>
+<span class="source-line-no">730</span><span id="line-730">        if( nonNull( selectedToggle) )</span>
+<span class="source-line-no">731</span><span id="line-731">        {</span>
+<span class="source-line-no">732</span><span id="line-732">            m_SelectedDiscipline.set( (Discipline) selectedToggle.getUserData() );</span>
+<span class="source-line-no">733</span><span id="line-733">        }</span>
+<span class="source-line-no">734</span><span id="line-734"></span>
+<span class="source-line-no">735</span><span id="line-735">        //---* Set the listener for the heat changes *-------------------------</span>
+<span class="source-line-no">736</span><span id="line-736">        m_ChoiceBox_Program.valueProperty()</span>
+<span class="source-line-no">737</span><span id="line-737">            .addListener( (p,o,n) -&gt;</span>
+<span class="source-line-no">738</span><span id="line-738">            {</span>
+<span class="source-line-no">739</span><span id="line-739">                final var program = m_SelectedDiscipline.getValue().getProgram();</span>
+<span class="source-line-no">740</span><span id="line-740">                var h = -1;</span>
+<span class="source-line-no">741</span><span id="line-741">                for( var i = 0; i &lt; program.length; ++i )</span>
+<span class="source-line-no">742</span><span id="line-742">                {</span>
+<span class="source-line-no">743</span><span id="line-743">                    if( program [i] == n ) h = i;</span>
+<span class="source-line-no">744</span><span id="line-744">                }</span>
+<span class="source-line-no">745</span><span id="line-745">                if( h &gt;= 0 ) m_Preferences.putInt( PREF_NODE_Heat, h );</span>
+<span class="source-line-no">746</span><span id="line-746">            } );</span>
+<span class="source-line-no">747</span><span id="line-747"></span>
+<span class="source-line-no">748</span><span id="line-748">        //---* Set the heat *--------------------------------------------------</span>
+<span class="source-line-no">749</span><span id="line-749">        if( heatNumber != 0 )</span>
+<span class="source-line-no">750</span><span id="line-750">        {</span>
+<span class="source-line-no">751</span><span id="line-751">            final var heat = discipline.getProgram() [heatNumber];</span>
+<span class="source-line-no">752</span><span id="line-752">            m_ChoiceBox_Program.setValue( heat );</span>
+<span class="source-line-no">753</span><span id="line-753">        }</span>
+<span class="source-line-no">754</span><span id="line-754"></span>
+<span class="source-line-no">755</span><span id="line-755">        //---* Configure the choice box for the program *----------------------</span>
+<span class="source-line-no">756</span><span id="line-756">        m_ChoiceBox_Program.setConverter( Heat.getStringConverter() );</span>
+<span class="source-line-no">757</span><span id="line-757"></span>
+<span class="source-line-no">758</span><span id="line-758">        //---* Set the change listener for the disciplines menu *--------------</span>
+<span class="source-line-no">759</span><span id="line-759">        m_DisciplinesToggleGroup.selectedToggleProperty()</span>
+<span class="source-line-no">760</span><span id="line-760">            .addListener( this::onDisciplineSelectionChanged );</span>
+<span class="source-line-no">761</span><span id="line-761"></span>
+<span class="source-line-no">762</span><span id="line-762">        //---* Set the radius for the lights *---------------------------------</span>
+<span class="source-line-no">763</span><span id="line-763">        m_Circle_Green.radiusProperty()</span>
+<span class="source-line-no">764</span><span id="line-764">            .bind( Bindings.min( m_LightBox.widthProperty().divide( 2.0 ), m_LightBox.heightProperty() ).divide( 2.0 ).subtract( 20.0 ) );</span>
+<span class="source-line-no">765</span><span id="line-765">        m_Circle_Red.radiusProperty()</span>
+<span class="source-line-no">766</span><span id="line-766">            .bind( Bindings.min( m_LightBox.widthProperty().divide( 2.0 ), m_LightBox.heightProperty() ).divide( 2.0 ).subtract( 20.0 ) );</span>
+<span class="source-line-no">767</span><span id="line-767"></span>
+<span class="source-line-no">768</span><span id="line-768">        //---* Create the light instances *------------------------------------</span>
+<span class="source-line-no">769</span><span id="line-769">        m_GreenLight = new Light( Color.GREEN, m_Circle_Green::setFill );</span>
+<span class="source-line-no">770</span><span id="line-770">        m_RedLight = new Light( Color.RED, m_Circle_Red::setFill );</span>
+<span class="source-line-no">771</span><span id="line-771"></span>
+<span class="source-line-no">772</span><span id="line-772">        //---* Sets the show status flag *-------------------------------------</span>
+<span class="source-line-no">773</span><span id="line-773">        final var showStatusFlag = m_Preferences.getBoolean( PREF_NODE_ShowStatus, false );</span>
+<span class="source-line-no">774</span><span id="line-774">        m_CheckMenuItem_ShowStatus.setSelected( showStatusFlag );</span>
+<span class="source-line-no">775</span><span id="line-775"></span>
+<span class="source-line-no">776</span><span id="line-776">        //---* Sets the listener for the show status flag menu item *----------</span>
+<span class="source-line-no">777</span><span id="line-777">        m_CheckMenuItem_ShowStatus.selectedProperty()</span>
+<span class="source-line-no">778</span><span id="line-778">            .addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_ShowStatus, n ) );</span>
+<span class="source-line-no">779</span><span id="line-779"></span>
+<span class="source-line-no">780</span><span id="line-780">        //---* Bind the status label to the status control *-------------------</span>
+<span class="source-line-no">781</span><span id="line-781">        /*</span>
+<span class="source-line-no">782</span><span id="line-782">        //m_Label_Status.textProperty().bind( m_StatusControl.asString() );</span>
+<span class="source-line-no">783</span><span id="line-783">         *</span>
+<span class="source-line-no">784</span><span id="line-784">         * Unfortunately this does not work as expected, as the label will not</span>
+<span class="source-line-no">785</span><span id="line-785">         * be updated when the status changes.</span>
+<span class="source-line-no">786</span><span id="line-786">         */</span>
+<span class="source-line-no">787</span><span id="line-787"></span>
+<span class="source-line-no">788</span><span id="line-788">        m_Label_Status.visibleProperty()</span>
+<span class="source-line-no">789</span><span id="line-789">            .bind( m_CheckMenuItem_ShowStatus.selectedProperty() );</span>
+<span class="source-line-no">790</span><span id="line-790"></span>
+<span class="source-line-no">791</span><span id="line-791">        //---* Sets the show heat count flag *---------------------------------</span>
+<span class="source-line-no">792</span><span id="line-792">        final var showHeatCountFlag = m_Preferences.getBoolean( PREF_NODE_ShowHeatCount, true );</span>
+<span class="source-line-no">793</span><span id="line-793">        m_CheckMenuItem_ShowHeatCount.setSelected( showHeatCountFlag );</span>
+<span class="source-line-no">794</span><span id="line-794"></span>
+<span class="source-line-no">795</span><span id="line-795">        //---* Sets the listener for the show heat count flag menu item *------</span>
+<span class="source-line-no">796</span><span id="line-796">        m_CheckMenuItem_ShowHeatCount.selectedProperty()</span>
+<span class="source-line-no">797</span><span id="line-797">            .addListener( (p,o,n) -&gt; m_Preferences.putBoolean( PREF_NODE_ShowHeatCount, n ) );</span>
+<span class="source-line-no">798</span><span id="line-798"></span>
+<span class="source-line-no">799</span><span id="line-799">        //---* Sets the size for the heat count label *------------------------</span>
+<span class="source-line-no">800</span><span id="line-800">        if( "arm".equalsIgnoreCase( getProperty( PROPERTY_CPUARCHITECTURE ) ) )</span>
+<span class="source-line-no">801</span><span id="line-801">        {</span>
+<span class="source-line-no">802</span><span id="line-802">            m_Label_HeatCount.setStyle( "-fx-font-size : 30.0;" );</span>
+<span class="source-line-no">803</span><span id="line-803">        }</span>
+<span class="source-line-no">804</span><span id="line-804">        else</span>
+<span class="source-line-no">805</span><span id="line-805">        {</span>
+<span class="source-line-no">806</span><span id="line-806">            m_Label_HeatCount.setStyle( "-fx-font-size : 250.0;" );</span>
+<span class="source-line-no">807</span><span id="line-807">        }</span>
+<span class="source-line-no">808</span><span id="line-808"></span>
+<span class="source-line-no">809</span><span id="line-809">        //---* Set the initial state *-----------------------------------------</span>
+<span class="source-line-no">810</span><span id="line-810">        reset();</span>
+<span class="source-line-no">811</span><span id="line-811">    }   //  initialize()</span>
+<span class="source-line-no">812</span><span id="line-812"></span>
+<span class="source-line-no">813</span><span id="line-813">    /**</span>
+<span class="source-line-no">814</span><span id="line-814">     *  Sets the lights to the off state.</span>
+<span class="source-line-no">815</span><span id="line-815">     */</span>
+<span class="source-line-no">816</span><span id="line-816">    private final void lightsOff()</span>
+<span class="source-line-no">817</span><span id="line-817">    {</span>
+<span class="source-line-no">818</span><span id="line-818">        asList( m_RedLight, m_GreenLight )</span>
+<span class="source-line-no">819</span><span id="line-819">            .forEach( Light::off );</span>
+<span class="source-line-no">820</span><span id="line-820">    }   //  lightsOff()</span>
+<span class="source-line-no">821</span><span id="line-821"></span>
+<span class="source-line-no">822</span><span id="line-822">    /**</span>
+<span class="source-line-no">823</span><span id="line-823">     *  The button handler for the</span>
+<span class="source-line-no">824</span><span id="line-824">     *  {@link #m_Button_Abort ABORT}</span>
+<span class="source-line-no">825</span><span id="line-825">     *  button.</span>
+<span class="source-line-no">826</span><span id="line-826">     *</span>
+<span class="source-line-no">827</span><span id="line-827">     *  @param  ignoredEvent    The action event.</span>
+<span class="source-line-no">828</span><span id="line-828">     */</span>
+<span class="source-line-no">829</span><span id="line-829">    @FXML</span>
+<span class="source-line-no">830</span><span id="line-830">    private final void onAbort( final ActionEvent ignoredEvent )</span>
+<span class="source-line-no">831</span><span id="line-831">    {</span>
+<span class="source-line-no">832</span><span id="line-832">        //---* Disable the abort button *--------------------------------------</span>
+<span class="source-line-no">833</span><span id="line-833">        m_Button_Abort.setDisable( true );</span>
+<span class="source-line-no">834</span><span id="line-834"></span>
+<span class="source-line-no">835</span><span id="line-835">        try( var ignored = m_HeatThreadGuard.lock() )</span>
+<span class="source-line-no">836</span><span id="line-836">        {</span>
+<span class="source-line-no">837</span><span id="line-837">            //---* Stop the heat thread *---------------------------------------</span>
+<span class="source-line-no">838</span><span id="line-838">            if( nonNull( m_HeatThread ) &amp;&amp; m_HeatThread.isAlive() )</span>
+<span class="source-line-no">839</span><span id="line-839">            {</span>
+<span class="source-line-no">840</span><span id="line-840">                var t = m_HeatThread;</span>
+<span class="source-line-no">841</span><span id="line-841">                m_HeatThread = null;</span>
+<span class="source-line-no">842</span><span id="line-842">                t.interrupt();</span>
+<span class="source-line-no">843</span><span id="line-843">                try</span>
+<span class="source-line-no">844</span><span id="line-844">                {</span>
+<span class="source-line-no">845</span><span id="line-845">                    t.join( 1000 );</span>
+<span class="source-line-no">846</span><span id="line-846">                }</span>
+<span class="source-line-no">847</span><span id="line-847">                catch( @SuppressWarnings( "unused" ) final InterruptedException e ) { /* Deliberately ignored */ }</span>
+<span class="source-line-no">848</span><span id="line-848">            }</span>
+<span class="source-line-no">849</span><span id="line-849">        }</span>
+<span class="source-line-no">850</span><span id="line-850"></span>
+<span class="source-line-no">851</span><span id="line-851">        //---* Reset the system *----------------------------------------------</span>
+<span class="source-line-no">852</span><span id="line-852">        reset();</span>
+<span class="source-line-no">853</span><span id="line-853">    }   //  onAbort()</span>
+<span class="source-line-no">854</span><span id="line-854"></span>
+<span class="source-line-no">855</span><span id="line-855">    /**</span>
+<span class="source-line-no">856</span><span id="line-856">     *  The change listener for the selected discipline.</span>
+<span class="source-line-no">857</span><span id="line-857">     *</span>
+<span class="source-line-no">858</span><span id="line-858">     *  @param  observable  The observed entity.</span>
+<span class="source-line-no">859</span><span id="line-859">     *  @param  oldValue    The old value.</span>
+<span class="source-line-no">860</span><span id="line-860">     *  @param  newValue    The new value.</span>
+<span class="source-line-no">861</span><span id="line-861">     */</span>
+<span class="source-line-no">862</span><span id="line-862">    private final void onDisciplineChanged( final ObservableValue&lt;? extends Discipline&gt; observable, final Discipline oldValue, final Discipline newValue )</span>
+<span class="source-line-no">863</span><span id="line-863">    {</span>
+<span class="source-line-no">864</span><span id="line-864">        if( nonNull( newValue ) )</span>
+<span class="source-line-no">865</span><span id="line-865">        {</span>
+<span class="source-line-no">866</span><span id="line-866">            final var text = newValue.toString();</span>
+<span class="source-line-no">867</span><span id="line-867">            m_Label_SelectedDiscipline.setText( text );</span>
+<span class="source-line-no">868</span><span id="line-868">            final var program = m_ChoiceBox_Program.getItems();</span>
+<span class="source-line-no">869</span><span id="line-869">            program.clear();</span>
+<span class="source-line-no">870</span><span id="line-870">            program.addAll( newValue.getProgram() );</span>
+<span class="source-line-no">871</span><span id="line-871">            m_ChoiceBox_Program.setValue( program.get( 0 ) );</span>
+<span class="source-line-no">872</span><span id="line-872"></span>
+<span class="source-line-no">873</span><span id="line-873">            //---* Update the preferences *------------------------------------</span>
+<span class="source-line-no">874</span><span id="line-874">            m_Preferences.put( PREF_NODE_Discipline, newValue.name() );</span>
+<span class="source-line-no">875</span><span id="line-875">            m_Preferences.putInt( PREF_NODE_Heat, 0 );</span>
+<span class="source-line-no">876</span><span id="line-876">        }</span>
+<span class="source-line-no">877</span><span id="line-877">    }   //  onDisciplineChanged()</span>
+<span class="source-line-no">878</span><span id="line-878"></span>
+<span class="source-line-no">879</span><span id="line-879">    /**</span>
+<span class="source-line-no">880</span><span id="line-880">     *  The change listener for the disciplines in the menu.</span>
+<span class="source-line-no">881</span><span id="line-881">     *</span>
+<span class="source-line-no">882</span><span id="line-882">     *  @param  observable  The observed entity.</span>
+<span class="source-line-no">883</span><span id="line-883">     *  @param  oldValue    The old value.</span>
+<span class="source-line-no">884</span><span id="line-884">     *  @param  newValue    The new value.</span>
+<span class="source-line-no">885</span><span id="line-885">     */</span>
+<span class="source-line-no">886</span><span id="line-886">    private final void onDisciplineSelectionChanged( final ObservableValue&lt;? extends Toggle&gt; observable, final Toggle oldValue, final Toggle newValue )</span>
+<span class="source-line-no">887</span><span id="line-887">    {</span>
+<span class="source-line-no">888</span><span id="line-888">        if( nonNull( newValue ) ) m_SelectedDiscipline.set( (Discipline) newValue.getUserData() );</span>
+<span class="source-line-no">889</span><span id="line-889">    }   //  onDisciplineSelectionChanged()</span>
+<span class="source-line-no">890</span><span id="line-890"></span>
+<span class="source-line-no">891</span><span id="line-891">    /**</span>
+<span class="source-line-no">892</span><span id="line-892">     *  The handler method that initialises the termination of the application.</span>
+<span class="source-line-no">893</span><span id="line-893">     *  It is assigned to the {@code MENU_FILE_EXIT} menu item.</span>
+<span class="source-line-no">894</span><span id="line-894">     *</span>
+<span class="source-line-no">895</span><span id="line-895">     *  @param  ignoredEvent    The action event.</span>
+<span class="source-line-no">896</span><span id="line-896">     */</span>
+<span class="source-line-no">897</span><span id="line-897">    @SuppressWarnings( "static-method" )</span>
+<span class="source-line-no">898</span><span id="line-898">    @FXML</span>
+<span class="source-line-no">899</span><span id="line-899">    private final void onExit( final ActionEvent ignoredEvent )</span>
+<span class="source-line-no">900</span><span id="line-900">    {</span>
+<span class="source-line-no">901</span><span id="line-901">        exit();</span>
+<span class="source-line-no">902</span><span id="line-902">    }   //  onExit()</span>
+<span class="source-line-no">903</span><span id="line-903"></span>
+<span class="source-line-no">904</span><span id="line-904">    /**</span>
+<span class="source-line-no">905</span><span id="line-905">     *  Responds to the menu item {@code Help|About} and shows the</span>
+<span class="source-line-no">906</span><span id="line-906">     *  &amp;quot;About&amp;quot; dialog.</span>
+<span class="source-line-no">907</span><span id="line-907">     *</span>
+<span class="source-line-no">908</span><span id="line-908">     *  @param  event   The event that triggered this handler.</span>
+<span class="source-line-no">909</span><span id="line-909">     */</span>
+<span class="source-line-no">910</span><span id="line-910">    @FXML</span>
+<span class="source-line-no">911</span><span id="line-911">    private final void onMenuAbout( final ActionEvent event )</span>
+<span class="source-line-no">912</span><span id="line-912">    {</span>
+<span class="source-line-no">913</span><span id="line-913">        event.consume();</span>
+<span class="source-line-no">914</span><span id="line-914">        try</span>
+<span class="source-line-no">915</span><span id="line-915">        {</span>
+<span class="source-line-no">916</span><span id="line-916">            final var mainClass = Main.class;</span>
+<span class="source-line-no">917</span><span id="line-917"></span>
+<span class="source-line-no">918</span><span id="line-918">            /*</span>
+<span class="source-line-no">919</span><span id="line-919">             * Get the parent window for the &amp;quot;About&amp;quot; window. This is</span>
+<span class="source-line-no">920</span><span id="line-920">             * the owner of the menu.</span>
+<span class="source-line-no">921</span><span id="line-921">             */</span>
+<span class="source-line-no">922</span><span id="line-922">            final var ownerWindow = ((MenuItem) event.getSource()).getParentPopup().getOwnerWindow();</span>
+<span class="source-line-no">923</span><span id="line-923"></span>
+<span class="source-line-no">924</span><span id="line-924">            //---* Get the user data from the scene of the parent window *-----</span>
+<span class="source-line-no">925</span><span id="line-925">            final var mainSceneUserData = retrieveUserData( ownerWindow.getScene(), mainClass )</span>
+<span class="source-line-no">926</span><span id="line-926">                .orElseThrow();</span>
+<span class="source-line-no">927</span><span id="line-927">            final var application = mainSceneUserData.getApplication();</span>
+<span class="source-line-no">928</span><span id="line-928"></span>
+<span class="source-line-no">929</span><span id="line-929">            //---* Create the new stage *--------------------------------------</span>
+<span class="source-line-no">930</span><span id="line-930">            final var stage = new Stage( UTILITY );</span>
+<span class="source-line-no">931</span><span id="line-931"></span>
+<span class="source-line-no">932</span><span id="line-932">            //---* Assign the parent *-----------------------------------------</span>
+<span class="source-line-no">933</span><span id="line-933">            stage.initOwner( ownerWindow );</span>
+<span class="source-line-no">934</span><span id="line-934"></span>
+<span class="source-line-no">935</span><span id="line-935">            //---* Load the *.fxml and create the scene root *-----------------</span>
+<span class="source-line-no">936</span><span id="line-936">            final var fxmlFileName = "About.fxml";</span>
+<span class="source-line-no">937</span><span id="line-937">            final var fxmlURL = mainClass.getResource( fxmlFileName );</span>
+<span class="source-line-no">938</span><span id="line-938">            if( isNull( fxmlURL ) )</span>
+<span class="source-line-no">939</span><span id="line-939">            {</span>
+<span class="source-line-no">940</span><span id="line-940">                throw new ApplicationError( application.retrieveMessage( resources, MSGKEY_CannotLoadUIDefinition, fxmlFileName ) );</span>
+<span class="source-line-no">941</span><span id="line-941">            }</span>
+<span class="source-line-no">942</span><span id="line-942">            final Pane root = FXMLLoader.load( fxmlURL, resources );</span>
+<span class="source-line-no">943</span><span id="line-943"></span>
+<span class="source-line-no">944</span><span id="line-944">            //---* Create the new scene *--------------------------------------</span>
+<span class="source-line-no">945</span><span id="line-945">            SceneUserData.createScene( mainSceneUserData, stage, root );</span>
+<span class="source-line-no">946</span><span id="line-946"></span>
+<span class="source-line-no">947</span><span id="line-947">            //---* Configure the stage *---------------------------------------</span>
+<span class="source-line-no">948</span><span id="line-948">            stage.setAlwaysOnTop( true );</span>
+<span class="source-line-no">949</span><span id="line-949">            stage.setTitle( resources.getString( "TITLE_ABOUT" ) );</span>
+<span class="source-line-no">950</span><span id="line-950">            stage.sizeToScene();</span>
+<span class="source-line-no">951</span><span id="line-951">            stage.centerOnScreen();</span>
+<span class="source-line-no">952</span><span id="line-952">            stage.showAndWait();</span>
+<span class="source-line-no">953</span><span id="line-953">        }</span>
+<span class="source-line-no">954</span><span id="line-954">        catch( final Exception e )</span>
+<span class="source-line-no">955</span><span id="line-955">        {</span>
+<span class="source-line-no">956</span><span id="line-956">            throw new ApplicationError( e );</span>
+<span class="source-line-no">957</span><span id="line-957">        }</span>
+<span class="source-line-no">958</span><span id="line-958">    }   //  onMenuAbout()</span>
+<span class="source-line-no">959</span><span id="line-959"></span>
+<span class="source-line-no">960</span><span id="line-960">    /**</span>
+<span class="source-line-no">961</span><span id="line-961">     *  The handler method for the</span>
+<span class="source-line-no">962</span><span id="line-962">     *  {@link #m_Button_Start START}</span>
+<span class="source-line-no">963</span><span id="line-963">     *  button.</span>
+<span class="source-line-no">964</span><span id="line-964">     *</span>
+<span class="source-line-no">965</span><span id="line-965">     *  @param  ignoredEvent   The action event.</span>
+<span class="source-line-no">966</span><span id="line-966">     */</span>
+<span class="source-line-no">967</span><span id="line-967">    @FXML</span>
+<span class="source-line-no">968</span><span id="line-968">    private final void onStart( final ActionEvent ignoredEvent )</span>
+<span class="source-line-no">969</span><span id="line-969">    {</span>
+<span class="source-line-no">970</span><span id="line-970">        //---* Start the sequence *--------------------------------------------</span>
+<span class="source-line-no">971</span><span id="line-971">        reset();</span>
+<span class="source-line-no">972</span><span id="line-972">        proceedToNextStatus();</span>
+<span class="source-line-no">973</span><span id="line-973"></span>
+<span class="source-line-no">974</span><span id="line-974">        try( var ignored = m_HeatThreadGuard.lock() )</span>
+<span class="source-line-no">975</span><span id="line-975">        {</span>
+<span class="source-line-no">976</span><span id="line-976">            //---* Execute the heat *------------------------------------------</span>
+<span class="source-line-no">977</span><span id="line-977">            m_HeatThread = new Thread( this::executeHeat );</span>
+<span class="source-line-no">978</span><span id="line-978">            m_HeatThread.setDaemon( true );</span>
+<span class="source-line-no">979</span><span id="line-979">            m_HeatThread.start();</span>
+<span class="source-line-no">980</span><span id="line-980">        }</span>
+<span class="source-line-no">981</span><span id="line-981">    }   //  onStart()</span>
+<span class="source-line-no">982</span><span id="line-982"></span>
+<span class="source-line-no">983</span><span id="line-983">    /**</span>
+<span class="source-line-no">984</span><span id="line-984">     *  The handler method for touches to the grid pane.</span>
+<span class="source-line-no">985</span><span id="line-985">     *</span>
+<span class="source-line-no">986</span><span id="line-986">     *  @param  event   The touch event.</span>
+<span class="source-line-no">987</span><span id="line-987">     */</span>
+<span class="source-line-no">988</span><span id="line-988">    @FXML</span>
+<span class="source-line-no">989</span><span id="line-989">    private final void onTouch( final TouchEvent event )</span>
+<span class="source-line-no">990</span><span id="line-990">    {</span>
+<span class="source-line-no">991</span><span id="line-991">        final var buttonEvent = new ActionEvent( event.getSource(), event.getTarget() );</span>
+<span class="source-line-no">992</span><span id="line-992"></span>
+<span class="source-line-no">993</span><span id="line-993">        try( var ignored = m_HeatThreadGuard.lock() )</span>
+<span class="source-line-no">994</span><span id="line-994">        {</span>
+<span class="source-line-no">995</span><span id="line-995">            if( isNull( m_HeatThread ) || !m_HeatThread.isAlive() )</span>
+<span class="source-line-no">996</span><span id="line-996">            {</span>
+<span class="source-line-no">997</span><span id="line-997">                onStart( buttonEvent );</span>
+<span class="source-line-no">998</span><span id="line-998">            }</span>
+<span class="source-line-no">999</span><span id="line-999">            else</span>
+<span class="source-line-no">1000</span><span id="line-1000">            {</span>
+<span class="source-line-no">1001</span><span id="line-1001">                onAbort( buttonEvent );</span>
+<span class="source-line-no">1002</span><span id="line-1002">            }</span>
+<span class="source-line-no">1003</span><span id="line-1003">        }</span>
+<span class="source-line-no">1004</span><span id="line-1004">    }   //  onTouch()</span>
+<span class="source-line-no">1005</span><span id="line-1005"></span>
+<span class="source-line-no">1006</span><span id="line-1006">    /**</span>
+<span class="source-line-no">1007</span><span id="line-1007">     *  The change listener for the preferences.</span>
+<span class="source-line-no">1008</span><span id="line-1008">     *</span>
+<span class="source-line-no">1009</span><span id="line-1009">     *  @param  event   The change event.</span>
+<span class="source-line-no">1010</span><span id="line-1010">     */</span>
+<span class="source-line-no">1011</span><span id="line-1011">    private final void preferenceChanged( final PreferenceChangeEvent event )</span>
+<span class="source-line-no">1012</span><span id="line-1012">    {</span>
+<span class="source-line-no">1013</span><span id="line-1013">        final var preferences = event.getNode();</span>
+<span class="source-line-no">1014</span><span id="line-1014">        try</span>
+<span class="source-line-no">1015</span><span id="line-1015">        {</span>
+<span class="source-line-no">1016</span><span id="line-1016">            preferences.flush();</span>
+<span class="source-line-no">1017</span><span id="line-1017">        }</span>
+<span class="source-line-no">1018</span><span id="line-1018">        catch( final BackingStoreException e )</span>
+<span class="source-line-no">1019</span><span id="line-1019">        {</span>
+<span class="source-line-no">1020</span><span id="line-1020">            //---* We will not terminate the program … *-----------------------</span>
+<span class="source-line-no">1021</span><span id="line-1021">            e.printStackTrace( err );</span>
+<span class="source-line-no">1022</span><span id="line-1022">        }</span>
+<span class="source-line-no">1023</span><span id="line-1023">    }   //  preferenceChanged()</span>
+<span class="source-line-no">1024</span><span id="line-1024"></span>
+<span class="source-line-no">1025</span><span id="line-1025">    /**</span>
+<span class="source-line-no">1026</span><span id="line-1026">     *  Proceeds to the next status.</span>
+<span class="source-line-no">1027</span><span id="line-1027">     */</span>
+<span class="source-line-no">1028</span><span id="line-1028">    @SuppressWarnings( "UnnecessaryDefault" )</span>
+<span class="source-line-no">1029</span><span id="line-1029">    private final void proceedToNextStatus()</span>
+<span class="source-line-no">1030</span><span id="line-1030">    {</span>
+<span class="source-line-no">1031</span><span id="line-1031">        /*</span>
+<span class="source-line-no">1032</span><span id="line-1032">         * We do not rely on the sequence the enum values of Status are defined</span>
+<span class="source-line-no">1033</span><span id="line-1033">         * in; instead, we do it the verbose way.</span>
+<span class="source-line-no">1034</span><span id="line-1034">         */</span>
+<span class="source-line-no">1035</span><span id="line-1035">        try( var ignored = m_StatusControlGuard.lock() )</span>
+<span class="source-line-no">1036</span><span id="line-1036">        {</span>
+<span class="source-line-no">1037</span><span id="line-1037">            var currentStatus = m_StatusControl.get();</span>
+<span class="source-line-no">1038</span><span id="line-1038">            var newStatus = switch( currentStatus )</span>
+<span class="source-line-no">1039</span><span id="line-1039">            {</span>
+<span class="source-line-no">1040</span><span id="line-1040">                case null, STATUS_OFF -&gt; STATUS_STARTING;</span>
+<span class="source-line-no">1041</span><span id="line-1041">                case STATUS_STARTING -&gt; STATUS_BEFORE;</span>
+<span class="source-line-no">1042</span><span id="line-1042">                case STATUS_BEFORE -&gt; STATUS_PROLOG;</span>
+<span class="source-line-no">1043</span><span id="line-1043">                case STATUS_PROLOG -&gt; STATUS_SHOOTING;</span>
+<span class="source-line-no">1044</span><span id="line-1044">                case STATUS_SHOOTING -&gt; STATUS_AFTER;</span>
+<span class="source-line-no">1045</span><span id="line-1045">                case STATUS_AFTER -&gt; STATUS_OFF;</span>
+<span class="source-line-no">1046</span><span id="line-1046">                default -&gt; throw new UnsupportedEnumError( currentStatus );</span>
+<span class="source-line-no">1047</span><span id="line-1047">            };</span>
+<span class="source-line-no">1048</span><span id="line-1048"></span>
+<span class="source-line-no">1049</span><span id="line-1049">            //---* Apply the new status *--------------------------------------</span>
+<span class="source-line-no">1050</span><span id="line-1050">            m_StatusControl.set( newStatus );</span>
+<span class="source-line-no">1051</span><span id="line-1051">        }</span>
+<span class="source-line-no">1052</span><span id="line-1052">    }   //  proceedToNextStatus()</span>
+<span class="source-line-no">1053</span><span id="line-1053"></span>
+<span class="source-line-no">1054</span><span id="line-1054">    /**</span>
+<span class="source-line-no">1055</span><span id="line-1055">     *  Resets the system status.</span>
+<span class="source-line-no">1056</span><span id="line-1056">     */</span>
+<span class="source-line-no">1057</span><span id="line-1057">    private final void reset()</span>
+<span class="source-line-no">1058</span><span id="line-1058">    {</span>
+<span class="source-line-no">1059</span><span id="line-1059">        try( var ignored = m_StatusControlGuard.lock() )</span>
+<span class="source-line-no">1060</span><span id="line-1060">        {</span>
+<span class="source-line-no">1061</span><span id="line-1061">            m_StatusControl.set( STATUS_OFF );</span>
+<span class="source-line-no">1062</span><span id="line-1062">        }</span>
+<span class="source-line-no">1063</span><span id="line-1063">    }   //  reset()</span>
+<span class="source-line-no">1064</span><span id="line-1064"></span>
+<span class="source-line-no">1065</span><span id="line-1065">    /**</span>
+<span class="source-line-no">1066</span><span id="line-1066">     *  Sets the system status to</span>
+<span class="source-line-no">1067</span><span id="line-1067">     *  {@link Status#STATUS_PROLOG}.</span>
+<span class="source-line-no">1068</span><span id="line-1068">     */</span>
+<span class="source-line-no">1069</span><span id="line-1069">    private final void setStatusProlog()</span>
+<span class="source-line-no">1070</span><span id="line-1070">    {</span>
+<span class="source-line-no">1071</span><span id="line-1071">        try( var ignored = m_StatusControlGuard.lock() )</span>
+<span class="source-line-no">1072</span><span id="line-1072">        {</span>
+<span class="source-line-no">1073</span><span id="line-1073">            m_StatusControl.set( STATUS_PROLOG );</span>
+<span class="source-line-no">1074</span><span id="line-1074">        }</span>
+<span class="source-line-no">1075</span><span id="line-1075">    }   //  setStatusProlog()</span>
+<span class="source-line-no">1076</span><span id="line-1076"></span>
+<span class="source-line-no">1077</span><span id="line-1077">    /**</span>
+<span class="source-line-no">1078</span><span id="line-1078">     *  Sets the system status to</span>
+<span class="source-line-no">1079</span><span id="line-1079">     *  {@link Status#STATUS_STARTING}.</span>
+<span class="source-line-no">1080</span><span id="line-1080">     */</span>
+<span class="source-line-no">1081</span><span id="line-1081">    private final void setStatusStarting()</span>
+<span class="source-line-no">1082</span><span id="line-1082">    {</span>
+<span class="source-line-no">1083</span><span id="line-1083">        try( var ignored = m_StatusControlGuard.lock() )</span>
+<span class="source-line-no">1084</span><span id="line-1084">        {</span>
+<span class="source-line-no">1085</span><span id="line-1085">            m_StatusControl.set( STATUS_STARTING );</span>
+<span class="source-line-no">1086</span><span id="line-1086">        }</span>
+<span class="source-line-no">1087</span><span id="line-1087">    }   //  setStatusStarting()</span>
+<span class="source-line-no">1088</span><span id="line-1088"></span>
+<span class="source-line-no">1089</span><span id="line-1089">    /**</span>
+<span class="source-line-no">1090</span><span id="line-1090">     *  The change listener for the status control.&lt;br&gt;</span>
+<span class="source-line-no">1091</span><span id="line-1091">     *  &lt;br&gt;This method controls the current display.</span>
+<span class="source-line-no">1092</span><span id="line-1092">     *</span>
+<span class="source-line-no">1093</span><span id="line-1093">     *  @param  ignoredObservable   The observed entity; ignored.</span>
+<span class="source-line-no">1094</span><span id="line-1094">     *  @param  oldStatus   The previous status.</span>
+<span class="source-line-no">1095</span><span id="line-1095">     *  @param  newStatus   The new status.</span>
+<span class="source-line-no">1096</span><span id="line-1096">     */</span>
+<span class="source-line-no">1097</span><span id="line-1097">    private final void statusTransition( final ObservableValue&lt;? extends Status&gt; ignoredObservable, final Status oldStatus, final Status newStatus )</span>
+<span class="source-line-no">1098</span><span id="line-1098">    {</span>
+<span class="source-line-no">1099</span><span id="line-1099">        try( var ignored = m_StatusControlGuard.lock() )</span>
+<span class="source-line-no">1100</span><span id="line-1100">        {</span>
+<span class="source-line-no">1101</span><span id="line-1101">            if( nonNull( newStatus ) )</span>
+<span class="source-line-no">1102</span><span id="line-1102">            {</span>
+<span class="source-line-no">1103</span><span id="line-1103">                runLater( () -&gt; m_Label_Status.setText( newStatus.toString() ) );</span>
+<span class="source-line-no">1104</span><span id="line-1104"></span>
+<span class="source-line-no">1105</span><span id="line-1105">                StatusSwitch:</span>
+<span class="source-line-no">1106</span><span id="line-1106">                switch( newStatus )</span>
+<span class="source-line-no">1107</span><span id="line-1107">                {</span>
+<span class="source-line-no">1108</span><span id="line-1108">                    case STATUS_AFTER -&gt; {</span>
+<span class="source-line-no">1109</span><span id="line-1109">                        //---* Stop the start sound and play the end sound *---</span>
+<span class="source-line-no">1110</span><span id="line-1110">                        if( m_CheckMenuItem_Sound.isSelected() )</span>
+<span class="source-line-no">1111</span><span id="line-1111">                        {</span>
+<span class="source-line-no">1112</span><span id="line-1112">                            m_StartSound.ifPresent( s -&gt; {</span>
+<span class="source-line-no">1113</span><span id="line-1113">                                if( s.isPlaying() )</span>
+<span class="source-line-no">1114</span><span id="line-1114">                                    s.stop();</span>
+<span class="source-line-no">1115</span><span id="line-1115">                            } );</span>
+<span class="source-line-no">1116</span><span id="line-1116">                            m_EndSound.ifPresent( AudioClip::play );</span>
+<span class="source-line-no">1117</span><span id="line-1117">                        }</span>
+<span class="source-line-no">1118</span><span id="line-1118"></span>
+<span class="source-line-no">1119</span><span id="line-1119">                        //---* Disable the abort button *----------------------</span>
+<span class="source-line-no">1120</span><span id="line-1120">                        m_Button_Abort.setDisable( true );</span>
+<span class="source-line-no">1121</span><span id="line-1121"></span>
+<span class="source-line-no">1122</span><span id="line-1122">                        //---* Change the lights *-----------------------------</span>
+<span class="source-line-no">1123</span><span id="line-1123">                        m_RedLight.toggle();</span>
+<span class="source-line-no">1124</span><span id="line-1124">                        m_GreenLight.toggle();</span>
+<span class="source-line-no">1125</span><span id="line-1125"></span>
+<span class="source-line-no">1126</span><span id="line-1126">                        //---* Hide the heat count *---------------------------</span>
+<span class="source-line-no">1127</span><span id="line-1127">                        m_Label_HeatCount.setVisible( false );</span>
+<span class="source-line-no">1128</span><span id="line-1128">                    }</span>
+<span class="source-line-no">1129</span><span id="line-1129">                    case STATUS_BEFORE -&gt; {</span>
+<span class="source-line-no">1130</span><span id="line-1130">                        //---* Disable the start button *----------------------</span>
+<span class="source-line-no">1131</span><span id="line-1131">                        m_Button_Start.setDisable( true );</span>
+<span class="source-line-no">1132</span><span id="line-1132"></span>
+<span class="source-line-no">1133</span><span id="line-1133">                        //---* Enable the abort button *----------------------</span>
+<span class="source-line-no">1134</span><span id="line-1134">                        m_Button_Abort.setDisable( false );</span>
+<span class="source-line-no">1135</span><span id="line-1135"></span>
+<span class="source-line-no">1136</span><span id="line-1136">                        //---* Focus the abort button *------------------------</span>
+<span class="source-line-no">1137</span><span id="line-1137">                        runLater( m_Button_Abort::requestFocus );</span>
+<span class="source-line-no">1138</span><span id="line-1138">                    }</span>
+<span class="source-line-no">1139</span><span id="line-1139">                    case STATUS_OFF -&gt; {</span>
+<span class="source-line-no">1140</span><span id="line-1140">                        //---* Set the default time *--------------------------</span>
+<span class="source-line-no">1141</span><span id="line-1141">                        m_TextField_Time.setText( format( "%3.1f", 0.0 ) );</span>
+<span class="source-line-no">1142</span><span id="line-1142"></span>
+<span class="source-line-no">1143</span><span id="line-1143">                        //---* Enable the start button *-----------------------</span>
+<span class="source-line-no">1144</span><span id="line-1144">                        m_Button_Start.setDisable( false );</span>
+<span class="source-line-no">1145</span><span id="line-1145"></span>
+<span class="source-line-no">1146</span><span id="line-1146">                        //---* Disable the abort button *----------------------</span>
+<span class="source-line-no">1147</span><span id="line-1147">                        m_Button_Abort.setDisable( true );</span>
+<span class="source-line-no">1148</span><span id="line-1148"></span>
+<span class="source-line-no">1149</span><span id="line-1149">                        //---* Focus the start button *------------------------</span>
+<span class="source-line-no">1150</span><span id="line-1150">                        runLater( m_Button_Start::requestFocus );</span>
+<span class="source-line-no">1151</span><span id="line-1151"></span>
+<span class="source-line-no">1152</span><span id="line-1152">                        //---* Hide the heat count *---------------------------</span>
+<span class="source-line-no">1153</span><span id="line-1153">                        m_Label_HeatCount.setVisible( false );</span>
+<span class="source-line-no">1154</span><span id="line-1154"></span>
+<span class="source-line-no">1155</span><span id="line-1155">                        //---* Switch off the lights *-------------------------</span>
+<span class="source-line-no">1156</span><span id="line-1156">                        lightsOff();</span>
+<span class="source-line-no">1157</span><span id="line-1157">                    }</span>
+<span class="source-line-no">1158</span><span id="line-1158">                    case STATUS_PROLOG -&gt; {</span>
+<span class="source-line-no">1159</span><span id="line-1159">                        if( oldStatus == STATUS_SHOOTING )</span>
+<span class="source-line-no">1160</span><span id="line-1160">                        {</span>
+<span class="source-line-no">1161</span><span id="line-1161">                            if( m_CheckMenuItem_Sound.isSelected() )</span>
+<span class="source-line-no">1162</span><span id="line-1162">                            {</span>
+<span class="source-line-no">1163</span><span id="line-1163">                                /*</span>
+<span class="source-line-no">1164</span><span id="line-1164">                                 * Stop the start sound and play the end sound.</span>
+<span class="source-line-no">1165</span><span id="line-1165">                                 */</span>
+<span class="source-line-no">1166</span><span id="line-1166">                                m_StartSound.ifPresent( s -&gt; {</span>
+<span class="source-line-no">1167</span><span id="line-1167">                                    if( s.isPlaying() )</span>
+<span class="source-line-no">1168</span><span id="line-1168">                                        s.stop();</span>
+<span class="source-line-no">1169</span><span id="line-1169">                                } );</span>
+<span class="source-line-no">1170</span><span id="line-1170">                                m_EndSound.ifPresent( AudioClip::play );</span>
+<span class="source-line-no">1171</span><span id="line-1171">                            }</span>
+<span class="source-line-no">1172</span><span id="line-1172"></span>
+<span class="source-line-no">1173</span><span id="line-1173">                            //---* Switch off the red light *------------------</span>
+<span class="source-line-no">1174</span><span id="line-1174">                            m_GreenLight.off();</span>
+<span class="source-line-no">1175</span><span id="line-1175">                        }</span>
+<span class="source-line-no">1176</span><span id="line-1176"></span>
+<span class="source-line-no">1177</span><span id="line-1177">                        //---* Show the heat count *---------------------------</span>
+<span class="source-line-no">1178</span><span id="line-1178">                        if( m_ChoiceBox_Program.getValue().isRepeated() &amp;&amp; m_CheckMenuItem_ShowHeatCount.isSelected() )</span>
+<span class="source-line-no">1179</span><span id="line-1179">                        {</span>
+<span class="source-line-no">1180</span><span id="line-1180">                            m_Label_HeatCount.setVisible( true );</span>
+<span class="source-line-no">1181</span><span id="line-1181">                        }</span>
+<span class="source-line-no">1182</span><span id="line-1182"></span>
+<span class="source-line-no">1183</span><span id="line-1183">                        //---* Switch on the red light *-----------------------</span>
+<span class="source-line-no">1184</span><span id="line-1184">                        m_RedLight.on();</span>
+<span class="source-line-no">1185</span><span id="line-1185">                    }</span>
+<span class="source-line-no">1186</span><span id="line-1186">                    case STATUS_SHOOTING -&gt; {</span>
+<span class="source-line-no">1187</span><span id="line-1187">                        //---* Play the start sound *--------------------------</span>
+<span class="source-line-no">1188</span><span id="line-1188">                        if( m_CheckMenuItem_Sound.isSelected() )</span>
+<span class="source-line-no">1189</span><span id="line-1189">                            m_StartSound.ifPresent( AudioClip::play );</span>
+<span class="source-line-no">1190</span><span id="line-1190"></span>
+<span class="source-line-no">1191</span><span id="line-1191">                        //---* Switch on the green light *---------------------</span>
+<span class="source-line-no">1192</span><span id="line-1192">                        m_GreenLight.on();</span>
+<span class="source-line-no">1193</span><span id="line-1193"></span>
+<span class="source-line-no">1194</span><span id="line-1194">                        //---* Switch off the red light *----------------------</span>
+<span class="source-line-no">1195</span><span id="line-1195">                        m_RedLight.off();</span>
+<span class="source-line-no">1196</span><span id="line-1196"></span>
+<span class="source-line-no">1197</span><span id="line-1197">                        //---* Leave the switch *------------------------------</span>
+<span class="source-line-no">1198</span><span id="line-1198">                        break StatusSwitch;</span>
+<span class="source-line-no">1199</span><span id="line-1199">                    }</span>
+<span class="source-line-no">1200</span><span id="line-1200"></span>
+<span class="source-line-no">1201</span><span id="line-1201">                    //---* Disable the start button *--------------------------</span>
+<span class="source-line-no">1202</span><span id="line-1202">                    case STATUS_STARTING -&gt; m_Button_Start.setDisable( true );</span>
+<span class="source-line-no">1203</span><span id="line-1203"></span>
+<span class="source-line-no">1204</span><span id="line-1204">                    default -&gt; throw new UnsupportedEnumError( newStatus );</span>
+<span class="source-line-no">1205</span><span id="line-1205">                }   //  StatusSwitch:</span>
+<span class="source-line-no">1206</span><span id="line-1206">            }</span>
+<span class="source-line-no">1207</span><span id="line-1207">        }</span>
+<span class="source-line-no">1208</span><span id="line-1208">    }   //  statusTransition()</span>
+<span class="source-line-no">1209</span><span id="line-1209">}</span>
+<span class="source-line-no">1210</span><span id="line-1210">//  class MainController</span>
+<span class="source-line-no">1211</span><span id="line-1211"></span>
+<span class="source-line-no">1212</span><span id="line-1212">/*</span>
+<span class="source-line-no">1213</span><span id="line-1213"> *  End of File</span>
+<span class="source-line-no">1214</span><span id="line-1214"> */</span>
 
 
 

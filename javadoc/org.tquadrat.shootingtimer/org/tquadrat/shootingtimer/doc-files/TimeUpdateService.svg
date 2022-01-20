@@ -7,7 +7,7 @@
      version='1.1'
      baseProfile='full'
      width='1573.000'
-     height='1932.000'>
+     height='1943.000'>
     <defs>
         <style><![CDATA[
             line
@@ -118,7 +118,7 @@
         </marker>
         <clipPath id='ID000001'>
             <rect class='focusClass'
-                  height='95.000'
+                  height='106.000'
                   width='466.000'
                   x='0.000'
                   y='0.000'/>
@@ -130,7 +130,7 @@
                     <rect x='0.000'
                           y='0.000'
                           width='466.000'
-                          height='95.000'
+                          height='106.000'
                           class='focusClass'/>
                     <line x1='0.000'
                           y1='17.000'
@@ -140,21 +140,23 @@
                     <text x='182.000'
                           y='13.000'>TimeUpdateService</text>
                     <line x1='0.000'
-                          y1='56.000'
+                          y1='67.000'
                           x2='466.000'
-                          y2='56.000'
+                          y2='67.000'
                           class='separator'/>
                     <text y='30.000'
                           class='final'>- m_EndTime:long</text>
-                    <text y='41.000'>- m_Stop:boolean</text>
-                    <text y='52.000'
+                    <text y='41.000'
+                          class='final'>- m_ShowMinutes:boolean</text>
+                    <text y='52.000'>- m_Stop:boolean</text>
+                    <text y='63.000'
                           class='final'>- m_TimeDisplay:javafx.scene.control.TextField</text>
                     <text x='5.000'
-                          y='69.000'>+ TimeUpdateService(endTime:long,timeDisplay:javafx.scene.control.TextField)</text>
+                          y='80.000'>+ TimeUpdateService(endTime:long,timeDisplay:javafx.scene.control.TextField)</text>
                     <text x='5.000'
-                          y='80.000'>+ stop():void</text>
+                          y='91.000'>+ stop():void</text>
                     <text x='5.000'
-                          y='91.000'># createTask():javafx.concurrent.Task&lt;java.lang.Void&gt;</text>
+                          y='102.000'># createTask():javafx.concurrent.Task&lt;java.lang.Void&gt;</text>
                 </g>
             </g>
         </symbol>

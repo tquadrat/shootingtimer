@@ -63,296 +63,342 @@
 <span class="source-line-no">050</span><span id="line-50">    ====** Enum Declaration **=================================================</span>
 <span class="source-line-no">051</span><span id="line-51">        \*------------------*/</span>
 <span class="source-line-no">052</span><span id="line-52">    /**</span>
-<span class="source-line-no">053</span><span id="line-53">     *  The discipline &amp;quot;Luftpistole Mehrkampf&amp;quot; (Air Pistol Sport).</span>
+<span class="source-line-no">053</span><span id="line-53">     *  The discipline &amp;quot;Luftgewehr&amp;quot; (Air Rifle).</span>
 <span class="source-line-no">054</span><span id="line-54">     */</span>
 <span class="source-line-no">055</span><span id="line-55">    @Text</span>
-<span class="source-line-no">056</span><span id="line-56">    (</span>
-<span class="source-line-no">057</span><span id="line-57">        description = "Air Pistol DSB 2.17",</span>
-<span class="source-line-no">058</span><span id="line-58">        translations =</span>
-<span class="source-line-no">059</span><span id="line-59">        {</span>
-<span class="source-line-no">060</span><span id="line-60">            @Translation( language="de", text = "· Luftpistole Mehrkampf (2.17)" ),</span>
-<span class="source-line-no">061</span><span id="line-61">            @Translation( language="en", text = "·             Air Pistol DSB 2.17" )</span>
-<span class="source-line-no">062</span><span id="line-62">        }</span>
-<span class="source-line-no">063</span><span id="line-63">    )</span>
-<span class="source-line-no">064</span><span id="line-64">    DISCIPLINE_2_17( "2.17", new Heat []</span>
-<span class="source-line-no">065</span><span id="line-65">    {</span>
-<span class="source-line-no">066</span><span id="line-66">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
-<span class="source-line-no">067</span><span id="line-67">        new Heat( "HEAT_DUEL", 3_000, 7_000, 5 )</span>
-<span class="source-line-no">068</span><span id="line-68">    } ),</span>
-<span class="source-line-no">069</span><span id="line-69"></span>
-<span class="source-line-no">070</span><span id="line-70">    /**</span>
-<span class="source-line-no">071</span><span id="line-71">     *  The discipline &amp;quot;Luftpistole Standard&amp;quot; (Air Pistol Standard).</span>
-<span class="source-line-no">072</span><span id="line-72">     */</span>
-<span class="source-line-no">073</span><span id="line-73">    @Text</span>
-<span class="source-line-no">074</span><span id="line-74">    (</span>
-<span class="source-line-no">075</span><span id="line-75">        description = "Air Pistol DSB 2.18",</span>
-<span class="source-line-no">076</span><span id="line-76">        translations =</span>
-<span class="source-line-no">077</span><span id="line-77">        {</span>
-<span class="source-line-no">078</span><span id="line-78">            @Translation( language="de", text = "·  Luftpistole Standard (2.18)" ),</span>
-<span class="source-line-no">079</span><span id="line-79">            @Translation( language="en", text = "·             Air Pistol DSB 2.18" )</span>
-<span class="source-line-no">080</span><span id="line-80">        }</span>
-<span class="source-line-no">081</span><span id="line-81">    )</span>
-<span class="source-line-no">082</span><span id="line-82">    DISCIPLINE_2_18( "2.18", new Heat []</span>
-<span class="source-line-no">083</span><span id="line-83">    {</span>
-<span class="source-line-no">084</span><span id="line-84">        new Heat( "HEAT_150s", 150_000, 7_000, 1),</span>
-<span class="source-line-no">085</span><span id="line-85">        new Heat( "HEAT_20s", 20_000, 7_000, 1 )</span>
-<span class="source-line-no">086</span><span id="line-86">    } ),</span>
-<span class="source-line-no">087</span><span id="line-87"></span>
-<span class="source-line-no">088</span><span id="line-88">    /**</span>
-<span class="source-line-no">089</span><span id="line-89">     *  The discipline &amp;quot;KK Sportpistole&amp;quot; (Rimfire Sport Pistol).</span>
-<span class="source-line-no">090</span><span id="line-90">     */</span>
-<span class="source-line-no">091</span><span id="line-91">    @Text</span>
-<span class="source-line-no">092</span><span id="line-92">    (</span>
-<span class="source-line-no">093</span><span id="line-93">        description = "Rimfire Pistol Sport DSB 2.40",</span>
-<span class="source-line-no">094</span><span id="line-94">        translations =</span>
-<span class="source-line-no">095</span><span id="line-95">        {</span>
-<span class="source-line-no">096</span><span id="line-96">            @Translation( language="de", text = "·       KK Sportpistole (2.40)" ),</span>
-<span class="source-line-no">097</span><span id="line-97">            @Translation( language="en", text = "·   Rimfire Sport Pistol DSB 2.40" )</span>
-<span class="source-line-no">098</span><span id="line-98">        }</span>
-<span class="source-line-no">099</span><span id="line-99">    )</span>
-<span class="source-line-no">100</span><span id="line-100">    DISCIPLINE_2_40( "2.40", new Heat []</span>
-<span class="source-line-no">101</span><span id="line-101">    {</span>
-<span class="source-line-no">102</span><span id="line-102">        new Heat( "HEAT_PRECISION", 300_000, 7_000, 1),</span>
-<span class="source-line-no">103</span><span id="line-103">        new Heat( "HEAT_DUEL", 3_000, 7_000, 5 )</span>
-<span class="source-line-no">104</span><span id="line-104">    } ),</span>
-<span class="source-line-no">105</span><span id="line-105"></span>
-<span class="source-line-no">106</span><span id="line-106">    /**</span>
-<span class="source-line-no">107</span><span id="line-107">     *  The discipline &amp;quot;Zentralfeuerpistole&amp;quot; (Center Fire Pistol).</span>
-<span class="source-line-no">108</span><span id="line-108">     */</span>
-<span class="source-line-no">109</span><span id="line-109">    @Text</span>
-<span class="source-line-no">110</span><span id="line-110">    (</span>
-<span class="source-line-no">111</span><span id="line-111">        description = "Center Fire Pistol DSB 2.45",</span>
-<span class="source-line-no">112</span><span id="line-112">        translations =</span>
-<span class="source-line-no">113</span><span id="line-113">        {</span>
-<span class="source-line-no">114</span><span id="line-114">            @Translation( language="de", text = "·  Zentralfeuerpistole  (2.45)" ),</span>
-<span class="source-line-no">115</span><span id="line-115">            @Translation( language="en", text = "·     Center Fire Pistol DSB 2.45" )</span>
-<span class="source-line-no">116</span><span id="line-116">        }</span>
-<span class="source-line-no">117</span><span id="line-117">    )</span>
-<span class="source-line-no">118</span><span id="line-118">    DISCIPLINE_2_45( "2.45", new Heat []</span>
-<span class="source-line-no">119</span><span id="line-119">    {</span>
-<span class="source-line-no">120</span><span id="line-120">        new Heat( "HEAT_PRECISION", 300_000, 7_000, 1),</span>
-<span class="source-line-no">121</span><span id="line-121">        new Heat( "HEAT_DUEL", 3_000, 7_000, 5 )</span>
-<span class="source-line-no">122</span><span id="line-122">    } ),</span>
-<span class="source-line-no">123</span><span id="line-123"></span>
-<span class="source-line-no">124</span><span id="line-124">    /**</span>
-<span class="source-line-no">125</span><span id="line-125">     *  The discipline &amp;quot;9mm Pistole&amp;quot; (9mm Pistol).</span>
-<span class="source-line-no">126</span><span id="line-126">     */</span>
-<span class="source-line-no">127</span><span id="line-127">    @Text</span>
-<span class="source-line-no">128</span><span id="line-128">    (</span>
-<span class="source-line-no">129</span><span id="line-129">        description = "9mm Pistol DSB 2.53",</span>
-<span class="source-line-no">130</span><span id="line-130">        translations =</span>
-<span class="source-line-no">131</span><span id="line-131">        {</span>
-<span class="source-line-no">132</span><span id="line-132">            @Translation( language="de", text = "·           9mm Pistole (2.53)" ),</span>
-<span class="source-line-no">133</span><span id="line-133">            @Translation( language="en", text = "·             9mm Pistol DSB 2.53" )</span>
-<span class="source-line-no">134</span><span id="line-134">        }</span>
-<span class="source-line-no">135</span><span id="line-135">    )</span>
-<span class="source-line-no">136</span><span id="line-136">    DISCIPLINE_2_53( "2.53", new Heat []</span>
-<span class="source-line-no">137</span><span id="line-137">    {</span>
-<span class="source-line-no">138</span><span id="line-138">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
-<span class="source-line-no">139</span><span id="line-139">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
-<span class="source-line-no">140</span><span id="line-140">    } ),</span>
-<span class="source-line-no">141</span><span id="line-141"></span>
-<span class="source-line-no">142</span><span id="line-142">    /**</span>
-<span class="source-line-no">143</span><span id="line-143">     *  The discipline &amp;quot;.357 Revolver&amp;quot;.</span>
-<span class="source-line-no">144</span><span id="line-144">     */</span>
-<span class="source-line-no">145</span><span id="line-145">    @Text</span>
-<span class="source-line-no">146</span><span id="line-146">    (</span>
-<span class="source-line-no">147</span><span id="line-147">        description = ".357 Revolver DSB 2.55",</span>
-<span class="source-line-no">148</span><span id="line-148">        translations =</span>
-<span class="source-line-no">149</span><span id="line-149">        {</span>
-<span class="source-line-no">150</span><span id="line-150">            @Translation( language="de", text = "·          .357 Revolver (2.55)" ),</span>
-<span class="source-line-no">151</span><span id="line-151">            @Translation( language="en", text = "·           .357 Revolver DSB 2.55" )</span>
-<span class="source-line-no">152</span><span id="line-152">        }</span>
-<span class="source-line-no">153</span><span id="line-153">    )</span>
-<span class="source-line-no">154</span><span id="line-154">    DISCIPLINE_2_55( "2.55", new Heat []</span>
-<span class="source-line-no">155</span><span id="line-155">    {</span>
-<span class="source-line-no">156</span><span id="line-156">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
-<span class="source-line-no">157</span><span id="line-157">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
-<span class="source-line-no">158</span><span id="line-158">    } ),</span>
-<span class="source-line-no">159</span><span id="line-159"></span>
-<span class="source-line-no">160</span><span id="line-160">    /**</span>
-<span class="source-line-no">161</span><span id="line-161">     *  The discipline &amp;quot;.44 Revolver&amp;quot;.</span>
-<span class="source-line-no">162</span><span id="line-162">     */</span>
-<span class="source-line-no">163</span><span id="line-163">    @Text</span>
-<span class="source-line-no">164</span><span id="line-164">    (</span>
-<span class="source-line-no">165</span><span id="line-165">        description = ".44 Revolver DSB 2.58",</span>
-<span class="source-line-no">166</span><span id="line-166">        translations =</span>
-<span class="source-line-no">167</span><span id="line-167">        {</span>
-<span class="source-line-no">168</span><span id="line-168">            @Translation( language="de", text = "·           .44 Revolver (2.58)" ),</span>
-<span class="source-line-no">169</span><span id="line-169">            @Translation( language="en", text = "·            .44 Revolver DSB 2.58" )</span>
-<span class="source-line-no">170</span><span id="line-170">        }</span>
-<span class="source-line-no">171</span><span id="line-171">    )</span>
-<span class="source-line-no">172</span><span id="line-172">    DISCIPLINE_2_58( "2.58", new Heat []</span>
-<span class="source-line-no">173</span><span id="line-173">    {</span>
-<span class="source-line-no">174</span><span id="line-174">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
-<span class="source-line-no">175</span><span id="line-175">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
-<span class="source-line-no">176</span><span id="line-176">    } ),</span>
-<span class="source-line-no">177</span><span id="line-177"></span>
-<span class="source-line-no">178</span><span id="line-178">    /**</span>
-<span class="source-line-no">179</span><span id="line-179">     *  The discipline &amp;quot;.44 Pistole&amp;quot; (.44 Pistol).</span>
-<span class="source-line-no">180</span><span id="line-180">     */</span>
-<span class="source-line-no">181</span><span id="line-181">    @Text</span>
-<span class="source-line-no">182</span><span id="line-182">    (</span>
-<span class="source-line-no">183</span><span id="line-183">        description = ".45 Pistol DSB 2.59",</span>
-<span class="source-line-no">184</span><span id="line-184">        translations =</span>
-<span class="source-line-no">185</span><span id="line-185">        {</span>
-<span class="source-line-no">186</span><span id="line-186">            @Translation( language="de", text = "·            .45 Pistole (2.59)" ),</span>
-<span class="source-line-no">187</span><span id="line-187">            @Translation( language="en", text = "·              .45 Pistol DSB 2.59" )</span>
-<span class="source-line-no">188</span><span id="line-188">        }</span>
-<span class="source-line-no">189</span><span id="line-189">    )</span>
-<span class="source-line-no">190</span><span id="line-190">    DISCIPLINE_2_59( "2.58", new Heat []</span>
-<span class="source-line-no">191</span><span id="line-191">    {</span>
-<span class="source-line-no">192</span><span id="line-192">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
-<span class="source-line-no">193</span><span id="line-193">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
-<span class="source-line-no">194</span><span id="line-194">    } ),</span>
-<span class="source-line-no">195</span><span id="line-195"></span>
-<span class="source-line-no">196</span><span id="line-196">    /**</span>
-<span class="source-line-no">197</span><span id="line-197">     *  The discipline &amp;quot;KK Standardpistole&amp;quot; (Rimfire Standard</span>
-<span class="source-line-no">198</span><span id="line-198">     *  Pistol).</span>
-<span class="source-line-no">199</span><span id="line-199">     */</span>
-<span class="source-line-no">200</span><span id="line-200">    @Text</span>
-<span class="source-line-no">201</span><span id="line-201">    (</span>
-<span class="source-line-no">202</span><span id="line-202">        description = ".45 Pistol DSB 2.60",</span>
-<span class="source-line-no">203</span><span id="line-203">        translations =</span>
-<span class="source-line-no">204</span><span id="line-204">        {</span>
-<span class="source-line-no">205</span><span id="line-205">            @Translation( language="de", text = "·     KK Standardpistole (2.60)" ),</span>
-<span class="source-line-no">206</span><span id="line-206">            @Translation( language="en", text = "· Rimfire Standard Pistol DSB 2.60" )</span>
-<span class="source-line-no">207</span><span id="line-207">        }</span>
-<span class="source-line-no">208</span><span id="line-208">    )</span>
-<span class="source-line-no">209</span><span id="line-209">    DISCIPLINE_2_60( "2.60", new Heat []</span>
-<span class="source-line-no">210</span><span id="line-210">    {</span>
-<span class="source-line-no">211</span><span id="line-211">        new Heat( "HEAT_150s", 150_000, 7_000, 1 ),</span>
-<span class="source-line-no">212</span><span id="line-212">        new Heat( "HEAT_20s", 20_000, 7_000, 1 ),</span>
-<span class="source-line-no">213</span><span id="line-213">        new Heat( "HEAT_10s", 10_000, 7_000, 1 )</span>
-<span class="source-line-no">214</span><span id="line-214">    } ),</span>
-<span class="source-line-no">215</span><span id="line-215"></span>
-<span class="source-line-no">216</span><span id="line-216">    /**</span>
-<span class="source-line-no">217</span><span id="line-217">     *  Several tie-break.</span>
-<span class="source-line-no">218</span><span id="line-218">     */</span>
-<span class="source-line-no">219</span><span id="line-219">    @SuppressWarnings( "GrazieInspection" )</span>
-<span class="source-line-no">220</span><span id="line-220">    @Text</span>
-<span class="source-line-no">221</span><span id="line-221">    (</span>
-<span class="source-line-no">222</span><span id="line-222">        description = "Tie-break",</span>
-<span class="source-line-no">223</span><span id="line-223">        translations =</span>
-<span class="source-line-no">224</span><span id="line-224">        {</span>
-<span class="source-line-no">225</span><span id="line-225">            @Translation( language="de", text = "·                    Stechschuß" ),</span>
-<span class="source-line-no">226</span><span id="line-226">            @Translation( language="en", text = "·                        Tie-break" )</span>
-<span class="source-line-no">227</span><span id="line-227">        }</span>
-<span class="source-line-no">228</span><span id="line-228">    )</span>
-<span class="source-line-no">229</span><span id="line-229">    TIEBREAK( "Tiebreak 50s", new Heat []</span>
-<span class="source-line-no">230</span><span id="line-230">    {</span>
-<span class="source-line-no">231</span><span id="line-231">        new Heat( "TIEBREAK_30s", 30_000, 500, 1 ),</span>
-<span class="source-line-no">232</span><span id="line-232">        new Heat( "TIEBREAK_50s", 50_000, 500, 1 ),</span>
-<span class="source-line-no">233</span><span id="line-233">        new Heat( "TIEBREAK_75s", 75_000, 500, 1 )</span>
-<span class="source-line-no">234</span><span id="line-234">    } );</span>
-<span class="source-line-no">235</span><span id="line-235"></span>
-<span class="source-line-no">236</span><span id="line-236">        /*------------*\</span>
-<span class="source-line-no">237</span><span id="line-237">    ====** Attributes **=======================================================</span>
-<span class="source-line-no">238</span><span id="line-238">        \*------------*/</span>
-<span class="source-line-no">239</span><span id="line-239">    /**</span>
-<span class="source-line-no">240</span><span id="line-240">     *  The code number for this discipline as used by the DSB.</span>
-<span class="source-line-no">241</span><span id="line-241">     */</span>
-<span class="source-line-no">242</span><span id="line-242">    private final String m_DSBCode;</span>
-<span class="source-line-no">243</span><span id="line-243"></span>
-<span class="source-line-no">244</span><span id="line-244">    /**</span>
-<span class="source-line-no">245</span><span id="line-245">     *  The program for this discipline.</span>
-<span class="source-line-no">246</span><span id="line-246">     */</span>
-<span class="source-line-no">247</span><span id="line-247">    private final Heat [] m_Program;</span>
-<span class="source-line-no">248</span><span id="line-248"></span>
-<span class="source-line-no">249</span><span id="line-249">        /*------------------------*\</span>
-<span class="source-line-no">250</span><span id="line-250">    ====** Static Initialisations **===========================================</span>
-<span class="source-line-no">251</span><span id="line-251">        \*------------------------*/</span>
-<span class="source-line-no">252</span><span id="line-252">    /**</span>
-<span class="source-line-no">253</span><span id="line-253">     *  The resource bundle with the names.</span>
-<span class="source-line-no">254</span><span id="line-254">     */</span>
-<span class="source-line-no">255</span><span id="line-255">    private final static ResourceBundle m_ResourceBundle;</span>
-<span class="source-line-no">256</span><span id="line-256"></span>
-<span class="source-line-no">257</span><span id="line-257">    static</span>
-<span class="source-line-no">258</span><span id="line-258">    {</span>
-<span class="source-line-no">259</span><span id="line-259">        try</span>
-<span class="source-line-no">260</span><span id="line-260">        {</span>
-<span class="source-line-no">261</span><span id="line-261">            //---* Load the resource bundle with the texts *-------------------</span>
-<span class="source-line-no">262</span><span id="line-262">            m_ResourceBundle = loadResourceBundle( BASE_BUNDLE_NAME )</span>
-<span class="source-line-no">263</span><span id="line-263">                .orElseThrow( () -&gt; new MissingResourceException( MSG_CannotLoadTextResources, BASE_BUNDLE_NAME, null ) );</span>
-<span class="source-line-no">264</span><span id="line-264">        }</span>
-<span class="source-line-no">265</span><span id="line-265">        catch( final MissingResourceException e )</span>
-<span class="source-line-no">266</span><span id="line-266">        {</span>
-<span class="source-line-no">267</span><span id="line-267">            throw new ExceptionInInitializerError( e );</span>
-<span class="source-line-no">268</span><span id="line-268">        }</span>
-<span class="source-line-no">269</span><span id="line-269">    }</span>
-<span class="source-line-no">270</span><span id="line-270"></span>
-<span class="source-line-no">271</span><span id="line-271">        /*--------------*\</span>
-<span class="source-line-no">272</span><span id="line-272">    ====** Constructors **=====================================================</span>
-<span class="source-line-no">273</span><span id="line-273">        \*--------------*/</span>
-<span class="source-line-no">274</span><span id="line-274">    /**</span>
-<span class="source-line-no">275</span><span id="line-275">     *  Creates a new {@code Discipline} instance.</span>
-<span class="source-line-no">276</span><span id="line-276">     *</span>
-<span class="source-line-no">277</span><span id="line-277">     *  @param  dsbCode The code number for this discipline as used by the</span>
-<span class="source-line-no">278</span><span id="line-278">     *      DSB (Deutscher Schützenbund).</span>
-<span class="source-line-no">279</span><span id="line-279">     *  @param  program The program for this discipline.</span>
-<span class="source-line-no">280</span><span id="line-280">     */</span>
-<span class="source-line-no">281</span><span id="line-281">    private Discipline( final String dsbCode, final Heat [] program )</span>
-<span class="source-line-no">282</span><span id="line-282">    {</span>
-<span class="source-line-no">283</span><span id="line-283">        m_DSBCode = dsbCode;</span>
-<span class="source-line-no">284</span><span id="line-284">        m_Program = program;</span>
-<span class="source-line-no">285</span><span id="line-285">    }   //  Discipline()</span>
-<span class="source-line-no">286</span><span id="line-286"></span>
-<span class="source-line-no">287</span><span id="line-287">        /*---------*\</span>
-<span class="source-line-no">288</span><span id="line-288">    ====** Methods **==========================================================</span>
-<span class="source-line-no">289</span><span id="line-289">        \*---------*/</span>
+<span class="source-line-no">056</span><span id="line-56">        (</span>
+<span class="source-line-no">057</span><span id="line-57">            description = "Air Rifle DSB 1.10",</span>
+<span class="source-line-no">058</span><span id="line-58">            translations =</span>
+<span class="source-line-no">059</span><span id="line-59">                {</span>
+<span class="source-line-no">060</span><span id="line-60">                    @Translation( language="de", text = "·            Luftgewehr (1.10)" ),</span>
+<span class="source-line-no">061</span><span id="line-61">                    @Translation( language="en", text = "·              Air Rifle DSB 1.10" )</span>
+<span class="source-line-no">062</span><span id="line-62">                }</span>
+<span class="source-line-no">063</span><span id="line-63">        )</span>
+<span class="source-line-no">064</span><span id="line-64">    DISCIPLINE_1_10( "1.10", new Heat []</span>
+<span class="source-line-no">065</span><span id="line-65">        {</span>
+<span class="source-line-no">066</span><span id="line-66">            new Heat( "HEAT_SIGHTING", 900_000, 500, 1),</span>
+<span class="source-line-no">067</span><span id="line-67">            new Heat( "HEAT_MATCH_30", 1_800_000, 500, 1 ),</span>
+<span class="source-line-no">068</span><span id="line-68">            new Heat( "HEAT_MATCH_35", 2_160_000, 500, 1 ),</span>
+<span class="source-line-no">069</span><span id="line-69">            new Heat( "HEAT_MATCH_50", 3_000_000, 500, 1 ),</span>
+<span class="source-line-no">070</span><span id="line-70">            new Heat( "HEAT_MATCH_60", 3_600_000, 500, 1 ),</span>
+<span class="source-line-no">071</span><span id="line-71">            new Heat( "HEAT_MATCH_75", 4_500_000, 500, 1 ),</span>
+<span class="source-line-no">072</span><span id="line-72">            new Heat( "HEAT_MATCH_90", 5_400_000, 500, 1 )</span>
+<span class="source-line-no">073</span><span id="line-73">        } ),</span>
+<span class="source-line-no">074</span><span id="line-74"></span>
+<span class="source-line-no">075</span><span id="line-75">    /**</span>
+<span class="source-line-no">076</span><span id="line-76">     *  The discipline &amp;quot;Luftpistole&amp;quot; (Air Pistol).</span>
+<span class="source-line-no">077</span><span id="line-77">     */</span>
+<span class="source-line-no">078</span><span id="line-78">    @Text</span>
+<span class="source-line-no">079</span><span id="line-79">        (</span>
+<span class="source-line-no">080</span><span id="line-80">            description = "Air Pistol DSB 2.10",</span>
+<span class="source-line-no">081</span><span id="line-81">            translations =</span>
+<span class="source-line-no">082</span><span id="line-82">                {</span>
+<span class="source-line-no">083</span><span id="line-83">                    @Translation( language="de", text = "·           Luftpistole (2.10)" ),</span>
+<span class="source-line-no">084</span><span id="line-84">                    @Translation( language="en", text = "·             Air Pistol DSB 2.10" )</span>
+<span class="source-line-no">085</span><span id="line-85">                }</span>
+<span class="source-line-no">086</span><span id="line-86">        )</span>
+<span class="source-line-no">087</span><span id="line-87">    DISCIPLINE_2_10( "2.10", new Heat []</span>
+<span class="source-line-no">088</span><span id="line-88">        {</span>
+<span class="source-line-no">089</span><span id="line-89">            new Heat( "HEAT_SIGHTING", 54_000_000, 500, 1),</span>
+<span class="source-line-no">090</span><span id="line-90">            new Heat( "HEAT_MATCH_30", 108_000_000, 500, 1 ),</span>
+<span class="source-line-no">091</span><span id="line-91">            new Heat( "HEAT_MATCH_35", 126_000_000, 500, 1 ),</span>
+<span class="source-line-no">092</span><span id="line-92">            new Heat( "HEAT_MATCH_50", 180_000_000, 500, 1 ),</span>
+<span class="source-line-no">093</span><span id="line-93">            new Heat( "HEAT_MATCH_60", 216_000_000, 500, 1 ),</span>
+<span class="source-line-no">094</span><span id="line-94">            new Heat( "HEAT_MATCH_75", 270_000_000, 500, 1 ),</span>
+<span class="source-line-no">095</span><span id="line-95">            new Heat( "HEAT_MATCH_90", 324_000_000, 500, 1 )</span>
+<span class="source-line-no">096</span><span id="line-96">        } ),</span>
+<span class="source-line-no">097</span><span id="line-97"></span>
+<span class="source-line-no">098</span><span id="line-98">    /**</span>
+<span class="source-line-no">099</span><span id="line-99">     *  The discipline &amp;quot;Luftpistole Mehrkampf&amp;quot; (Air Pistol Sport).</span>
+<span class="source-line-no">100</span><span id="line-100">     */</span>
+<span class="source-line-no">101</span><span id="line-101">    @Text</span>
+<span class="source-line-no">102</span><span id="line-102">    (</span>
+<span class="source-line-no">103</span><span id="line-103">        description = "Air Pistol DSB 2.17",</span>
+<span class="source-line-no">104</span><span id="line-104">        translations =</span>
+<span class="source-line-no">105</span><span id="line-105">        {</span>
+<span class="source-line-no">106</span><span id="line-106">            @Translation( language="de", text = "· Luftpistole Mehrkampf (2.17)" ),</span>
+<span class="source-line-no">107</span><span id="line-107">            @Translation( language="en", text = "·             Air Pistol DSB 2.17" )</span>
+<span class="source-line-no">108</span><span id="line-108">        }</span>
+<span class="source-line-no">109</span><span id="line-109">    )</span>
+<span class="source-line-no">110</span><span id="line-110">    DISCIPLINE_2_17( "2.17", new Heat []</span>
+<span class="source-line-no">111</span><span id="line-111">    {</span>
+<span class="source-line-no">112</span><span id="line-112">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
+<span class="source-line-no">113</span><span id="line-113">        new Heat( "HEAT_DUEL", 3_000, 7_000, 5 )</span>
+<span class="source-line-no">114</span><span id="line-114">    } ),</span>
+<span class="source-line-no">115</span><span id="line-115"></span>
+<span class="source-line-no">116</span><span id="line-116">    /**</span>
+<span class="source-line-no">117</span><span id="line-117">     *  The discipline &amp;quot;Luftpistole Standard&amp;quot; (Air Pistol Standard).</span>
+<span class="source-line-no">118</span><span id="line-118">     */</span>
+<span class="source-line-no">119</span><span id="line-119">    @Text</span>
+<span class="source-line-no">120</span><span id="line-120">    (</span>
+<span class="source-line-no">121</span><span id="line-121">        description = "Air Pistol DSB 2.18",</span>
+<span class="source-line-no">122</span><span id="line-122">        translations =</span>
+<span class="source-line-no">123</span><span id="line-123">        {</span>
+<span class="source-line-no">124</span><span id="line-124">            @Translation( language="de", text = "·  Luftpistole Standard (2.18)" ),</span>
+<span class="source-line-no">125</span><span id="line-125">            @Translation( language="en", text = "·             Air Pistol DSB 2.18" )</span>
+<span class="source-line-no">126</span><span id="line-126">        }</span>
+<span class="source-line-no">127</span><span id="line-127">    )</span>
+<span class="source-line-no">128</span><span id="line-128">    DISCIPLINE_2_18( "2.18", new Heat []</span>
+<span class="source-line-no">129</span><span id="line-129">    {</span>
+<span class="source-line-no">130</span><span id="line-130">        new Heat( "HEAT_150s", 150_000, 7_000, 1),</span>
+<span class="source-line-no">131</span><span id="line-131">        new Heat( "HEAT_20s", 20_000, 7_000, 1 )</span>
+<span class="source-line-no">132</span><span id="line-132">    } ),</span>
+<span class="source-line-no">133</span><span id="line-133"></span>
+<span class="source-line-no">134</span><span id="line-134">    /**</span>
+<span class="source-line-no">135</span><span id="line-135">     *  The discipline &amp;quot;KK Sportpistole&amp;quot; (Rimfire Sport Pistol).</span>
+<span class="source-line-no">136</span><span id="line-136">     */</span>
+<span class="source-line-no">137</span><span id="line-137">    @Text</span>
+<span class="source-line-no">138</span><span id="line-138">    (</span>
+<span class="source-line-no">139</span><span id="line-139">        description = "Rimfire Pistol Sport DSB 2.40",</span>
+<span class="source-line-no">140</span><span id="line-140">        translations =</span>
+<span class="source-line-no">141</span><span id="line-141">        {</span>
+<span class="source-line-no">142</span><span id="line-142">            @Translation( language="de", text = "·       KK Sportpistole (2.40)" ),</span>
+<span class="source-line-no">143</span><span id="line-143">            @Translation( language="en", text = "·   Rimfire Sport Pistol DSB 2.40" )</span>
+<span class="source-line-no">144</span><span id="line-144">        }</span>
+<span class="source-line-no">145</span><span id="line-145">    )</span>
+<span class="source-line-no">146</span><span id="line-146">    DISCIPLINE_2_40( "2.40", new Heat []</span>
+<span class="source-line-no">147</span><span id="line-147">    {</span>
+<span class="source-line-no">148</span><span id="line-148">        new Heat( "HEAT_PRECISION", 300_000, 7_000, 1),</span>
+<span class="source-line-no">149</span><span id="line-149">        new Heat( "HEAT_DUEL", 3_000, 7_000, 5 )</span>
+<span class="source-line-no">150</span><span id="line-150">    } ),</span>
+<span class="source-line-no">151</span><span id="line-151"></span>
+<span class="source-line-no">152</span><span id="line-152">    /**</span>
+<span class="source-line-no">153</span><span id="line-153">     *  The discipline &amp;quot;Zentralfeuerpistole&amp;quot; (Center Fire Pistol).</span>
+<span class="source-line-no">154</span><span id="line-154">     */</span>
+<span class="source-line-no">155</span><span id="line-155">    @Text</span>
+<span class="source-line-no">156</span><span id="line-156">    (</span>
+<span class="source-line-no">157</span><span id="line-157">        description = "Center Fire Pistol DSB 2.45",</span>
+<span class="source-line-no">158</span><span id="line-158">        translations =</span>
+<span class="source-line-no">159</span><span id="line-159">        {</span>
+<span class="source-line-no">160</span><span id="line-160">            @Translation( language="de", text = "·  Zentralfeuerpistole  (2.45)" ),</span>
+<span class="source-line-no">161</span><span id="line-161">            @Translation( language="en", text = "·     Center Fire Pistol DSB 2.45" )</span>
+<span class="source-line-no">162</span><span id="line-162">        }</span>
+<span class="source-line-no">163</span><span id="line-163">    )</span>
+<span class="source-line-no">164</span><span id="line-164">    DISCIPLINE_2_45( "2.45", new Heat []</span>
+<span class="source-line-no">165</span><span id="line-165">    {</span>
+<span class="source-line-no">166</span><span id="line-166">        new Heat( "HEAT_PRECISION", 300_000, 7_000, 1),</span>
+<span class="source-line-no">167</span><span id="line-167">        new Heat( "HEAT_DUEL", 3_000, 7_000, 5 )</span>
+<span class="source-line-no">168</span><span id="line-168">    } ),</span>
+<span class="source-line-no">169</span><span id="line-169"></span>
+<span class="source-line-no">170</span><span id="line-170">    /**</span>
+<span class="source-line-no">171</span><span id="line-171">     *  The discipline &amp;quot;9mm Pistole&amp;quot; (9mm Pistol).</span>
+<span class="source-line-no">172</span><span id="line-172">     */</span>
+<span class="source-line-no">173</span><span id="line-173">    @Text</span>
+<span class="source-line-no">174</span><span id="line-174">    (</span>
+<span class="source-line-no">175</span><span id="line-175">        description = "9mm Pistol DSB 2.53",</span>
+<span class="source-line-no">176</span><span id="line-176">        translations =</span>
+<span class="source-line-no">177</span><span id="line-177">        {</span>
+<span class="source-line-no">178</span><span id="line-178">            @Translation( language="de", text = "·           9mm Pistole (2.53)" ),</span>
+<span class="source-line-no">179</span><span id="line-179">            @Translation( language="en", text = "·             9mm Pistol DSB 2.53" )</span>
+<span class="source-line-no">180</span><span id="line-180">        }</span>
+<span class="source-line-no">181</span><span id="line-181">    )</span>
+<span class="source-line-no">182</span><span id="line-182">    DISCIPLINE_2_53( "2.53", new Heat []</span>
+<span class="source-line-no">183</span><span id="line-183">    {</span>
+<span class="source-line-no">184</span><span id="line-184">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
+<span class="source-line-no">185</span><span id="line-185">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
+<span class="source-line-no">186</span><span id="line-186">    } ),</span>
+<span class="source-line-no">187</span><span id="line-187"></span>
+<span class="source-line-no">188</span><span id="line-188">    /**</span>
+<span class="source-line-no">189</span><span id="line-189">     *  The discipline &amp;quot;.357 Revolver&amp;quot;.</span>
+<span class="source-line-no">190</span><span id="line-190">     */</span>
+<span class="source-line-no">191</span><span id="line-191">    @Text</span>
+<span class="source-line-no">192</span><span id="line-192">    (</span>
+<span class="source-line-no">193</span><span id="line-193">        description = ".357 Revolver DSB 2.55",</span>
+<span class="source-line-no">194</span><span id="line-194">        translations =</span>
+<span class="source-line-no">195</span><span id="line-195">        {</span>
+<span class="source-line-no">196</span><span id="line-196">            @Translation( language="de", text = "·          .357 Revolver (2.55)" ),</span>
+<span class="source-line-no">197</span><span id="line-197">            @Translation( language="en", text = "·           .357 Revolver DSB 2.55" )</span>
+<span class="source-line-no">198</span><span id="line-198">        }</span>
+<span class="source-line-no">199</span><span id="line-199">    )</span>
+<span class="source-line-no">200</span><span id="line-200">    DISCIPLINE_2_55( "2.55", new Heat []</span>
+<span class="source-line-no">201</span><span id="line-201">    {</span>
+<span class="source-line-no">202</span><span id="line-202">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
+<span class="source-line-no">203</span><span id="line-203">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
+<span class="source-line-no">204</span><span id="line-204">    } ),</span>
+<span class="source-line-no">205</span><span id="line-205"></span>
+<span class="source-line-no">206</span><span id="line-206">    /**</span>
+<span class="source-line-no">207</span><span id="line-207">     *  The discipline &amp;quot;.44 Revolver&amp;quot;.</span>
+<span class="source-line-no">208</span><span id="line-208">     */</span>
+<span class="source-line-no">209</span><span id="line-209">    @Text</span>
+<span class="source-line-no">210</span><span id="line-210">    (</span>
+<span class="source-line-no">211</span><span id="line-211">        description = ".44 Revolver DSB 2.58",</span>
+<span class="source-line-no">212</span><span id="line-212">        translations =</span>
+<span class="source-line-no">213</span><span id="line-213">        {</span>
+<span class="source-line-no">214</span><span id="line-214">            @Translation( language="de", text = "·           .44 Revolver (2.58)" ),</span>
+<span class="source-line-no">215</span><span id="line-215">            @Translation( language="en", text = "·            .44 Revolver DSB 2.58" )</span>
+<span class="source-line-no">216</span><span id="line-216">        }</span>
+<span class="source-line-no">217</span><span id="line-217">    )</span>
+<span class="source-line-no">218</span><span id="line-218">    DISCIPLINE_2_58( "2.58", new Heat []</span>
+<span class="source-line-no">219</span><span id="line-219">    {</span>
+<span class="source-line-no">220</span><span id="line-220">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
+<span class="source-line-no">221</span><span id="line-221">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
+<span class="source-line-no">222</span><span id="line-222">    } ),</span>
+<span class="source-line-no">223</span><span id="line-223"></span>
+<span class="source-line-no">224</span><span id="line-224">    /**</span>
+<span class="source-line-no">225</span><span id="line-225">     *  The discipline &amp;quot;.44 Pistole&amp;quot; (.44 Pistol).</span>
+<span class="source-line-no">226</span><span id="line-226">     */</span>
+<span class="source-line-no">227</span><span id="line-227">    @Text</span>
+<span class="source-line-no">228</span><span id="line-228">    (</span>
+<span class="source-line-no">229</span><span id="line-229">        description = ".45 Pistol DSB 2.59",</span>
+<span class="source-line-no">230</span><span id="line-230">        translations =</span>
+<span class="source-line-no">231</span><span id="line-231">        {</span>
+<span class="source-line-no">232</span><span id="line-232">            @Translation( language="de", text = "·            .45 Pistole (2.59)" ),</span>
+<span class="source-line-no">233</span><span id="line-233">            @Translation( language="en", text = "·              .45 Pistol DSB 2.59" )</span>
+<span class="source-line-no">234</span><span id="line-234">        }</span>
+<span class="source-line-no">235</span><span id="line-235">    )</span>
+<span class="source-line-no">236</span><span id="line-236">    DISCIPLINE_2_59( "2.58", new Heat []</span>
+<span class="source-line-no">237</span><span id="line-237">    {</span>
+<span class="source-line-no">238</span><span id="line-238">        new Heat( "HEAT_PRECISION", 150_000, 7_000, 1),</span>
+<span class="source-line-no">239</span><span id="line-239">        new Heat( "HEAT_DUEL", 20_000, 7_000, 1 )</span>
+<span class="source-line-no">240</span><span id="line-240">    } ),</span>
+<span class="source-line-no">241</span><span id="line-241"></span>
+<span class="source-line-no">242</span><span id="line-242">    /**</span>
+<span class="source-line-no">243</span><span id="line-243">     *  The discipline &amp;quot;KK Standardpistole&amp;quot; (Rimfire Standard</span>
+<span class="source-line-no">244</span><span id="line-244">     *  Pistol).</span>
+<span class="source-line-no">245</span><span id="line-245">     */</span>
+<span class="source-line-no">246</span><span id="line-246">    @Text</span>
+<span class="source-line-no">247</span><span id="line-247">    (</span>
+<span class="source-line-no">248</span><span id="line-248">        description = ".45 Pistol DSB 2.60",</span>
+<span class="source-line-no">249</span><span id="line-249">        translations =</span>
+<span class="source-line-no">250</span><span id="line-250">        {</span>
+<span class="source-line-no">251</span><span id="line-251">            @Translation( language="de", text = "·     KK Standardpistole (2.60)" ),</span>
+<span class="source-line-no">252</span><span id="line-252">            @Translation( language="en", text = "· Rimfire Standard Pistol DSB 2.60" )</span>
+<span class="source-line-no">253</span><span id="line-253">        }</span>
+<span class="source-line-no">254</span><span id="line-254">    )</span>
+<span class="source-line-no">255</span><span id="line-255">    DISCIPLINE_2_60( "2.60", new Heat []</span>
+<span class="source-line-no">256</span><span id="line-256">    {</span>
+<span class="source-line-no">257</span><span id="line-257">        new Heat( "HEAT_150s", 150_000, 7_000, 1 ),</span>
+<span class="source-line-no">258</span><span id="line-258">        new Heat( "HEAT_20s", 20_000, 7_000, 1 ),</span>
+<span class="source-line-no">259</span><span id="line-259">        new Heat( "HEAT_10s", 10_000, 7_000, 1 )</span>
+<span class="source-line-no">260</span><span id="line-260">    } ),</span>
+<span class="source-line-no">261</span><span id="line-261"></span>
+<span class="source-line-no">262</span><span id="line-262">    /**</span>
+<span class="source-line-no">263</span><span id="line-263">     *  Several tie-break.</span>
+<span class="source-line-no">264</span><span id="line-264">     */</span>
+<span class="source-line-no">265</span><span id="line-265">    @SuppressWarnings( "GrazieInspection" )</span>
+<span class="source-line-no">266</span><span id="line-266">    @Text</span>
+<span class="source-line-no">267</span><span id="line-267">    (</span>
+<span class="source-line-no">268</span><span id="line-268">        description = "Tie-break",</span>
+<span class="source-line-no">269</span><span id="line-269">        translations =</span>
+<span class="source-line-no">270</span><span id="line-270">        {</span>
+<span class="source-line-no">271</span><span id="line-271">            @Translation( language="de", text = "·                    Stechschuß" ),</span>
+<span class="source-line-no">272</span><span id="line-272">            @Translation( language="en", text = "·                        Tie-break" )</span>
+<span class="source-line-no">273</span><span id="line-273">        }</span>
+<span class="source-line-no">274</span><span id="line-274">    )</span>
+<span class="source-line-no">275</span><span id="line-275">    TIEBREAK( "Tiebreak", new Heat []</span>
+<span class="source-line-no">276</span><span id="line-276">    {</span>
+<span class="source-line-no">277</span><span id="line-277">        new Heat( "TIEBREAK_30s", 30_000, 500, 1 ),</span>
+<span class="source-line-no">278</span><span id="line-278">        new Heat( "TIEBREAK_50s", 50_000, 500, 1 ),</span>
+<span class="source-line-no">279</span><span id="line-279">        new Heat( "TIEBREAK_75s", 75_000, 500, 1 )</span>
+<span class="source-line-no">280</span><span id="line-280">    } );</span>
+<span class="source-line-no">281</span><span id="line-281"></span>
+<span class="source-line-no">282</span><span id="line-282">        /*------------*\</span>
+<span class="source-line-no">283</span><span id="line-283">    ====** Attributes **=======================================================</span>
+<span class="source-line-no">284</span><span id="line-284">        \*------------*/</span>
+<span class="source-line-no">285</span><span id="line-285">    /**</span>
+<span class="source-line-no">286</span><span id="line-286">     *  The code number for this discipline as used by the DSB.</span>
+<span class="source-line-no">287</span><span id="line-287">     */</span>
+<span class="source-line-no">288</span><span id="line-288">    private final String m_DSBCode;</span>
+<span class="source-line-no">289</span><span id="line-289"></span>
 <span class="source-line-no">290</span><span id="line-290">    /**</span>
-<span class="source-line-no">291</span><span id="line-291">     *  Retrieves the discipline that matches the given DSB code number.</span>
-<span class="source-line-no">292</span><span id="line-292">     *</span>
-<span class="source-line-no">293</span><span id="line-293">     *  @param  dsbCode The code as used by the DSB.</span>
-<span class="source-line-no">294</span><span id="line-294">     *  @return The discipline for the given code.</span>
-<span class="source-line-no">295</span><span id="line-295">     *  @throws IllegalArgumentException    There is no discipline that matches</span>
-<span class="source-line-no">296</span><span id="line-296">     *      the given code.</span>
-<span class="source-line-no">297</span><span id="line-297">     */</span>
-<span class="source-line-no">298</span><span id="line-298">    @SuppressWarnings( "unused" )</span>
-<span class="source-line-no">299</span><span id="line-299">    public final static Discipline fromDSBCode( final String dsbCode ) throws IllegalArgumentException</span>
-<span class="source-line-no">300</span><span id="line-300">    {</span>
-<span class="source-line-no">301</span><span id="line-301">        final var retValue = Arrays.stream( values() )</span>
-<span class="source-line-no">302</span><span id="line-302">                .filter( d -&gt; d.getDSBCode().equals( dsbCode ) )</span>
-<span class="source-line-no">303</span><span id="line-303">                .findAny()</span>
-<span class="source-line-no">304</span><span id="line-304">                .orElseThrow( () -&gt; new IllegalArgumentException( dsbCode ) );</span>
-<span class="source-line-no">305</span><span id="line-305"></span>
-<span class="source-line-no">306</span><span id="line-306">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">307</span><span id="line-307">        return retValue;</span>
-<span class="source-line-no">308</span><span id="line-308">    }   //  fromDSBCode()</span>
-<span class="source-line-no">309</span><span id="line-309"></span>
-<span class="source-line-no">310</span><span id="line-310">    /**</span>
-<span class="source-line-no">311</span><span id="line-311">     *  Returns the DSB code number.</span>
-<span class="source-line-no">312</span><span id="line-312">     *</span>
-<span class="source-line-no">313</span><span id="line-313">     *  @return The DSB code number.</span>
-<span class="source-line-no">314</span><span id="line-314">     */</span>
-<span class="source-line-no">315</span><span id="line-315">    public final String getDSBCode() { return m_DSBCode; }</span>
+<span class="source-line-no">291</span><span id="line-291">     *  The program for this discipline.</span>
+<span class="source-line-no">292</span><span id="line-292">     */</span>
+<span class="source-line-no">293</span><span id="line-293">    private final Heat [] m_Program;</span>
+<span class="source-line-no">294</span><span id="line-294"></span>
+<span class="source-line-no">295</span><span id="line-295">        /*------------------------*\</span>
+<span class="source-line-no">296</span><span id="line-296">    ====** Static Initialisations **===========================================</span>
+<span class="source-line-no">297</span><span id="line-297">        \*------------------------*/</span>
+<span class="source-line-no">298</span><span id="line-298">    /**</span>
+<span class="source-line-no">299</span><span id="line-299">     *  The resource bundle with the names.</span>
+<span class="source-line-no">300</span><span id="line-300">     */</span>
+<span class="source-line-no">301</span><span id="line-301">    private final static ResourceBundle m_ResourceBundle;</span>
+<span class="source-line-no">302</span><span id="line-302"></span>
+<span class="source-line-no">303</span><span id="line-303">    static</span>
+<span class="source-line-no">304</span><span id="line-304">    {</span>
+<span class="source-line-no">305</span><span id="line-305">        try</span>
+<span class="source-line-no">306</span><span id="line-306">        {</span>
+<span class="source-line-no">307</span><span id="line-307">            //---* Load the resource bundle with the texts *-------------------</span>
+<span class="source-line-no">308</span><span id="line-308">            m_ResourceBundle = loadResourceBundle( BASE_BUNDLE_NAME )</span>
+<span class="source-line-no">309</span><span id="line-309">                .orElseThrow( () -&gt; new MissingResourceException( MSG_CannotLoadTextResources, BASE_BUNDLE_NAME, null ) );</span>
+<span class="source-line-no">310</span><span id="line-310">        }</span>
+<span class="source-line-no">311</span><span id="line-311">        catch( final MissingResourceException e )</span>
+<span class="source-line-no">312</span><span id="line-312">        {</span>
+<span class="source-line-no">313</span><span id="line-313">            throw new ExceptionInInitializerError( e );</span>
+<span class="source-line-no">314</span><span id="line-314">        }</span>
+<span class="source-line-no">315</span><span id="line-315">    }</span>
 <span class="source-line-no">316</span><span id="line-316"></span>
-<span class="source-line-no">317</span><span id="line-317">    /**</span>
-<span class="source-line-no">318</span><span id="line-318">     *  Returns the program.</span>
-<span class="source-line-no">319</span><span id="line-319">     *</span>
-<span class="source-line-no">320</span><span id="line-320">     *  @return The program.</span>
-<span class="source-line-no">321</span><span id="line-321">     */</span>
-<span class="source-line-no">322</span><span id="line-322">    public final Heat [] getProgram() { return m_Program; }</span>
-<span class="source-line-no">323</span><span id="line-323"></span>
-<span class="source-line-no">324</span><span id="line-324">    /**</span>
-<span class="source-line-no">325</span><span id="line-325">     *  {@inheritDoc}</span>
-<span class="source-line-no">326</span><span id="line-326">     *</span>
-<span class="source-line-no">327</span><span id="line-327">     *  @see Enum#toString()</span>
-<span class="source-line-no">328</span><span id="line-328">     */</span>
-<span class="source-line-no">329</span><span id="line-329">    @Override</span>
-<span class="source-line-no">330</span><span id="line-330">    public final String toString()</span>
-<span class="source-line-no">331</span><span id="line-331">    {</span>
-<span class="source-line-no">332</span><span id="line-332">        final var retValue = retrieveText( m_ResourceBundle, this );</span>
-<span class="source-line-no">333</span><span id="line-333"></span>
-<span class="source-line-no">334</span><span id="line-334">        //---* Done *----------------------------------------------------------</span>
-<span class="source-line-no">335</span><span id="line-335">        return retValue;</span>
-<span class="source-line-no">336</span><span id="line-336">    }   //  toString()</span>
-<span class="source-line-no">337</span><span id="line-337">}</span>
-<span class="source-line-no">338</span><span id="line-338">//  class Discipline</span>
-<span class="source-line-no">339</span><span id="line-339"></span>
-<span class="source-line-no">340</span><span id="line-340">/*</span>
-<span class="source-line-no">341</span><span id="line-341"> *  End of File</span>
-<span class="source-line-no">342</span><span id="line-342"> */</span>
+<span class="source-line-no">317</span><span id="line-317">        /*--------------*\</span>
+<span class="source-line-no">318</span><span id="line-318">    ====** Constructors **=====================================================</span>
+<span class="source-line-no">319</span><span id="line-319">        \*--------------*/</span>
+<span class="source-line-no">320</span><span id="line-320">    /**</span>
+<span class="source-line-no">321</span><span id="line-321">     *  Creates a new {@code Discipline} instance.</span>
+<span class="source-line-no">322</span><span id="line-322">     *</span>
+<span class="source-line-no">323</span><span id="line-323">     *  @param  dsbCode The code number for this discipline as used by the</span>
+<span class="source-line-no">324</span><span id="line-324">     *      DSB (Deutscher Schützenbund).</span>
+<span class="source-line-no">325</span><span id="line-325">     *  @param  program The program for this discipline.</span>
+<span class="source-line-no">326</span><span id="line-326">     */</span>
+<span class="source-line-no">327</span><span id="line-327">    private Discipline( final String dsbCode, final Heat [] program )</span>
+<span class="source-line-no">328</span><span id="line-328">    {</span>
+<span class="source-line-no">329</span><span id="line-329">        m_DSBCode = dsbCode;</span>
+<span class="source-line-no">330</span><span id="line-330">        m_Program = program;</span>
+<span class="source-line-no">331</span><span id="line-331">    }   //  Discipline()</span>
+<span class="source-line-no">332</span><span id="line-332"></span>
+<span class="source-line-no">333</span><span id="line-333">        /*---------*\</span>
+<span class="source-line-no">334</span><span id="line-334">    ====** Methods **==========================================================</span>
+<span class="source-line-no">335</span><span id="line-335">        \*---------*/</span>
+<span class="source-line-no">336</span><span id="line-336">    /**</span>
+<span class="source-line-no">337</span><span id="line-337">     *  Retrieves the discipline that matches the given DSB code number.</span>
+<span class="source-line-no">338</span><span id="line-338">     *</span>
+<span class="source-line-no">339</span><span id="line-339">     *  @param  dsbCode The code as used by the DSB.</span>
+<span class="source-line-no">340</span><span id="line-340">     *  @return The discipline for the given code.</span>
+<span class="source-line-no">341</span><span id="line-341">     *  @throws IllegalArgumentException    There is no discipline that matches</span>
+<span class="source-line-no">342</span><span id="line-342">     *      the given code.</span>
+<span class="source-line-no">343</span><span id="line-343">     */</span>
+<span class="source-line-no">344</span><span id="line-344">    @SuppressWarnings( "unused" )</span>
+<span class="source-line-no">345</span><span id="line-345">    public final static Discipline fromDSBCode( final String dsbCode ) throws IllegalArgumentException</span>
+<span class="source-line-no">346</span><span id="line-346">    {</span>
+<span class="source-line-no">347</span><span id="line-347">        final var retValue = Arrays.stream( values() )</span>
+<span class="source-line-no">348</span><span id="line-348">                .filter( d -&gt; d.getDSBCode().equals( dsbCode ) )</span>
+<span class="source-line-no">349</span><span id="line-349">                .findAny()</span>
+<span class="source-line-no">350</span><span id="line-350">                .orElseThrow( () -&gt; new IllegalArgumentException( dsbCode ) );</span>
+<span class="source-line-no">351</span><span id="line-351"></span>
+<span class="source-line-no">352</span><span id="line-352">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">353</span><span id="line-353">        return retValue;</span>
+<span class="source-line-no">354</span><span id="line-354">    }   //  fromDSBCode()</span>
+<span class="source-line-no">355</span><span id="line-355"></span>
+<span class="source-line-no">356</span><span id="line-356">    /**</span>
+<span class="source-line-no">357</span><span id="line-357">     *  Returns the DSB code number.</span>
+<span class="source-line-no">358</span><span id="line-358">     *</span>
+<span class="source-line-no">359</span><span id="line-359">     *  @return The DSB code number.</span>
+<span class="source-line-no">360</span><span id="line-360">     */</span>
+<span class="source-line-no">361</span><span id="line-361">    public final String getDSBCode() { return m_DSBCode; }</span>
+<span class="source-line-no">362</span><span id="line-362"></span>
+<span class="source-line-no">363</span><span id="line-363">    /**</span>
+<span class="source-line-no">364</span><span id="line-364">     *  Returns the program.</span>
+<span class="source-line-no">365</span><span id="line-365">     *</span>
+<span class="source-line-no">366</span><span id="line-366">     *  @return The program.</span>
+<span class="source-line-no">367</span><span id="line-367">     */</span>
+<span class="source-line-no">368</span><span id="line-368">    public final Heat [] getProgram() { return m_Program; }</span>
+<span class="source-line-no">369</span><span id="line-369"></span>
+<span class="source-line-no">370</span><span id="line-370">    /**</span>
+<span class="source-line-no">371</span><span id="line-371">     *  {@inheritDoc}</span>
+<span class="source-line-no">372</span><span id="line-372">     *</span>
+<span class="source-line-no">373</span><span id="line-373">     *  @see Enum#toString()</span>
+<span class="source-line-no">374</span><span id="line-374">     */</span>
+<span class="source-line-no">375</span><span id="line-375">    @Override</span>
+<span class="source-line-no">376</span><span id="line-376">    public final String toString()</span>
+<span class="source-line-no">377</span><span id="line-377">    {</span>
+<span class="source-line-no">378</span><span id="line-378">        final var retValue = retrieveText( m_ResourceBundle, this );</span>
+<span class="source-line-no">379</span><span id="line-379"></span>
+<span class="source-line-no">380</span><span id="line-380">        //---* Done *----------------------------------------------------------</span>
+<span class="source-line-no">381</span><span id="line-381">        return retValue;</span>
+<span class="source-line-no">382</span><span id="line-382">    }   //  toString()</span>
+<span class="source-line-no">383</span><span id="line-383">}</span>
+<span class="source-line-no">384</span><span id="line-384">//  class Discipline</span>
+<span class="source-line-no">385</span><span id="line-385"></span>
+<span class="source-line-no">386</span><span id="line-386">/*</span>
+<span class="source-line-no">387</span><span id="line-387"> *  End of File</span>
+<span class="source-line-no">388</span><span id="line-388"> */</span>
 
 
 

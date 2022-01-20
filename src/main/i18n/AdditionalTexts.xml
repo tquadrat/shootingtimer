@@ -28,10 +28,45 @@
         <translation language="en"><![CDATA[Duel]]></translation>
         <translation language="de"><![CDATA[Duell]]></translation>
     </text>
+    <text key='HEAT_MATCH_30'>
+        <description><![CDATA[The 30 min match heat.]]></description>
+        <translation language="en"><![CDATA[Match 30 min (20 shots)]]></translation>
+        <translation language="de"><![CDATA[30 Minuten Wettkampfzeit (20 Schuß)]]></translation>
+    </text>
+    <text key='HEAT_MATCH_35'>
+        <description><![CDATA[The 35 min match heat.]]></description>
+        <translation language="en"><![CDATA[Match 35 min (20 Shots)]]></translation>
+        <translation language="de"><![CDATA[35 Minuten Wettkampfzeit (20 Schuß)]]></translation>
+    </text>
+    <text key='HEAT_MATCH_50'>
+        <description><![CDATA[The 50 min match heat.]]></description>
+        <translation language="en"><![CDATA[Match 50 min (40 Shots)]]></translation>
+        <translation language="de"><![CDATA[50 Minuten Wettkampfzeit (40 Schuß)]]></translation>
+    </text>
+    <text key='HEAT_MATCH_60'>
+        <description><![CDATA[The 60 min match heat.]]></description>
+        <translation language="en"><![CDATA[Match 60 min (40 Shots)]]></translation>
+        <translation language="de"><![CDATA[60 Minuten Wettkampfzeit (40 Schuß)]]></translation>
+    </text>
+    <text key='HEAT_MATCH_75'>
+        <description><![CDATA[The 75 min match heat.]]></description>
+        <translation language="en"><![CDATA[Match 75 min (60 Shots)]]></translation>
+        <translation language="de"><![CDATA[75 Minuten Wettkampfzeit (60 Schuß)]]></translation>
+    </text>
+    <text key='HEAT_MATCH_90'>
+        <description><![CDATA[The 90 min match heat.]]></description>
+        <translation language="en"><![CDATA[Match 90 min (60 Shots)]]></translation>
+        <translation language="de"><![CDATA[90 Minuten Wettkampfzeit (60 Schuß)]]></translation>
+    </text>
     <text key='HEAT_PRECISION'>
         <description><![CDATA[The precision heat.]]></description>
         <translation language="en"><![CDATA[Precision]]></translation>
         <translation language="de"><![CDATA[Präzision]]></translation>
+    </text>
+    <text key='HEAT_SIGHTING'>
+        <description><![CDATA[The sightings heat.]]></description>
+        <translation language="en"><![CDATA[Sighting 15 min]]></translation>
+        <translation language="de"><![CDATA[15 Minuten Vorbereitungs- und Probezeit]]></translation>
     </text>
     <text key='HEAT_10s'>
         <description><![CDATA[The 10 seconds heat.]]></description>
@@ -48,10 +83,20 @@
         <translation language="en"><![CDATA[150 Seconds]]></translation>
         <translation language="de"><![CDATA[150 Sekunden]]></translation>
     </text>
+    <text key='TIEBREAK_30s'>
+        <description><![CDATA[A 30 seconds tie-break.]]></description>
+        <translation language="en"><![CDATA[Tie-break 30 Seconds]]></translation>
+        <translation language="de"><![CDATA[Stechschuß 30 Sekunden]]></translation>
+    </text>
     <text key='TIEBREAK_50s'>
         <description><![CDATA[A 50 seconds tie-break.]]></description>
         <translation language="en"><![CDATA[Tie-break 50 Seconds]]></translation>
         <translation language="de"><![CDATA[Stechschuß 50 Sekunden]]></translation>
+    </text>
+    <text key='TIEBREAK_75s'>
+        <description><![CDATA[A 75 seconds tie-break.]]></description>
+        <translation language="en"><![CDATA[Tie-break 75 Seconds]]></translation>
+        <translation language="de"><![CDATA[Stechschuß 75 Sekunden]]></translation>
     </text>
 
     <!-- These texts are used directly by the JavaFX components -->
@@ -73,14 +118,24 @@
 
     <text key='LABEL_TIME'>
         <description><![CDATA[The text for the label "Time".]]></description>
-        <translation language="en"><![CDATA[Time (in seconds)]]></translation>
-        <translation language="de"><![CDATA[Zeit (in Sekunden)]]></translation>
+        <translation language="en"><![CDATA[Remaining Time]]></translation>
+        <translation language="de"><![CDATA[Restzeit]]></translation>
     </text>
 
     <text key='MENU_DISCIPLINES'>
         <description><![CDATA[The text for the "Disciplines" menu.]]></description>
         <translation language="en"><![CDATA[Disci_plines]]></translation>
         <translation language="de"><![CDATA[Diszi_plinen]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_1_10'>
+        <description><![CDATA[The text for the menu entry for the discipline 1.10.]]></description>
+        <translation language="en"><![CDATA[Air Rifle DSB 1.10]]></translation>
+        <translation language="de"><![CDATA[_Luftgewehr (1.10)]]></translation>
+    </text>
+    <text key='MENU_DISCIPLINE_2_10'>
+        <description><![CDATA[The text for the menu entry for the discipline 2.10.]]></description>
+        <translation language="en"><![CDATA[Air Pistol DSB 2.10]]></translation>
+        <translation language="de"><![CDATA[_Luftpistole (2.10)]]></translation>
     </text>
     <text key='MENU_DISCIPLINE_2_17'>
         <description><![CDATA[The text for the menu entry for the discipline 2.17.]]></description>

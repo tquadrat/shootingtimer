@@ -193,12 +193,20 @@
                                 <Discipline fx:constant="DISCIPLINE_2_58" />
                             </userData>
                         </RadioMenuItem>
-                        <RadioMenuItem id="MENU_DISIPLINE_2_59"
-                                       text="%MENU_DISCIPLINE_2_59"
+                        <RadioMenuItem id="MENU_DISIPLINE_1_10"
+                                       text="%MENU_DISCIPLINE_1_10"
                                        mnemonicParsing="true"
                                        toggleGroup="$m_DisciplinesToggleGroup">
                             <userData>
-                                <Discipline fx:constant="DISCIPLINE_2_59" />
+                                <Discipline fx:constant="DISCIPLINE_1_10" />
+                            </userData>
+                        </RadioMenuItem>
+                        <RadioMenuItem id="MENU_DISIPLINE_2_10"
+                                       text="%MENU_DISCIPLINE_2_10"
+                                       mnemonicParsing="true"
+                                       toggleGroup="$m_DisciplinesToggleGroup">
+                            <userData>
+                                <Discipline fx:constant="DISCIPLINE_2_10" />
                             </userData>
                         </RadioMenuItem>
                         <RadioMenuItem id="MENU_DISIPLINE_TIEBREAK"

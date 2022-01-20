@@ -271,7 +271,6 @@ public class MainController
      *  The width for the fields in the timer box: {@value}.
      */
     @SuppressWarnings( "unused" )
-
     public final static double TIMERBOX_WIDTH = 200.0;
 
         /*------------*\
@@ -594,25 +593,25 @@ public class MainController
     @FXML
     private final void initialize()
     {
-        assert m_Button_Abort != null : "fx:id=\"m_Button_Abort\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Button_Start != null : "fx:id=\"m_Button_Start\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_ButtonPane != null : "fx:id=\"m_ButtonPane\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_CheckMenuItem_ShowHeatCount != null : "fx:id=\"m_CheckMenuItem_ShowHeatCount\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_CheckMenuItem_ShowStatus != null : "fx:id=\"m_CheckMenuItem_ShowStatus\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_CheckMenuItem_ShowTime != null : "fx:id=\"m_CheckMenuItem_ShowTime\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_CheckMenuItem_Sound != null : "fx:id=\"m_CheckMenuItem_Sound\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_ChoiceBox_Program != null : "fx:id=\"m_ChoiceBox_Program\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Circle_Green != null : "fx:id=\"m_Circle_Green\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Circle_Red != null : "fx:id=\"m_Circle_Red\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_DisciplinesToggleGroup != null : "fx:id=\"m_DisciplinesToggleGroup\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Label_HeatCount != null : "fx:id=\"m_Label_HeatCount\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Label_SelectedDiscipline != null : "fx:id=\"m_Label_SelectedDiscipline\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Label_Status != null : "fx:id=\"m_Label_Status\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_LightBox != null : "fx:id=\"m_LightBox\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Slider_AfterTime != null : "fx:id=\"m_Slider_AfterTime\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_Slider_BeforeTime != null : "fx:id=\"m_Slider_BeforeTime\" was not injected: check your FXML file 'Main.fxml'.";
-        assert m_TextField_Time != null : "fx:id=\"m_TextField_Time\" was not injected: check your FXML file 'Main.fxml'.";
-        assert resources != null : "The resource bundle was not injected";
+        assert nonNull( m_Button_Abort ) : "fx:id=\"m_Button_Abort\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Button_Start ) : "fx:id=\"m_Button_Start\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_ButtonPane ) : "fx:id=\"m_ButtonPane\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_CheckMenuItem_ShowHeatCount ) : "fx:id=\"m_CheckMenuItem_ShowHeatCount\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_CheckMenuItem_ShowStatus ) : "fx:id=\"m_CheckMenuItem_ShowStatus\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_CheckMenuItem_ShowTime ) : "fx:id=\"m_CheckMenuItem_ShowTime\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_CheckMenuItem_Sound ) : "fx:id=\"m_CheckMenuItem_Sound\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_ChoiceBox_Program ) : "fx:id=\"m_ChoiceBox_Program\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Circle_Green ) : "fx:id=\"m_Circle_Green\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Circle_Red ) : "fx:id=\"m_Circle_Red\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_DisciplinesToggleGroup ) : "fx:id=\"m_DisciplinesToggleGroup\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Label_HeatCount ) : "fx:id=\"m_Label_HeatCount\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Label_SelectedDiscipline ) : "fx:id=\"m_Label_SelectedDiscipline\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Label_Status ) : "fx:id=\"m_Label_Status\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_LightBox ) : "fx:id=\"m_LightBox\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Slider_AfterTime ) : "fx:id=\"m_Slider_AfterTime\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_Slider_BeforeTime ) : "fx:id=\"m_Slider_BeforeTime\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( m_TextField_Time ) : "fx:id=\"m_TextField_Time\" was not injected: check your FXML file 'Main.fxml'.";
+        assert nonNull( resources ) : "The resource bundle was not injected";
 
         //---* Load the sounds *-----------------------------------------------
         if( "arm".equalsIgnoreCase( getProperty( PROPERTY_CPUARCHITECTURE ) ) )

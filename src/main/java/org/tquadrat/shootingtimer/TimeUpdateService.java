@@ -22,7 +22,6 @@ import static javafx.application.Platform.runLater;
 import static org.apiguardian.api.API.Status.INTERNAL;
 import static org.apiguardian.api.API.Status.STABLE;
 import static org.tquadrat.foundation.lang.Objects.requireNonNullArgument;
-import static org.tquadrat.foundation.util.StringUtils.format;
 
 import org.apiguardian.api.API;
 import org.tquadrat.foundation.annotation.ClassVersion;
@@ -77,7 +76,19 @@ public class TimeUpdateService extends ScheduledService<Void>
         {
             final var currentTime = currentTimeMillis();
             final var remainingTime = currentTime < m_EndTime ? m_EndTime - currentTime : 0L;
-            runLater( () -> m_TimeDisplay.setText( format( "%3.1f", remainingTime / 1000.0 ) ) );
+            if( m_ShowMinutes )
+            {
+                runLater( () ->
+                    {
+                        final var minutes = remainingTime / 60_000;
+                        final var seconds = (remainingTime / 1000) % 60;
+                        m_TimeDisplay.setText( "%d:%02d".formatted( minutes, seconds ) );
+                    } );
+            }
+            else
+            {
+                runLater( () -> m_TimeDisplay.setText( "%3.1f".formatted( remainingTime / 1000.0 ) ) );
+            }
             if( (remainingTime <= 0L) || m_Stop ) cancel();
 
             //---* Done *------------------------------------------------------
@@ -93,6 +104,12 @@ public class TimeUpdateService extends ScheduledService<Void>
      *  The end time.
      */
     private final long m_EndTime;
+
+    /**
+     *  Flag that indicates if either minutes or seconds should be
+     *  displayed.
+     */
+    private final boolean m_ShowMinutes;
 
     /**
      *  The flag that stops the service.
@@ -117,6 +134,7 @@ public class TimeUpdateService extends ScheduledService<Void>
     {
         m_EndTime = endTime;
         m_TimeDisplay = requireNonNullArgument( timeDisplay, "timeDisplay" );
+        m_ShowMinutes = endTime - currentTimeMillis() > 350_000;
         setPeriod( new Duration( 100 ) );
     }   //  TimeUpdateService()
 

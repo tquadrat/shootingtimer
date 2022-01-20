@@ -50,6 +50,52 @@ public enum Discipline
     ====** Enum Declaration **=================================================
         \*------------------*/
     /**
+     *  The discipline &quot;Luftgewehr&quot; (Air Rifle).
+     */
+    @Text
+        (
+            description = "Air Rifle DSB 1.10",
+            translations =
+                {
+                    @Translation( language="de", text = "·            Luftgewehr (1.10)" ),
+                    @Translation( language="en", text = "·              Air Rifle DSB 1.10" )
+                }
+        )
+    DISCIPLINE_1_10( "1.10", new Heat []
+        {
+            new Heat( "HEAT_SIGHTING", 900_000, 500, 1),
+            new Heat( "HEAT_MATCH_30", 1_800_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_35", 2_160_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_50", 3_000_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_60", 3_600_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_75", 4_500_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_90", 5_400_000, 500, 1 )
+        } ),
+
+    /**
+     *  The discipline &quot;Luftpistole&quot; (Air Pistol).
+     */
+    @Text
+        (
+            description = "Air Pistol DSB 2.10",
+            translations =
+                {
+                    @Translation( language="de", text = "·           Luftpistole (2.10)" ),
+                    @Translation( language="en", text = "·             Air Pistol DSB 2.10" )
+                }
+        )
+    DISCIPLINE_2_10( "2.10", new Heat []
+        {
+            new Heat( "HEAT_SIGHTING", 54_000_000, 500, 1),
+            new Heat( "HEAT_MATCH_30", 108_000_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_35", 126_000_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_50", 180_000_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_60", 216_000_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_75", 270_000_000, 500, 1 ),
+            new Heat( "HEAT_MATCH_90", 324_000_000, 500, 1 )
+        } ),
+
+    /**
      *  The discipline &quot;Luftpistole Mehrkampf&quot; (Air Pistol Sport).
      */
     @Text
@@ -226,7 +272,7 @@ public enum Discipline
             @Translation( language="en", text = "·                        Tie-break" )
         }
     )
-    TIEBREAK( "Tiebreak 50s", new Heat []
+    TIEBREAK( "Tiebreak", new Heat []
     {
         new Heat( "TIEBREAK_30s", 30_000, 500, 1 ),
         new Heat( "TIEBREAK_50s", 50_000, 500, 1 ),
