@@ -1,0 +1,330 @@
+/*
+ * ============================================================================
+ * Copyright © 2002-2022 by Thomas Thrien.
+ * All Rights Reserved.
+ * ============================================================================
+ * Licensed to the public under the agreements of the GNU Lesser General Public
+ * License, version 3.0 (the "License"). You may obtain a copy of the License at
+ *
+ *      http://www.gnu.org/licenses/lgpl.html
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+ * License for the specific language governing permissions and limitations
+ * under the License.
+ */
+//file:noinspection SpellCheckingInspection
+
+import java.time.Year
+
+plugins {
+    //---* Apply the java Plugin to add support for Java *---------------------
+    id 'java'
+
+    //---* Apply the Groovy plugin to add support for Groovy *-----------------
+    id 'groovy'
+
+    /*
+     * Apply the application plugin to add support for building a CLI
+     * application in Java.
+     */
+    id 'application'
+
+    //---* Apply the JavaFX plugin *-------------------------------------------
+    id 'org.openjfx.javafxplugin' version '0.0.10'
+
+    //---* Define additional tests *-------------------------------------------
+    id 'jvm-test-suite'
+}   //  plugins
+
+//---* Settings *--------------------------------------------------------------
+project.version = '0.3.0'
+
+/**
+ *  The current year, used for the copyright notice in JavaDoc.
+ */
+String currentYear = Year.now().toString()
+
+/**
+ *  The encoding for JavaDoc.
+ */
+String javadocEncoding = 'UTF-8'
+
+/**
+ *  The Java source level.
+ */
+String javaSourceLevel = '17'
+
+/**
+ *  The JavaDoc taglets.
+ */
+def tagletList = []
+for( def className : [
+        /* The inline tags */
+        "AnchorTaglet",
+        "HRefTaglet",
+        "IgnoreTaglet",
+        "IncludeTaglet",
+        "UnderlineTaglet",
+
+        /* The block taglets - sequence is relevant! */
+        "NoteTaglet",
+        "AuthorTaglet",
+        "ThanksTaglet",
+        "ModifiedTaglet",
+        "InspiredTaglet",
+        "UmlGraphLinkTaglet",
+        "ToDoTaglet"] )
+{
+    tagletList.add( String.join( ".", "org.tquadrat.foundation.javadoc", className ) )
+}
+
+/**
+ *  The JavaDoc tags; this defines the sequence how the tags will appear in the
+ *  documentation.
+ */
+def tagList = ["note", "param", "return", "throws", "author", "extauthor",
+    "thanks", "modified", "version", "since", "see", "inspired",
+    "UMLGraph.link", "todo" ]
+
+//-----------------------------------------------------------------------------
+
+repositories {
+    //---* Use Maven Central for resolving common dependencies *---------------
+    mavenCentral() {
+        content {
+            excludeGroupByRegex "org\\.tquadrat.*"
+        }   //  content
+    }   //  mavenCentral()
+
+    //---* Use the private repositories for our own stuff *--------------------
+    maven {
+        name "tquadratReleases"
+        url "http://www.tquadrat.org/archiva/repository/releases/"
+        content {
+            includeGroupByRegex "org\\.tquadrat.*"
+        }   //  content
+        mavenContent {
+            releasesOnly()
+        }   //  mavenContent()
+        allowInsecureProtocol true
+    }   //  maven
+}   //  repositories
+
+configurations {
+    tquadratTaglet
+}   //  configurations
+
+dependencies {
+    //---* The Foundation stuff *----------------------------------------------
+    implementation 'org.tquadrat.library:org.tquadrat.foundation.i18n:0.1.0'
+    annotationProcessor 'org.tquadrat.tool:org.tquadrat.foundation.i18n.ap:0.1.0'
+    implementation 'org.tquadrat.library:org.tquadrat.foundation.fx:0.1.0'
+    testImplementation 'org.tquadrat.library:org.tquadrat.foundation.testutil:0.1.0'
+
+    //---* Use JUnit Jupiter API to define the tests *-------------------------
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.8.2'
+
+    //---* Use Spock test framework for additional tests *---------------------
+    testImplementation 'org.spockframework:spock-core:2.0-groovy-3.0'
+
+    //---* EasyMock for the mocking of test objects *--------------------------
+    testImplementation 'org.easymock:easymock:4.3'
+
+    //---* Use JUnit Jupiter Engine for testing *------------------------------
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+
+    //---* The JavaDoc extensions *--------------------------------------------
+    tquadratTaglet 'org.tquadrat.tool:org.tquadrat.foundation.javadoc:0.1.0'
+}   //  dependencies
+
+javafx {
+    version = "17.0.1"
+    modules = [ 'javafx.controls', 'javafx.media', 'javafx.fxml' ]
+}   //  javafx
+
+java {
+    //---* Switch on Java module support *-------------------------------------
+    modularity.inferModulePath = true
+
+    //---* Create the Jar with the sources *-----------------------------------
+    withSourcesJar()
+
+    //---* Create the Jar with the JavaDoc *-----------------------------------
+    withJavadocJar()
+}   //  java
+
+testing {
+    suites {
+        // Configure the built-in test suite
+        test {
+            // Use JUnit Jupiter test framework
+            useJUnitJupiter('5.8.2')
+        }   //  test
+
+        //---* Create a new test suite *---------------------------------------
+        testFunctional( JvmTestSuite ) {
+            //---* Use Spock test framework *----------------------------------
+            useSpock( '2.0-groovy-3.0' )
+
+            dependencies {
+                /*
+                 * The functionalTest test suite depends on the production code
+                 * in tests.
+                 */
+                implementation project
+            }   //  dependencies
+
+            targets {
+                all {
+                    /*
+                     * This test suite should run after the built-in test suite
+                     * has run its tests.
+                     */
+                    testTask.configure { shouldRunAfter( test ) }
+                }   //  all
+            }   //  targets
+        }   //  testFunctional()
+    }   //  suites
+}   //  testing
+
+application {
+    //---* Define the main class for the application *-------------------------
+    mainClass = 'org.tquadrat.shootingtimer.Main'
+
+    //---* The architecture is used as the classifier *------------------------
+    distTar.archiveClassifier = System.getProperty( 'os.arch', 'unknown' )
+}   //  application
+
+//---* Task configurations *---------------------------------------------------
+task sourceJar( type: Jar ) {
+    archiveClassifier.set( "sources" )
+}
+
+tasks.named( 'check' ) {
+    //---* Include functional test as part of the check lifecycle *------------
+    dependsOn( testing.suites.testFunctional )
+}
+
+tasks.named( 'jar' ) {
+    //---* Configure META-INF/MANIFEST.MF *------------------------------------
+    manifest {
+        attributes( 'Implementation-Title': project.name,
+                    'Implementation-Version': project.version )
+    }   //  manifest
+}
+
+tasks.named( 'javadoc' ) {
+    mustRunAfter "jar"
+
+    //---* Configure JavaDoc *-------------------------------------------------
+    String topValue = """
+                      <div style="overflow:auto;">
+                          <img src="{@docRoot}/resources/tquadrat_logo.jpg" 
+                               alt="tquadrat.org"
+                               style="float:right;">
+                          <p style="font-family:sans-serif;font-size:40px;font-weight:bold;padding-left:30px;">tquadrat Shooting Timer</p>      
+                      </div>
+                      """
+    options {
+        addBooleanOption( '-enable-preview', true )
+        addStringOption( '--expand-requires all' )
+        addStringOption( '--html5' )
+        addStringOption( '-javafx' )
+        addStringOption( '--show-members private' )
+        addStringOption( '--show-module-contents all' )
+        addStringOption( '--show-packages all' )
+        addStringOption( '--show-types private' )
+        addStringOption( 'sourcetab', '4' )
+        addStringOption( 'top', topValue )
+
+        quiet()
+
+        author true
+        bottom "Copyright © 2002-$currentYear by Thomas Thrien (tquadrat.org)"
+        breakIterator true
+        charSet javadocEncoding
+        docEncoding javadocEncoding
+        docFilesSubDirs true
+        encoding javadocEncoding
+        header ""
+        jFlags( '-Duser.language=en', '--enable-preview', "-Dorg.tquadrat.foundation.todo.base=$projectDir",
+                /*
+                 * Refer the the additional include roots with the ${…}
+                 * notation.
+                 */
+                "-Dorg.tquadrat.foundation.include.root.module=$projectDir",
+                "-Dorg.tquadrat.foundation.include.root.source=$projectDir/src/main/java",
+                "-Dorg.tquadrat.foundation.include.root.resources=$projectDir/src/main/resources",
+                "-Dorg.tquadrat.foundation.include.root.javadoc=$projectDir/src/main/javadoc",
+                "-Dorg.tquadrat.foundation.include.root.project=$projectDir/.." )
+        keyWords true
+
+        links "https://docs.oracle.com/en/java/javase/${javaSourceLevel}/docs/api/"
+        links "https://apiguardian-team.github.io/apiguardian/docs/current/api/"
+        links "https://tquadrat.github.io/foundation-fx/javadoc"
+        links "https://tquadrat.github.io/foundation-base/javadoc"
+        links "https://tquadrat.github.io/foundation-util/javadoc"
+        links "https://tquadrat.github.io/foundation-i18n/javadoc"
+        links "https://tquadrat.github.io/foundation-inifile/javadoc"
+        links "https://openjfx.io/javadoc/17/"
+
+        linkSource true
+        locale "en_GB"
+        noComment false
+        noDeprecated false
+        noDeprecatedList false
+        noHelp false
+        noIndex false
+        noNavBar false
+        noSince false
+        noTimestamp true
+        noTree false
+        overview "$projectDir/src/main/javadoc/overview.html"
+        serialWarn true
+        setMemberLevel( JavadocMemberLevel.PRIVATE )
+        source javaSourceLevel
+        splitIndex true
+        setUse true
+        setVersion true
+        windowTitle ""
+
+        tagletPath configurations.tquadratTaglet.files as List
+        taglets tagletList
+        tags tagList
+    }
+
+    doLast {
+        copy {
+            from "$projectDir/../resources/javadoc/tquadrat_logo.jpg"
+            into "$project.docsDir/javadoc/resources"
+        }
+    }
+}
+
+tasks.withType( JavaCompile ) {
+    //---* Enable the preview features *---------------------------------------
+    options.compilerArgs += "--enable-preview"
+
+    //---* Set the annotation processor options *------------------------------
+    doFirst {
+        println "AnnotationProcessorPath for $name is ${options.getAnnotationProcessorPath().getFiles()}"
+    }
+    options.compilerArgs += "-Aorg.tquadrat.foundation.i18n.ap.textLocation=$projectDir/src/main/i18n"
+}
+
+tasks.withType( Test ) {
+    //---* Enable the preview features *---------------------------------------
+    jvmArgs += "--enable-preview"
+}
+
+tasks.withType( JavaExec ) {
+    //---* Enable the preview features *---------------------------------------
+    jvmArgs += '--enable-preview'
+}
+
+/*
+ * End of File
+ */
